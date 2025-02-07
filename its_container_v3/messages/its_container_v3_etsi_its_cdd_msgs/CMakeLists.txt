@@ -1,0 +1,374 @@
+# 
+# Copyright (C) German Aerospace Center e.V. (https://www.dlr.de)
+# Institute of Transportation Systems. (https://www.dlr.de/ts/)
+# 
+# Eclipse ADORe, Automated Driving Open Research https://eclipse.org/adore
+# 
+# This program and the accompanying materials are made available under the
+# terms of the Eclipse Public License 2.0 which is available at
+# http://www.eclipse.org/legal/epl-2.0.
+# 
+# SPDX-License-Identifier: EPL-2.0
+# 
+# 
+# File automatically generated with DLR Wind v2
+# 
+# This file belongs to the DLR Wind project de.dlr.ts.v2x:its_container_v3:2.0
+# 
+# Module: ETSI_ITS_CDD {itu-t(0) identified-organization(4) etsi(0) itsDomain(5) 
+#     wg1(1) ts(102894) cdd(2) major-version-3(3) minor-version-1(1)}
+# 
+# For support contact v2x-ts@dlr.de
+# 
+# 
+cmake_minimum_required(VERSION 3.13)
+project(its_container_v3_etsi_its_cdd_msgs)
+
+## Compile as C++11, supported in ROS Kinetic and newer
+add_compile_options(-std=c++11)
+add_definitions(-DWIND_ROS_VERSION=1)
+
+find_package(catkin REQUIRED COMPONENTS
+    std_msgs
+    message_generation
+)
+
+add_message_files(
+    FILES
+    Acceleration3dWithConfidence.msg
+    AccelerationCartesian.msg
+    AccelerationChange.msg
+    AccelerationChangeIndication.msg
+    AccelerationComponent.msg
+    AccelerationConfidence.msg
+    AccelerationControl.msg
+    AccelerationMagnitude.msg
+    AccelerationMagnitudeValue.msg
+    AccelerationPolarWithZ.msg
+    AccelerationValue.msg
+    AccessTechnologyClass.msg
+    AccidentSubCauseCode.msg
+    ActionId.msg
+    ActionIdList.msg
+    AdverseWeatherConditionAdhesionSubCauseCode.msg
+    AdverseWeatherConditionExtremeWeatherConditionSubCauseCode.msg
+    AdverseWeatherConditionPrecipitationSubCauseCode.msg
+    AdverseWeatherConditionVisibilitySubCauseCode.msg
+    AirHumidity.msg
+    Altitude.msg
+    AltitudeConfidence.msg
+    AltitudeValue.msg
+    AngleConfidence.msg
+    AngularAccelerationConfidence.msg
+    AngularSpeedConfidence.msg
+    AxlesCount.msg
+    BarometricPressure.msg
+    BasicContainer.msg
+    BogiesCount.msg
+    CardinalNumber1B.msg
+    CardinalNumber3b.msg
+    CartesianAngle.msg
+    CartesianAngleValue.msg
+    CartesianAngularAccelerationComponent.msg
+    CartesianAngularAccelerationComponentValue.msg
+    CartesianAngularVelocityComponent.msg
+    CartesianAngularVelocityComponentValue.msg
+    CartesianCoordinate.msg
+    CartesianCoordinateLarge.msg
+    CartesianCoordinateSmall.msg
+    CartesianCoordinateWithConfidence.msg
+    CartesianPosition3d.msg
+    CartesianPosition3dWithConfidence.msg
+    CauseCode.msg
+    CauseCodeChoice.msg
+    CauseCodeType.msg
+    CauseCodeV2.msg
+    CenDsrcTollingZone.msg
+    CenDsrcTollingZoneID.msg
+    CircularShape.msg
+    ClosedLanes.msg
+    ClusterBreakupInfo.msg
+    ClusterBreakupReason.msg
+    ClusterJoinInfo.msg
+    ClusterLeaveInfo.msg
+    ClusterLeaveReason.msg
+    CollisionRiskSubCauseCode.msg
+    ConfidenceLevel.msg
+    CoordinateConfidence.msg
+    CorrelationCellValue.msg
+    CorrelationColumn.msg
+    Curvature.msg
+    CurvatureCalculationMode.msg
+    CurvatureConfidence.msg
+    CurvatureValue.msg
+    DangerousEndOfQueueSubCauseCode.msg
+    DangerousGoodsBasic.msg
+    DangerousGoodsExtended.msg
+    DangerousGoodsExtendedCompanyName.msg
+    DangerousGoodsExtendedElevatedTemperature.msg
+    DangerousGoodsExtendedEmergencyActionCode.msg
+    DangerousGoodsExtendedLimitedQuantity.msg
+    DangerousGoodsExtendedTunnelsRestricted.msg
+    DangerousGoodsExtendedUnNumber.msg
+    DangerousSituationSubCauseCode.msg
+    DeltaAltitude.msg
+    DeltaLatitude.msg
+    DeltaLongitude.msg
+    DeltaReferencePosition.msg
+    DeltaTimeMilliSecondPositive.msg
+    DeltaTimeMilliSecondSigned.msg
+    DeltaTimeQuarterSecond.msg
+    DeltaTimeSecond.msg
+    DeltaTimeTenthOfSecond.msg
+    DigitalMap.msg
+    Direction.msg
+    DriveDirection.msg
+    DrivingLaneStatus.msg
+    EllipticalShape.msg
+    EmbarkationStatus.msg
+    EmergencyPriority.msg
+    EmergencyVehicleApproachingSubCauseCode.msg
+    EnergyStorageType.msg
+    EuVehicleCategoryCode.msg
+    EuVehicleCategoryL.msg
+    EuVehicleCategoryM.msg
+    EuVehicleCategoryN.msg
+    EuVehicleCategoryO.msg
+    EulerAnglesWithConfidence.msg
+    EventHistory.msg
+    EventPoint.msg
+    EventZone.msg
+    Ext1.msg
+    Ext1Content.msg
+    Ext2.msg
+    Ext2Content.msg
+    Ext3.msg
+    ExteriorLights.msg
+    GeneralizedLanePosition.msg
+    GenerationDeltaTime.msg
+    HardShoulderStatus.msg
+    HazardousLocationAnimalOnTheRoadSubCauseCode.msg
+    HazardousLocationDangerousCurveSubCauseCode.msg
+    HazardousLocationObstacleOnTheRoadSubCauseCode.msg
+    HazardousLocationSurfaceConditionSubCauseCode.msg
+    Heading.msg
+    HeadingChangeIndication.msg
+    HeadingConfidence.msg
+    HeadingValue.msg
+    HeightLonCarr.msg
+    HumanPresenceOnTheRoadSubCauseCode.msg
+    HumanProblemSubCauseCode.msg
+    Identifier1B.msg
+    Identifier2B.msg
+    InformationQuality.msg
+    InterferenceManagementChannel.msg
+    InterferenceManagementChannelCentreFrequency.msg
+    InterferenceManagementChannelChannelWidth.msg
+    InterferenceManagementChannelExponent.msg
+    InterferenceManagementInfo.msg
+    InterferenceManagementInfoPerChannel.msg
+    InterferenceManagementZone.msg
+    InterferenceManagementZoneDefinition.msg
+    InterferenceManagementZoneType.msg
+    InterferenceManagementZones.msg
+    IntersectionReferenceId.msg
+    Iso3833VehicleType.msg
+    ItineraryPath.msg
+    ItsPduHeader.msg
+    LanePosition.msg
+    LanePositionAndType.msg
+    LaneType.msg
+    LaneWidth.msg
+    LateralAcceleration.msg
+    LateralAccelerationValue.msg
+    Latitude.msg
+    LightBarSirenInUse.msg
+    Longitude.msg
+    LongitudinalAcceleration.msg
+    LongitudinalAccelerationValue.msg
+    LongitudinalLanePosition.msg
+    LongitudinalLanePositionConfidence.msg
+    LongitudinalLanePositionValue.msg
+    LowerTriangularPositiveSemidefiniteMatrices.msg
+    LowerTriangularPositiveSemidefiniteMatrix.msg
+    LowerTriangularPositiveSemidefiniteMatrixColumns.msg
+    MapPosition.msg
+    MapReference.msg
+    MatrixIncludedComponents.msg
+    MessageId.msg
+    MessageRateHz.msg
+    MessageRateHzExponent.msg
+    MessageRateHzMantissa.msg
+    MessageSegmentationInfo.msg
+    MitigationForTechnologies.msg
+    MitigationPerTechnologyClass.msg
+    MitigationPerTechnologyClassDmcToffLimit.msg
+    MitigationPerTechnologyClassDmcTonLimit.msg
+    MitigationPerTechnologyClassLowDutyCycle.msg
+    MitigationPerTechnologyClassPowerReduction.msg
+    NumberOfOccupants.msg
+    ObjectClass.msg
+    ObjectClassDescription.msg
+    ObjectClassWithConfidence.msg
+    ObjectDimension.msg
+    ObjectDimensionConfidence.msg
+    ObjectDimensionValue.msg
+    ObjectFace.msg
+    ObjectPerceptionQuality.msg
+    OpeningDaysHours.msg
+    OrdinalNumber1B.msg
+    OrdinalNumber3b.msg
+    OtherSubClass.msg
+    Path.msg
+    PathDeltaTime.msg
+    PathHistory.msg
+    PathPoint.msg
+    PathPointPredicted.msg
+    PathPredicted.msg
+    PerceivedObject.msg
+    PerceivedObjectDeltaTimeMilliSecondSignedObjectAge.msg
+    PerformanceClass.msg
+    PhoneNumber.msg
+    PolygonalShape.msg
+    PosCentMass.msg
+    PosConfidenceEllipse.msg
+    PosFrontAx.msg
+    PosLonCarr.msg
+    PosPillar.msg
+    PositionConfidenceEllipse.msg
+    PositionOfOccupants.msg
+    PositionOfPillars.msg
+    PositioningSolutionType.msg
+    PostCrashSubCauseCode.msg
+    PrecipitationIntensity.msg
+    ProtectedCommunicationZone.msg
+    ProtectedCommunicationZonesRSU.msg
+    ProtectedZoneId.msg
+    ProtectedZoneRadius.msg
+    ProtectedZoneType.msg
+    PtActivation.msg
+    PtActivationData.msg
+    PtActivationType.msg
+    RadialShape.msg
+    RadialShapeDetails.msg
+    RadialShapes.msg
+    RadialShapesList.msg
+    RailwayLevelCrossingSubCauseCode.msg
+    RectangularShape.msg
+    ReferencePosition.msg
+    ReferencePositionWithConfidence.msg
+    RelevanceDistance.msg
+    RelevanceTrafficDirection.msg
+    RequestResponseIndication.msg
+    RescueAndRecoveryWorkInProgressSubCauseCode.msg
+    RestrictedTypes.msg
+    RoadSegmentReferenceId.msg
+    RoadType.msg
+    RoadworksSubCauseCode.msg
+    SafeDistanceIndication.msg
+    SafeDistanceIndicator.msg
+    SemiAxisLength.msg
+    SensorType.msg
+    SequenceNumber.msg
+    SequenceOfCartesianPosition3d.msg
+    SequenceOfIdentifier1B.msg
+    SequenceOfSafeDistanceIndication.msg
+    SequenceOfTrajectoryInterceptionIndication.msg
+    Shape.msg
+    SignalViolationSubCauseCode.msg
+    SlowVehicleSubCauseCode.msg
+    SpecialTransportType.msg
+    Speed.msg
+    SpeedConfidence.msg
+    SpeedLimit.msg
+    SpeedValue.msg
+    StabilityChangeIndication.msg
+    StabilityLossProbability.msg
+    StandardLength12b.msg
+    StandardLength1B.msg
+    StandardLength2B.msg
+    StandardLength3b.msg
+    StandardLength9b.msg
+    StationId.msg
+    StationType.msg
+    StationarySince.msg
+    StationaryVehicleSubCauseCode.msg
+    SteeringWheelAngle.msg
+    SteeringWheelAngleConfidence.msg
+    SteeringWheelAngleValue.msg
+    SubCauseCodeType.msg
+    Temperature.msg
+    TimestampIts.msg
+    Traces.msg
+    TrafficConditionSubCauseCode.msg
+    TrafficDirection.msg
+    TrafficIslandPosition.msg
+    TrafficParticipantType.msg
+    TrafficRule.msg
+    TrailerData.msg
+    TrailerPresenceInformation.msg
+    TrajectoryInterceptionConfidence.msg
+    TrajectoryInterceptionIndication.msg
+    TrajectoryInterceptionProbability.msg
+    TransmissionInterval.msg
+    TurningDirection.msg
+    TurningRadius.msg
+    VDS.msg
+    ValidityDuration.msg
+    VarLengthNumber.msg
+    VarLengthNumberContent.msg
+    VehicleBreakdownSubCauseCode.msg
+    VehicleHeight.msg
+    VehicleIdentification.msg
+    VehicleLength.msg
+    VehicleLengthConfidenceIndication.msg
+    VehicleLengthV2.msg
+    VehicleLengthValue.msg
+    VehicleMass.msg
+    VehicleRole.msg
+    VehicleWidth.msg
+    Velocity3dWithConfidence.msg
+    VelocityCartesian.msg
+    VelocityComponent.msg
+    VelocityComponentValue.msg
+    VelocityPolarWithZ.msg
+    VerticalAcceleration.msg
+    VerticalAccelerationValue.msg
+    VruClusterInformation.msg
+    VruClusterProfiles.msg
+    VruDeviceUsage.msg
+    VruEnvironment.msg
+    VruExteriorLights.msg
+    VruMovementControl.msg
+    VruProfileAndSubprofile.msg
+    VruSizeClass.msg
+    VruSpecificExteriorLights.msg
+    VruSubProfileAnimal.msg
+    VruSubProfileBicyclist.msg
+    VruSubProfileMotorcyclist.msg
+    VruSubProfilePedestrian.msg
+    WMInumber.msg
+    Wgs84Angle.msg
+    Wgs84AngleConfidence.msg
+    Wgs84AngleValue.msg
+    WheelBaseVehicle.msg
+    WrongWayDrivingSubCauseCode.msg
+    YawRate.msg
+    YawRateConfidence.msg
+    YawRateValue.msg
+)
+
+generate_messages(
+    DEPENDENCIES
+    std_msgs
+)
+
+catkin_package(
+    CATKIN_DEPENDS message_runtime 
+)
+
+add_library(${PROJECT_NAME} INTERFACE)
+
+add_dependencies(${PROJECT_NAME} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS}) 
+
+export(TARGETS ${PROJECT_NAME} FILE ${PROJECT_NAME}.cmake)
