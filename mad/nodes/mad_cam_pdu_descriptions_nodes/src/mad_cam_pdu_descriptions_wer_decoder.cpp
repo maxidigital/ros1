@@ -58,12 +58,12 @@ namespace wind
         // Field name: protocol_version
         // Integer
         // UINT8  min(0) max(255) span(256) datatype(UInt8)
-        uint8_t* _tmp_17500 = (uint8_t*) buffer++;
-        __aux64__ = *_tmp_17500;
+        uint8_t* _tmp_1 = (uint8_t*) buffer++;
+        __aux64__ = *_tmp_1;
         ros->hheader.protocol_version.value = __aux64__;
         
         if(debug) {
-            logger->debug() << "|\033[38;5;94m015613\033[0m| " << tools::getTypeName(ros->hheader.protocol_version.value) << 
+            logger->debug() << "|\033[38;5;94m000000\033[0m| " << tools::getTypeName(ros->hheader.protocol_version.value) << 
                          " hheader.protocol_version.value: " << static_cast<int>(ros->hheader.protocol_version.value);
         }
         
@@ -81,12 +81,12 @@ namespace wind
         // Field name: message_id
         // Integer
         // UINT8  min(0) max(255) span(256) datatype(UInt8)
-        uint8_t* _tmp_17501 = (uint8_t*) buffer++;
-        __aux64__ = *_tmp_17501;
+        uint8_t* _tmp_2 = (uint8_t*) buffer++;
+        __aux64__ = *_tmp_2;
         ros->hheader.message_id.value = __aux64__;
         
         if(debug) {
-            logger->debug() << "|\033[38;5;94m015614\033[0m| " << tools::getTypeName(ros->hheader.message_id.value) << 
+            logger->debug() << "|\033[38;5;94m000001\033[0m| " << tools::getTypeName(ros->hheader.message_id.value) << 
                          " hheader.message_id.value: " << static_cast<int>(ros->hheader.message_id.value);
         }
         
@@ -104,12 +104,12 @@ namespace wind
         // Field name: station_id
         // Integer
         // UINT32  min(0) max(4294967295) span(4294967296) datatype(UInt32)
-        uint32_t* _tmp_17502 = (uint32_t*) buffer; buffer += 4;
-        __aux64__ = *_tmp_17502;
+        uint32_t* _tmp_3 = (uint32_t*) buffer; buffer += 4;
+        __aux64__ = *_tmp_3;
         ros->hheader.station_id.value = __aux64__;
         
         if(debug) {
-            logger->debug() << "|\033[38;5;94m015615\033[0m| " << tools::getTypeName(ros->hheader.station_id.value) << 
+            logger->debug() << "|\033[38;5;94m000002\033[0m| " << tools::getTypeName(ros->hheader.station_id.value) << 
                          " hheader.station_id.value: " << ros->hheader.station_id.value;
         }
         
@@ -132,12 +132,12 @@ namespace wind
         // Field name: generation_delta_time
         // Integer
         // UINT16  min(0) max(65535) span(65536) datatype(UInt16)
-        uint16_t* _tmp_17503 = (uint16_t*) buffer; buffer += 2;
-        __aux64__ = *_tmp_17503;
+        uint16_t* _tmp_4 = (uint16_t*) buffer; buffer += 2;
+        __aux64__ = *_tmp_4;
         ros->cam.generation_delta_time.value = __aux64__;
         
         if(debug) {
-            logger->debug() << "|\033[38;5;94m015616\033[0m| " << tools::getTypeName(ros->cam.generation_delta_time.value) << 
+            logger->debug() << "|\033[38;5;94m000003\033[0m| " << tools::getTypeName(ros->cam.generation_delta_time.value) << 
                          " cam.generation_delta_time.value: " << ros->cam.generation_delta_time.value;
         }
         
@@ -159,25 +159,25 @@ namespace wind
                 //  lowFrequencyContainer   LowFrequencyContainer     OPTIONAL  
                 //  specialVehicleContainer SpecialVehicleContainer   OPTIONAL  
                 //  ...
-            uint8_t* _ext_flag_7664 = (uint8_t*) buffer++;  // Read ext flag from ros->cam.cam_parameters.
+            uint8_t* _ext_flag_1 = (uint8_t*) buffer++;  // Read ext flag from ros->cam.cam_parameters.
             
             if(debug) {
-                logger->debug() << "|\033[38;5;94m015617\033[0m| Reading ext flag from ros->cam.cam_parameters.: " << int(*_ext_flag_7664);
+                logger->debug() << "|\033[38;5;94m000004\033[0m| Reading ext flag from ros->cam.cam_parameters.: " << int(*_ext_flag_1);
             }
             
             if(*(buffer++)) { 
-                mad_cam_pdu_descriptions_msgs::LowFrequencyContainer _tmp_17504;
-                ros->cam.cam_parameters.low_frequency_container.push_back(_tmp_17504);
+                mad_cam_pdu_descriptions_msgs::LowFrequencyContainer _tmp_5;
+                ros->cam.cam_parameters.low_frequency_container.push_back(_tmp_5);
             
                 if(debug)
-                    logger->debug() << "|\033[38;5;94m015618\033[0m| ros->cam.cam_parameters.low_frequency_container " << tools::green("present");
+                    logger->debug() << "|\033[38;5;94m000005\033[0m| ros->cam.cam_parameters.low_frequency_container " << tools::green("present");
             }
             if(*(buffer++)) { 
-                mad_cam_pdu_descriptions_msgs::SpecialVehicleContainer _tmp_17505;
-                ros->cam.cam_parameters.special_vehicle_container.push_back(_tmp_17505);
+                mad_cam_pdu_descriptions_msgs::SpecialVehicleContainer _tmp_6;
+                ros->cam.cam_parameters.special_vehicle_container.push_back(_tmp_6);
             
                 if(debug)
-                    logger->debug() << "|\033[38;5;94m015619\033[0m| ros->cam.cam_parameters.special_vehicle_container " << tools::green("present");
+                    logger->debug() << "|\033[38;5;94m000006\033[0m| ros->cam.cam_parameters.special_vehicle_container " << tools::green("present");
             }
             
             // Field name: basic_container
@@ -185,22 +185,22 @@ namespace wind
                     //  stationType       StationType           
                     //  referencePosition ReferencePosition     
                     //  ...
-                uint8_t* _ext_flag_7665 = (uint8_t*) buffer++;  // Read ext flag from ros->cam.cam_parameters.basic_container.
+                uint8_t* _ext_flag_2 = (uint8_t*) buffer++;  // Read ext flag from ros->cam.cam_parameters.basic_container.
                 
                 if(debug) {
-                    logger->debug() << "|\033[38;5;94m015620\033[0m| Reading ext flag from ros->cam.cam_parameters.basic_container.: " << int(*_ext_flag_7665);
+                    logger->debug() << "|\033[38;5;94m000007\033[0m| Reading ext flag from ros->cam.cam_parameters.basic_container.: " << int(*_ext_flag_2);
                 }
                 
                 
                 // Field name: station_type
                 // Integer
                 // UINT8  min(0) max(255) span(256) datatype(UInt8)
-                uint8_t* _tmp_17506 = (uint8_t*) buffer++;
-                __aux64__ = *_tmp_17506;
+                uint8_t* _tmp_7 = (uint8_t*) buffer++;
+                __aux64__ = *_tmp_7;
                 ros->cam.cam_parameters.basic_container.station_type.value = __aux64__;
                 
                 if(debug) {
-                    logger->debug() << "|\033[38;5;94m015621\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.basic_container.station_type.value) << 
+                    logger->debug() << "|\033[38;5;94m000008\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.basic_container.station_type.value) << 
                                  " cam.cam_parameters.basic_container.station_type.value: " << static_cast<int>(ros->cam.cam_parameters.basic_container.station_type.value);
                 }
                 
@@ -226,8 +226,8 @@ namespace wind
                     // Real
                     // Double
                     // DOUBLE  min(-900000000) max(900000001) span(1800000002) scaleDivisor(1.0E7) dataType(Double)
-                    uint32_t* _tmp_17507 = (uint32_t*) buffer; buffer += 4;
-                    ros->cam.cam_parameters.basic_container.reference_position.latitude.value = *_tmp_17507;
+                    uint32_t* _tmp_8 = (uint32_t*) buffer; buffer += 4;
+                    ros->cam.cam_parameters.basic_container.reference_position.latitude.value = *_tmp_8;
                     ros->cam.cam_parameters.basic_container.reference_position.latitude.value += -900000000;
                     __aux64__ = ros->cam.cam_parameters.basic_container.reference_position.latitude.value;
                     ros->cam.cam_parameters.basic_container.reference_position.latitude.value /= 1.0E7;
@@ -244,7 +244,7 @@ namespace wind
                     }
                     
                     if(debug) {
-                        logger->debug() << "|\033[38;5;94m015622\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.basic_container.reference_position.latitude.value) << " cam.cam_parameters.basic_container.reference_position.latitude: " <<
+                        logger->debug() << "|\033[38;5;94m000009\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.basic_container.reference_position.latitude.value) << " cam.cam_parameters.basic_container.reference_position.latitude: " <<
                                      ros->cam.cam_parameters.basic_container.reference_position.latitude.value << " (" << __aux64__ << ")";
                     }
                     
@@ -252,8 +252,8 @@ namespace wind
                     // Real
                     // Double
                     // DOUBLE  min(-1800000000) max(1800000001) span(3600000002) scaleDivisor(1.0E7) dataType(Double)
-                    uint32_t* _tmp_17508 = (uint32_t*) buffer; buffer += 4;
-                    ros->cam.cam_parameters.basic_container.reference_position.longitude.value = *_tmp_17508;
+                    uint32_t* _tmp_9 = (uint32_t*) buffer; buffer += 4;
+                    ros->cam.cam_parameters.basic_container.reference_position.longitude.value = *_tmp_9;
                     ros->cam.cam_parameters.basic_container.reference_position.longitude.value += -1800000000;
                     __aux64__ = ros->cam.cam_parameters.basic_container.reference_position.longitude.value;
                     ros->cam.cam_parameters.basic_container.reference_position.longitude.value /= 1.0E7;
@@ -270,7 +270,7 @@ namespace wind
                     }
                     
                     if(debug) {
-                        logger->debug() << "|\033[38;5;94m015623\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.basic_container.reference_position.longitude.value) << " cam.cam_parameters.basic_container.reference_position.longitude: " <<
+                        logger->debug() << "|\033[38;5;94m000010\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.basic_container.reference_position.longitude.value) << " cam.cam_parameters.basic_container.reference_position.longitude: " <<
                                      ros->cam.cam_parameters.basic_container.reference_position.longitude.value << " (" << __aux64__ << ")";
                     }
                     
@@ -284,8 +284,8 @@ namespace wind
                         // Real
                         // Float
                         // FLOAT  min(0) max(4095) span(4096) scaleDivisor(100.0) dataType(Float)
-                        uint16_t* _tmp_17509 = (uint16_t*) buffer; buffer += 2;
-                        ros->cam.cam_parameters.basic_container.reference_position.position_confidence_ellipse.semi_major_confidence.value = *_tmp_17509;
+                        uint16_t* _tmp_10 = (uint16_t*) buffer; buffer += 2;
+                        ros->cam.cam_parameters.basic_container.reference_position.position_confidence_ellipse.semi_major_confidence.value = *_tmp_10;
                         __aux64__ = ros->cam.cam_parameters.basic_container.reference_position.position_confidence_ellipse.semi_major_confidence.value;
                         ros->cam.cam_parameters.basic_container.reference_position.position_confidence_ellipse.semi_major_confidence.value /= 100.0;
                         
@@ -301,7 +301,7 @@ namespace wind
                         }
                         
                         if(debug) {
-                            logger->debug() << "|\033[38;5;94m015624\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.basic_container.reference_position.position_confidence_ellipse.semi_major_confidence.value) << " cam.cam_parameters.basic_container.reference_position.position_confidence_ellipse.semi_major_confidence: " <<
+                            logger->debug() << "|\033[38;5;94m000011\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.basic_container.reference_position.position_confidence_ellipse.semi_major_confidence.value) << " cam.cam_parameters.basic_container.reference_position.position_confidence_ellipse.semi_major_confidence: " <<
                                          ros->cam.cam_parameters.basic_container.reference_position.position_confidence_ellipse.semi_major_confidence.value << " (" << __aux64__ << ")";
                         }
                         
@@ -309,8 +309,8 @@ namespace wind
                         // Real
                         // Float
                         // FLOAT  min(0) max(4095) span(4096) scaleDivisor(100.0) dataType(Float)
-                        uint16_t* _tmp_17510 = (uint16_t*) buffer; buffer += 2;
-                        ros->cam.cam_parameters.basic_container.reference_position.position_confidence_ellipse.semi_minor_confidence.value = *_tmp_17510;
+                        uint16_t* _tmp_11 = (uint16_t*) buffer; buffer += 2;
+                        ros->cam.cam_parameters.basic_container.reference_position.position_confidence_ellipse.semi_minor_confidence.value = *_tmp_11;
                         __aux64__ = ros->cam.cam_parameters.basic_container.reference_position.position_confidence_ellipse.semi_minor_confidence.value;
                         ros->cam.cam_parameters.basic_container.reference_position.position_confidence_ellipse.semi_minor_confidence.value /= 100.0;
                         
@@ -326,7 +326,7 @@ namespace wind
                         }
                         
                         if(debug) {
-                            logger->debug() << "|\033[38;5;94m015625\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.basic_container.reference_position.position_confidence_ellipse.semi_minor_confidence.value) << " cam.cam_parameters.basic_container.reference_position.position_confidence_ellipse.semi_minor_confidence: " <<
+                            logger->debug() << "|\033[38;5;94m000012\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.basic_container.reference_position.position_confidence_ellipse.semi_minor_confidence.value) << " cam.cam_parameters.basic_container.reference_position.position_confidence_ellipse.semi_minor_confidence: " <<
                                          ros->cam.cam_parameters.basic_container.reference_position.position_confidence_ellipse.semi_minor_confidence.value << " (" << __aux64__ << ")";
                         }
                         
@@ -334,8 +334,8 @@ namespace wind
                         // Real
                         // Float
                         // FLOAT  min(0) max(3601) span(3602) scaleDivisor(10.0) dataType(Float)
-                        uint16_t* _tmp_17511 = (uint16_t*) buffer; buffer += 2;
-                        ros->cam.cam_parameters.basic_container.reference_position.position_confidence_ellipse.semi_major_orientation.value = *_tmp_17511;
+                        uint16_t* _tmp_12 = (uint16_t*) buffer; buffer += 2;
+                        ros->cam.cam_parameters.basic_container.reference_position.position_confidence_ellipse.semi_major_orientation.value = *_tmp_12;
                         __aux64__ = ros->cam.cam_parameters.basic_container.reference_position.position_confidence_ellipse.semi_major_orientation.value;
                         ros->cam.cam_parameters.basic_container.reference_position.position_confidence_ellipse.semi_major_orientation.value /= 10.0;
                         
@@ -351,7 +351,7 @@ namespace wind
                         }
                         
                         if(debug) {
-                            logger->debug() << "|\033[38;5;94m015626\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.basic_container.reference_position.position_confidence_ellipse.semi_major_orientation.value) << " cam.cam_parameters.basic_container.reference_position.position_confidence_ellipse.semi_major_orientation: " <<
+                            logger->debug() << "|\033[38;5;94m000013\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.basic_container.reference_position.position_confidence_ellipse.semi_major_orientation.value) << " cam.cam_parameters.basic_container.reference_position.position_confidence_ellipse.semi_major_orientation: " <<
                                          ros->cam.cam_parameters.basic_container.reference_position.position_confidence_ellipse.semi_major_orientation.value << " (" << __aux64__ << ")";
                         }
                     
@@ -364,8 +364,8 @@ namespace wind
                         // Real
                         // Float
                         // FLOAT  min(-100000) max(800001) span(900002) scaleDivisor(100.0) dataType(Float)
-                        uint32_t* _tmp_17512 = (uint32_t*) buffer; buffer += 4;
-                        ros->cam.cam_parameters.basic_container.reference_position.altitude.altitude_value.value = *_tmp_17512;
+                        uint32_t* _tmp_13 = (uint32_t*) buffer; buffer += 4;
+                        ros->cam.cam_parameters.basic_container.reference_position.altitude.altitude_value.value = *_tmp_13;
                         ros->cam.cam_parameters.basic_container.reference_position.altitude.altitude_value.value += -100000;
                         __aux64__ = ros->cam.cam_parameters.basic_container.reference_position.altitude.altitude_value.value;
                         ros->cam.cam_parameters.basic_container.reference_position.altitude.altitude_value.value /= 100.0;
@@ -382,15 +382,15 @@ namespace wind
                         }
                         
                         if(debug) {
-                            logger->debug() << "|\033[38;5;94m015627\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.basic_container.reference_position.altitude.altitude_value.value) << " cam.cam_parameters.basic_container.reference_position.altitude.altitude_value: " <<
+                            logger->debug() << "|\033[38;5;94m000014\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.basic_container.reference_position.altitude.altitude_value.value) << " cam.cam_parameters.basic_container.reference_position.altitude.altitude_value: " <<
                                          ros->cam.cam_parameters.basic_container.reference_position.altitude.altitude_value.value << " (" << __aux64__ << ")";
                         }
                         
                         // Field name: altitude_confidence
                         // Enumerated
                         // INT32  min(0) max(15) span(16) datatype(Int32)
-                        uint8_t* _tmp_17513 = (uint8_t*) buffer++;
-                        __aux64__ = *_tmp_17513;
+                        uint8_t* _tmp_14 = (uint8_t*) buffer++;
+                        __aux64__ = *_tmp_14;
                         __aux64__ += 0;
                         ros->cam.cam_parameters.basic_container.reference_position.altitude.altitude_confidence.value = __aux64__;
                         // ******************* MIN validator *******************
@@ -406,29 +406,29 @@ namespace wind
                         
                         
                         if(debug) {
-                            logger->debug() << "|\033[38;5;94m015628\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.basic_container.reference_position.altitude.altitude_confidence.value) << 
+                            logger->debug() << "|\033[38;5;94m000015\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.basic_container.reference_position.altitude.altitude_confidence.value) << 
                                          " cam.cam_parameters.basic_container.reference_position.altitude.altitude_confidence.value: " << static_cast<int>(ros->cam.cam_parameters.basic_container.reference_position.altitude.altitude_confidence.value);
                         }
-                if(*_ext_flag_7665) { // from ros->cam.cam_parameters.basic_container. 
-                    uint8_t* _tmp_17514 = (uint8_t*) buffer++;  // number of extensions
-                    bool _array_213[*_tmp_17514];
+                if(*_ext_flag_2) { // from ros->cam.cam_parameters.basic_container. 
+                    uint8_t* _tmp_15 = (uint8_t*) buffer++;  // number of extensions
+                    bool _array_1[*_tmp_15];
                     
                     if(debug)
-                        logger->debug() << "|\033[38;5;94m015629\033[0m| Reading number of exts from ros->cam.cam_parameters.basic_container.: " << static_cast<unsigned int>(*_tmp_17514);
+                        logger->debug() << "|\033[38;5;94m000016\033[0m| Reading number of exts from ros->cam.cam_parameters.basic_container.: " << static_cast<unsigned int>(*_tmp_15);
                     
                     // Extensions bytemap
-                    for(int i = 0; i < *_tmp_17514; i++)
-                        _array_213[i] = (*buffer++) != 0;
+                    for(int i = 0; i < *_tmp_15; i++)
+                        _array_1[i] = (*buffer++) != 0;
                     
                     // Discarding unknown OpenType containers
-                    for(int i = 0; i < *_tmp_17514; i++) {
-                        uint16_t* _tmp_17515 = (uint16_t*)buffer;  // OpenType length
+                    for(int i = 0; i < *_tmp_15; i++) {
+                        uint16_t* _tmp_16 = (uint16_t*)buffer;  // OpenType length
                         buffer += 2;
                     
                         if(debug) {
                         }
                     
-                        for(int i = 0; i < *_tmp_17515; i++)
+                        for(int i = 0; i < *_tmp_16; i++)
                             buffer++;
                     }
                     
@@ -436,19 +436,19 @@ namespace wind
             
             // Field name: high_frequency_container
             // Choice
-            uint8_t* _ext_flag_7673 = (uint8_t*)buffer++; // ext flag
+            uint8_t* _ext_flag_10 = (uint8_t*)buffer++; // ext flag
             
                // #0  basicVehicleContainerHighFrequency   BasicVehicleContainerHighFrequency   
                // #1  rsuContainerHighFrequency   RSUContainerHighFrequency   
                // #2  madVehicleContainerHighFrequency   MADVehicleContainerHighFrequency   (ext field)
-            uint8_t _choice_404 = *(buffer++);
+            uint8_t _choice_1 = *(buffer++);
             
-            if(*_ext_flag_7673)
-                _choice_404 += 1 + 1; // Ext addition
+            if(*_ext_flag_10)
+                _choice_1 += 1 + 1; // Ext addition
             
-            if(_choice_404 == 0) {
-                mad_cam_pdu_descriptions_msgs::BasicVehicleContainerHighFrequency _tmp_17516;
-                ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency.push_back(_tmp_17516);
+            if(_choice_1 == 0) {
+                mad_cam_pdu_descriptions_msgs::BasicVehicleContainerHighFrequency _tmp_17;
+                ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency.push_back(_tmp_17);
             
                     // BasicVehicleContainerHighFrequency  SEQUENCE
                         //  heading                  Heading                      
@@ -468,53 +468,53 @@ namespace wind
                         //  performanceClass         PerformanceClass           OPTIONAL  
                         //  cenDsrcTollingZone       CenDsrcTollingZone         OPTIONAL  
                     if(*(buffer++)) { 
-                        its_container_v2_its_container_msgs::AccelerationControl _tmp_17517;
-                        ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].acceleration_control.push_back(_tmp_17517);
+                        its_container_v2_its_container_msgs::AccelerationControl _tmp_18;
+                        ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].acceleration_control.push_back(_tmp_18);
                     
                         if(debug)
-                            logger->debug() << "|\033[38;5;94m015630\033[0m| ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].acceleration_control " << tools::green("present");
+                            logger->debug() << "|\033[38;5;94m000017\033[0m| ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].acceleration_control " << tools::green("present");
                     }
                     if(*(buffer++)) { 
-                        its_container_v2_its_container_msgs::LanePosition _tmp_17518;
-                        ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].lane_position.push_back(_tmp_17518);
+                        its_container_v2_its_container_msgs::LanePosition _tmp_19;
+                        ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].lane_position.push_back(_tmp_19);
                     
                         if(debug)
-                            logger->debug() << "|\033[38;5;94m015631\033[0m| ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].lane_position " << tools::green("present");
+                            logger->debug() << "|\033[38;5;94m000018\033[0m| ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].lane_position " << tools::green("present");
                     }
                     if(*(buffer++)) { 
-                        its_container_v2_its_container_msgs::SteeringWheelAngle _tmp_17519;
-                        ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].steering_wheel_angle.push_back(_tmp_17519);
+                        its_container_v2_its_container_msgs::SteeringWheelAngle _tmp_20;
+                        ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].steering_wheel_angle.push_back(_tmp_20);
                     
                         if(debug)
-                            logger->debug() << "|\033[38;5;94m015632\033[0m| ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].steering_wheel_angle " << tools::green("present");
+                            logger->debug() << "|\033[38;5;94m000019\033[0m| ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].steering_wheel_angle " << tools::green("present");
                     }
                     if(*(buffer++)) { 
-                        its_container_v2_its_container_msgs::LateralAcceleration _tmp_17520;
-                        ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].lateral_acceleration.push_back(_tmp_17520);
+                        its_container_v2_its_container_msgs::LateralAcceleration _tmp_21;
+                        ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].lateral_acceleration.push_back(_tmp_21);
                     
                         if(debug)
-                            logger->debug() << "|\033[38;5;94m015633\033[0m| ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].lateral_acceleration " << tools::green("present");
+                            logger->debug() << "|\033[38;5;94m000020\033[0m| ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].lateral_acceleration " << tools::green("present");
                     }
                     if(*(buffer++)) { 
-                        its_container_v2_its_container_msgs::VerticalAcceleration _tmp_17521;
-                        ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vertical_acceleration.push_back(_tmp_17521);
+                        its_container_v2_its_container_msgs::VerticalAcceleration _tmp_22;
+                        ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vertical_acceleration.push_back(_tmp_22);
                     
                         if(debug)
-                            logger->debug() << "|\033[38;5;94m015634\033[0m| ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vertical_acceleration " << tools::green("present");
+                            logger->debug() << "|\033[38;5;94m000021\033[0m| ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vertical_acceleration " << tools::green("present");
                     }
                     if(*(buffer++)) { 
-                        its_container_v2_its_container_msgs::PerformanceClass _tmp_17522;
-                        ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].performance_class.push_back(_tmp_17522);
+                        its_container_v2_its_container_msgs::PerformanceClass _tmp_23;
+                        ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].performance_class.push_back(_tmp_23);
                     
                         if(debug)
-                            logger->debug() << "|\033[38;5;94m015635\033[0m| ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].performance_class " << tools::green("present");
+                            logger->debug() << "|\033[38;5;94m000022\033[0m| ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].performance_class " << tools::green("present");
                     }
                     if(*(buffer++)) { 
-                        its_container_v2_its_container_msgs::CenDsrcTollingZone _tmp_17523;
-                        ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].cen_dsrc_tolling_zone.push_back(_tmp_17523);
+                        its_container_v2_its_container_msgs::CenDsrcTollingZone _tmp_24;
+                        ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].cen_dsrc_tolling_zone.push_back(_tmp_24);
                     
                         if(debug)
-                            logger->debug() << "|\033[38;5;94m015636\033[0m| ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].cen_dsrc_tolling_zone " << tools::green("present");
+                            logger->debug() << "|\033[38;5;94m000023\033[0m| ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].cen_dsrc_tolling_zone " << tools::green("present");
                     }
                     
                     // Field name: heading
@@ -526,8 +526,8 @@ namespace wind
                         // Real
                         // Float
                         // FLOAT  min(0) max(3601) span(3602) scaleDivisor(10.0) dataType(Float)
-                        uint16_t* _tmp_17524 = (uint16_t*) buffer; buffer += 2;
-                        ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].heading.heading_value.value = *_tmp_17524;
+                        uint16_t* _tmp_25 = (uint16_t*) buffer; buffer += 2;
+                        ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].heading.heading_value.value = *_tmp_25;
                         __aux64__ = ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].heading.heading_value.value;
                         ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].heading.heading_value.value /= 10.0;
                         
@@ -543,7 +543,7 @@ namespace wind
                         }
                         
                         if(debug) {
-                            logger->debug() << "|\033[38;5;94m015637\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].heading.heading_value.value) << " cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].heading.heading_value: " <<
+                            logger->debug() << "|\033[38;5;94m000024\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].heading.heading_value.value) << " cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].heading.heading_value: " <<
                                          ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].heading.heading_value.value << " (" << __aux64__ << ")";
                         }
                         
@@ -551,8 +551,8 @@ namespace wind
                         // Real
                         // Float
                         // FLOAT  min(1) max(127) span(127) scaleDivisor(10.0) dataType(Float)
-                        uint8_t* _tmp_17525 = (uint8_t*) buffer++;
-                        ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].heading.heading_confidence.value = *_tmp_17525;
+                        uint8_t* _tmp_26 = (uint8_t*) buffer++;
+                        ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].heading.heading_confidence.value = *_tmp_26;
                         ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].heading.heading_confidence.value += 1;
                         __aux64__ = ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].heading.heading_confidence.value;
                         ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].heading.heading_confidence.value /= 10.0;
@@ -569,7 +569,7 @@ namespace wind
                         }
                         
                         if(debug) {
-                            logger->debug() << "|\033[38;5;94m015638\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].heading.heading_confidence.value) << " cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].heading.heading_confidence: " <<
+                            logger->debug() << "|\033[38;5;94m000025\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].heading.heading_confidence.value) << " cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].heading.heading_confidence: " <<
                                          ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].heading.heading_confidence.value << " (" << __aux64__ << ")";
                         }
                     
@@ -582,8 +582,8 @@ namespace wind
                         // Real
                         // Float
                         // FLOAT  min(0) max(16383) span(16384) scaleDivisor(100.0) dataType(Float)
-                        uint16_t* _tmp_17526 = (uint16_t*) buffer; buffer += 2;
-                        ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].speed.speed_value.value = *_tmp_17526;
+                        uint16_t* _tmp_27 = (uint16_t*) buffer; buffer += 2;
+                        ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].speed.speed_value.value = *_tmp_27;
                         __aux64__ = ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].speed.speed_value.value;
                         ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].speed.speed_value.value /= 100.0;
                         
@@ -599,7 +599,7 @@ namespace wind
                         }
                         
                         if(debug) {
-                            logger->debug() << "|\033[38;5;94m015639\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].speed.speed_value.value) << " cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].speed.speed_value: " <<
+                            logger->debug() << "|\033[38;5;94m000026\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].speed.speed_value.value) << " cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].speed.speed_value: " <<
                                          ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].speed.speed_value.value << " (" << __aux64__ << ")";
                         }
                         
@@ -607,8 +607,8 @@ namespace wind
                         // Real
                         // Float
                         // FLOAT  min(1) max(127) span(127) scaleDivisor(100.0) dataType(Float)
-                        uint8_t* _tmp_17527 = (uint8_t*) buffer++;
-                        ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].speed.speed_confidence.value = *_tmp_17527;
+                        uint8_t* _tmp_28 = (uint8_t*) buffer++;
+                        ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].speed.speed_confidence.value = *_tmp_28;
                         ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].speed.speed_confidence.value += 1;
                         __aux64__ = ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].speed.speed_confidence.value;
                         ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].speed.speed_confidence.value /= 100.0;
@@ -625,15 +625,15 @@ namespace wind
                         }
                         
                         if(debug) {
-                            logger->debug() << "|\033[38;5;94m015640\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].speed.speed_confidence.value) << " cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].speed.speed_confidence: " <<
+                            logger->debug() << "|\033[38;5;94m000027\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].speed.speed_confidence.value) << " cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].speed.speed_confidence: " <<
                                          ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].speed.speed_confidence.value << " (" << __aux64__ << ")";
                         }
                     
                     // Field name: drive_direction
                     // Enumerated
                     // INT32  min(0) max(2) span(3) datatype(Int32)
-                    uint8_t* _tmp_17528 = (uint8_t*) buffer++;
-                    __aux64__ = *_tmp_17528;
+                    uint8_t* _tmp_29 = (uint8_t*) buffer++;
+                    __aux64__ = *_tmp_29;
                     __aux64__ += 0;
                     ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].drive_direction.value = __aux64__;
                     // ******************* MIN validator *******************
@@ -649,7 +649,7 @@ namespace wind
                     
                     
                     if(debug) {
-                        logger->debug() << "|\033[38;5;94m015641\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].drive_direction.value) << 
+                        logger->debug() << "|\033[38;5;94m000028\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].drive_direction.value) << 
                                      " cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].drive_direction.value: " << static_cast<int>(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].drive_direction.value);
                     }
                     
@@ -662,8 +662,8 @@ namespace wind
                         // Real
                         // Float
                         // FLOAT  min(1) max(1023) span(1023) scaleDivisor(10.0) dataType(Float)
-                        uint16_t* _tmp_17529 = (uint16_t*) buffer; buffer += 2;
-                        ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vehicle_length.vehicle_length_value.value = *_tmp_17529;
+                        uint16_t* _tmp_30 = (uint16_t*) buffer; buffer += 2;
+                        ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vehicle_length.vehicle_length_value.value = *_tmp_30;
                         ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vehicle_length.vehicle_length_value.value += 1;
                         __aux64__ = ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vehicle_length.vehicle_length_value.value;
                         ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vehicle_length.vehicle_length_value.value /= 10.0;
@@ -680,15 +680,15 @@ namespace wind
                         }
                         
                         if(debug) {
-                            logger->debug() << "|\033[38;5;94m015642\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vehicle_length.vehicle_length_value.value) << " cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vehicle_length.vehicle_length_value: " <<
+                            logger->debug() << "|\033[38;5;94m000029\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vehicle_length.vehicle_length_value.value) << " cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vehicle_length.vehicle_length_value: " <<
                                          ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vehicle_length.vehicle_length_value.value << " (" << __aux64__ << ")";
                         }
                         
                         // Field name: vehicle_length_confidence_indication
                         // Enumerated
                         // INT32  min(0) max(4) span(5) datatype(Int32)
-                        uint8_t* _tmp_17530 = (uint8_t*) buffer++;
-                        __aux64__ = *_tmp_17530;
+                        uint8_t* _tmp_31 = (uint8_t*) buffer++;
+                        __aux64__ = *_tmp_31;
                         __aux64__ += 0;
                         ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vehicle_length.vehicle_length_confidence_indication.value = __aux64__;
                         // ******************* MIN validator *******************
@@ -704,7 +704,7 @@ namespace wind
                         
                         
                         if(debug) {
-                            logger->debug() << "|\033[38;5;94m015643\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vehicle_length.vehicle_length_confidence_indication.value) << 
+                            logger->debug() << "|\033[38;5;94m000030\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vehicle_length.vehicle_length_confidence_indication.value) << 
                                          " cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vehicle_length.vehicle_length_confidence_indication.value: " << static_cast<int>(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vehicle_length.vehicle_length_confidence_indication.value);
                         }
                     
@@ -712,8 +712,8 @@ namespace wind
                     // Real
                     // Float
                     // FLOAT  min(1) max(62) span(62) scaleDivisor(10.0) dataType(Float)
-                    uint8_t* _tmp_17531 = (uint8_t*) buffer++;
-                    ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vehicle_width.value = *_tmp_17531;
+                    uint8_t* _tmp_32 = (uint8_t*) buffer++;
+                    ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vehicle_width.value = *_tmp_32;
                     ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vehicle_width.value += 1;
                     __aux64__ = ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vehicle_width.value;
                     ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vehicle_width.value /= 10.0;
@@ -730,7 +730,7 @@ namespace wind
                     }
                     
                     if(debug) {
-                        logger->debug() << "|\033[38;5;94m015644\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vehicle_width.value) << " cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vehicle_width: " <<
+                        logger->debug() << "|\033[38;5;94m000031\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vehicle_width.value) << " cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vehicle_width: " <<
                                      ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vehicle_width.value << " (" << __aux64__ << ")";
                     }
                     
@@ -743,8 +743,8 @@ namespace wind
                         // Real
                         // Float
                         // FLOAT  min(-160) max(161) span(322) scaleDivisor(10.0) dataType(Float)
-                        uint16_t* _tmp_17532 = (uint16_t*) buffer; buffer += 2;
-                        ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].longitudinal_acceleration.longitudinal_acceleration_value.value = *_tmp_17532;
+                        uint16_t* _tmp_33 = (uint16_t*) buffer; buffer += 2;
+                        ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].longitudinal_acceleration.longitudinal_acceleration_value.value = *_tmp_33;
                         ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].longitudinal_acceleration.longitudinal_acceleration_value.value += -160;
                         __aux64__ = ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].longitudinal_acceleration.longitudinal_acceleration_value.value;
                         ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].longitudinal_acceleration.longitudinal_acceleration_value.value /= 10.0;
@@ -761,7 +761,7 @@ namespace wind
                         }
                         
                         if(debug) {
-                            logger->debug() << "|\033[38;5;94m015645\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].longitudinal_acceleration.longitudinal_acceleration_value.value) << " cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].longitudinal_acceleration.longitudinal_acceleration_value: " <<
+                            logger->debug() << "|\033[38;5;94m000032\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].longitudinal_acceleration.longitudinal_acceleration_value.value) << " cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].longitudinal_acceleration.longitudinal_acceleration_value: " <<
                                          ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].longitudinal_acceleration.longitudinal_acceleration_value.value << " (" << __aux64__ << ")";
                         }
                         
@@ -769,8 +769,8 @@ namespace wind
                         // Real
                         // Float
                         // FLOAT  min(0) max(102) span(103) scaleDivisor(10.0) dataType(Float)
-                        uint8_t* _tmp_17533 = (uint8_t*) buffer++;
-                        ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].longitudinal_acceleration.longitudinal_acceleration_confidence.value = *_tmp_17533;
+                        uint8_t* _tmp_34 = (uint8_t*) buffer++;
+                        ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].longitudinal_acceleration.longitudinal_acceleration_confidence.value = *_tmp_34;
                         __aux64__ = ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].longitudinal_acceleration.longitudinal_acceleration_confidence.value;
                         ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].longitudinal_acceleration.longitudinal_acceleration_confidence.value /= 10.0;
                         
@@ -786,7 +786,7 @@ namespace wind
                         }
                         
                         if(debug) {
-                            logger->debug() << "|\033[38;5;94m015646\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].longitudinal_acceleration.longitudinal_acceleration_confidence.value) << " cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].longitudinal_acceleration.longitudinal_acceleration_confidence: " <<
+                            logger->debug() << "|\033[38;5;94m000033\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].longitudinal_acceleration.longitudinal_acceleration_confidence.value) << " cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].longitudinal_acceleration.longitudinal_acceleration_confidence: " <<
                                          ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].longitudinal_acceleration.longitudinal_acceleration_confidence.value << " (" << __aux64__ << ")";
                         }
                     
@@ -798,13 +798,13 @@ namespace wind
                         // Field name: curvature_value
                         // Integer
                         // INT16  min(-1023) max(1023) span(2047) datatype(Int16)
-                        uint16_t* _tmp_17534 = (uint16_t*) buffer; buffer += 2;
-                        __aux64__ = *_tmp_17534;
+                        uint16_t* _tmp_35 = (uint16_t*) buffer; buffer += 2;
+                        __aux64__ = *_tmp_35;
                         __aux64__ += -1023;
                         ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].curvature.curvature_value.value = __aux64__;
                         
                         if(debug) {
-                            logger->debug() << "|\033[38;5;94m015647\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].curvature.curvature_value.value) << 
+                            logger->debug() << "|\033[38;5;94m000034\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].curvature.curvature_value.value) << 
                                          " cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].curvature.curvature_value.value: " << ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].curvature.curvature_value.value;
                         }
                         
@@ -822,8 +822,8 @@ namespace wind
                         // Field name: curvature_confidence
                         // Enumerated
                         // INT32  min(0) max(7) span(8) datatype(Int32)
-                        uint8_t* _tmp_17535 = (uint8_t*) buffer++;
-                        __aux64__ = *_tmp_17535;
+                        uint8_t* _tmp_36 = (uint8_t*) buffer++;
+                        __aux64__ = *_tmp_36;
                         __aux64__ += 0;
                         ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].curvature.curvature_confidence.value = __aux64__;
                         // ******************* MIN validator *******************
@@ -839,21 +839,21 @@ namespace wind
                         
                         
                         if(debug) {
-                            logger->debug() << "|\033[38;5;94m015648\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].curvature.curvature_confidence.value) << 
+                            logger->debug() << "|\033[38;5;94m000035\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].curvature.curvature_confidence.value) << 
                                          " cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].curvature.curvature_confidence.value: " << static_cast<int>(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].curvature.curvature_confidence.value);
                         }
                     
                     // Field name: curvature_calculation_mode
                     // Enumerated
                     // INT32  min(0) max(2) span(3) datatype(Int32)
-                    uint8_t* _ext_flag_7685 = (uint8_t*) buffer++;  // Read ext flag from ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].curvature_calculation_mode.
+                    uint8_t* _ext_flag_22 = (uint8_t*) buffer++;  // Read ext flag from ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].curvature_calculation_mode.
                     
                     if(debug) {
-                        logger->debug() << "|\033[38;5;94m015649\033[0m| Reading ext flag from ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].curvature_calculation_mode.: " << int(*_ext_flag_7685);
+                        logger->debug() << "|\033[38;5;94m000036\033[0m| Reading ext flag from ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].curvature_calculation_mode.: " << int(*_ext_flag_22);
                     }
                     
-                    uint8_t* _tmp_17536 = (uint8_t*) buffer++;
-                    __aux64__ = *_tmp_17536;
+                    uint8_t* _tmp_37 = (uint8_t*) buffer++;
+                    __aux64__ = *_tmp_37;
                     __aux64__ += 0;
                     ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].curvature_calculation_mode.value = __aux64__;
                     // ******************* MIN validator *******************
@@ -869,7 +869,7 @@ namespace wind
                     
                     
                     if(debug) {
-                        logger->debug() << "|\033[38;5;94m015650\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].curvature_calculation_mode.value) << 
+                        logger->debug() << "|\033[38;5;94m000037\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].curvature_calculation_mode.value) << 
                                      " cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].curvature_calculation_mode.value: " << static_cast<int>(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].curvature_calculation_mode.value);
                     }
                     
@@ -882,8 +882,8 @@ namespace wind
                         // Real
                         // Float
                         // FLOAT  min(-32766) max(32767) span(65534) scaleDivisor(100.0) dataType(Float)
-                        uint16_t* _tmp_17537 = (uint16_t*) buffer; buffer += 2;
-                        ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].yaw_rate.yaw_rate_value.value = *_tmp_17537;
+                        uint16_t* _tmp_38 = (uint16_t*) buffer; buffer += 2;
+                        ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].yaw_rate.yaw_rate_value.value = *_tmp_38;
                         ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].yaw_rate.yaw_rate_value.value += -32766;
                         __aux64__ = ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].yaw_rate.yaw_rate_value.value;
                         ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].yaw_rate.yaw_rate_value.value /= 100.0;
@@ -900,15 +900,15 @@ namespace wind
                         }
                         
                         if(debug) {
-                            logger->debug() << "|\033[38;5;94m015651\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].yaw_rate.yaw_rate_value.value) << " cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].yaw_rate.yaw_rate_value: " <<
+                            logger->debug() << "|\033[38;5;94m000038\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].yaw_rate.yaw_rate_value.value) << " cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].yaw_rate.yaw_rate_value: " <<
                                          ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].yaw_rate.yaw_rate_value.value << " (" << __aux64__ << ")";
                         }
                         
                         // Field name: yaw_rate_confidence
                         // Enumerated
                         // INT32  min(0) max(8) span(9) datatype(Int32)
-                        uint8_t* _tmp_17538 = (uint8_t*) buffer++;
-                        __aux64__ = *_tmp_17538;
+                        uint8_t* _tmp_39 = (uint8_t*) buffer++;
+                        __aux64__ = *_tmp_39;
                         __aux64__ += 0;
                         ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].yaw_rate.yaw_rate_confidence.value = __aux64__;
                         // ******************* MIN validator *******************
@@ -924,7 +924,7 @@ namespace wind
                         
                         
                         if(debug) {
-                            logger->debug() << "|\033[38;5;94m015652\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].yaw_rate.yaw_rate_confidence.value) << 
+                            logger->debug() << "|\033[38;5;94m000039\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].yaw_rate.yaw_rate_confidence.value) << 
                                          " cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].yaw_rate.yaw_rate_confidence.value: " << static_cast<int>(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].yaw_rate.yaw_rate_confidence.value);
                         }
                     
@@ -932,19 +932,19 @@ namespace wind
                         // Field name: acceleration_control
                         // BitString
                         // BIT_STRING  min(7) max(7) span(1)
-                        uint8_t* _tmp_17539 = (uint8_t*)buffer;
-                        __aux64__ = *_tmp_17539 + 7;
+                        uint8_t* _tmp_40 = (uint8_t*)buffer;
+                        __aux64__ = *_tmp_40 + 7;
                         buffer += 1;
                         
                         if(debug)
-                            logger->debug() << "|\033[38;5;94m015653\033[0m| cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].acceleration_control[0].value: " << __aux64__;
+                            logger->debug() << "|\033[38;5;94m000040\033[0m| cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].acceleration_control[0].value: " << __aux64__;
                         
-                        int _if__tmp_17539 = __aux64__;
-                        for(int x = 0; x < _if__tmp_17539; x++) {
+                        int _if__tmp_40 = __aux64__;
+                        for(int a = 0; a < _if__tmp_40; a++) {
                             uint8_t __c__;
                             ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].acceleration_control[0].values.push_back(__c__);
                             uint8_t* __b__ = (uint8_t*)buffer++;
-                            ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].acceleration_control[0].values[x] = (*__b__ == 1);
+                            ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].acceleration_control[0].values[a] = (*__b__ == 1);
                         }
                         
                         // ******************* MIN validator *******************
@@ -963,13 +963,13 @@ namespace wind
                         // Field name: lane_position
                         // Integer
                         // INT8  min(-1) max(14) span(16) datatype(Int8)
-                        uint8_t* _tmp_17540 = (uint8_t*) buffer++;
-                        __aux64__ = *_tmp_17540;
+                        uint8_t* _tmp_41 = (uint8_t*) buffer++;
+                        __aux64__ = *_tmp_41;
                         __aux64__ += -1;
                         ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].lane_position[0].value = __aux64__;
                         
                         if(debug) {
-                            logger->debug() << "|\033[38;5;94m015654\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].lane_position[0].value) << 
+                            logger->debug() << "|\033[38;5;94m000041\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].lane_position[0].value) << 
                                          " cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].lane_position[0].value: " << static_cast<int>(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].lane_position[0].value);
                         }
                         
@@ -994,13 +994,13 @@ namespace wind
                             // Field name: steering_wheel_angle_value
                             // Integer
                             // INT16  min(-511) max(512) span(1024) datatype(Int16)
-                            uint16_t* _tmp_17541 = (uint16_t*) buffer; buffer += 2;
-                            __aux64__ = *_tmp_17541;
+                            uint16_t* _tmp_42 = (uint16_t*) buffer; buffer += 2;
+                            __aux64__ = *_tmp_42;
                             __aux64__ += -511;
                             ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].steering_wheel_angle[0].steering_wheel_angle_value.value = __aux64__;
                             
                             if(debug) {
-                                logger->debug() << "|\033[38;5;94m015655\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].steering_wheel_angle[0].steering_wheel_angle_value.value) << 
+                                logger->debug() << "|\033[38;5;94m000042\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].steering_wheel_angle[0].steering_wheel_angle_value.value) << 
                                              " cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].steering_wheel_angle[0].steering_wheel_angle_value.value: " << ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].steering_wheel_angle[0].steering_wheel_angle_value.value;
                             }
                             
@@ -1018,13 +1018,13 @@ namespace wind
                             // Field name: steering_wheel_angle_confidence
                             // Integer
                             // UINT8  min(1) max(127) span(127) datatype(UInt8)
-                            uint8_t* _tmp_17542 = (uint8_t*) buffer++;
-                            __aux64__ = *_tmp_17542;
+                            uint8_t* _tmp_43 = (uint8_t*) buffer++;
+                            __aux64__ = *_tmp_43;
                             __aux64__ += 1;
                             ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].steering_wheel_angle[0].steering_wheel_angle_confidence.value = __aux64__;
                             
                             if(debug) {
-                                logger->debug() << "|\033[38;5;94m015656\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].steering_wheel_angle[0].steering_wheel_angle_confidence.value) << 
+                                logger->debug() << "|\033[38;5;94m000043\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].steering_wheel_angle[0].steering_wheel_angle_confidence.value) << 
                                              " cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].steering_wheel_angle[0].steering_wheel_angle_confidence.value: " << static_cast<int>(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].steering_wheel_angle[0].steering_wheel_angle_confidence.value);
                             }
                             
@@ -1050,8 +1050,8 @@ namespace wind
                             // Real
                             // Float
                             // FLOAT  min(-160) max(161) span(322) scaleDivisor(10.0) dataType(Float)
-                            uint16_t* _tmp_17543 = (uint16_t*) buffer; buffer += 2;
-                            ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].lateral_acceleration[0].lateral_acceleration_value.value = *_tmp_17543;
+                            uint16_t* _tmp_44 = (uint16_t*) buffer; buffer += 2;
+                            ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].lateral_acceleration[0].lateral_acceleration_value.value = *_tmp_44;
                             ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].lateral_acceleration[0].lateral_acceleration_value.value += -160;
                             __aux64__ = ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].lateral_acceleration[0].lateral_acceleration_value.value;
                             ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].lateral_acceleration[0].lateral_acceleration_value.value /= 10.0;
@@ -1068,7 +1068,7 @@ namespace wind
                             }
                             
                             if(debug) {
-                                logger->debug() << "|\033[38;5;94m015657\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].lateral_acceleration[0].lateral_acceleration_value.value) << " cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].lateral_acceleration[0].lateral_acceleration_value: " <<
+                                logger->debug() << "|\033[38;5;94m000044\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].lateral_acceleration[0].lateral_acceleration_value.value) << " cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].lateral_acceleration[0].lateral_acceleration_value: " <<
                                              ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].lateral_acceleration[0].lateral_acceleration_value.value << " (" << __aux64__ << ")";
                             }
                             
@@ -1076,8 +1076,8 @@ namespace wind
                             // Real
                             // Float
                             // FLOAT  min(0) max(102) span(103) scaleDivisor(10.0) dataType(Float)
-                            uint8_t* _tmp_17544 = (uint8_t*) buffer++;
-                            ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].lateral_acceleration[0].lateral_acceleration_confidence.value = *_tmp_17544;
+                            uint8_t* _tmp_45 = (uint8_t*) buffer++;
+                            ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].lateral_acceleration[0].lateral_acceleration_confidence.value = *_tmp_45;
                             __aux64__ = ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].lateral_acceleration[0].lateral_acceleration_confidence.value;
                             ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].lateral_acceleration[0].lateral_acceleration_confidence.value /= 10.0;
                             
@@ -1093,7 +1093,7 @@ namespace wind
                             }
                             
                             if(debug) {
-                                logger->debug() << "|\033[38;5;94m015658\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].lateral_acceleration[0].lateral_acceleration_confidence.value) << " cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].lateral_acceleration[0].lateral_acceleration_confidence: " <<
+                                logger->debug() << "|\033[38;5;94m000045\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].lateral_acceleration[0].lateral_acceleration_confidence.value) << " cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].lateral_acceleration[0].lateral_acceleration_confidence: " <<
                                              ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].lateral_acceleration[0].lateral_acceleration_confidence.value << " (" << __aux64__ << ")";
                             }
                     }
@@ -1108,8 +1108,8 @@ namespace wind
                             // Real
                             // Float
                             // FLOAT  min(-160) max(161) span(322) scaleDivisor(10.0) dataType(Float)
-                            uint16_t* _tmp_17545 = (uint16_t*) buffer; buffer += 2;
-                            ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vertical_acceleration[0].vertical_acceleration_value.value = *_tmp_17545;
+                            uint16_t* _tmp_46 = (uint16_t*) buffer; buffer += 2;
+                            ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vertical_acceleration[0].vertical_acceleration_value.value = *_tmp_46;
                             ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vertical_acceleration[0].vertical_acceleration_value.value += -160;
                             __aux64__ = ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vertical_acceleration[0].vertical_acceleration_value.value;
                             ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vertical_acceleration[0].vertical_acceleration_value.value /= 10.0;
@@ -1126,7 +1126,7 @@ namespace wind
                             }
                             
                             if(debug) {
-                                logger->debug() << "|\033[38;5;94m015659\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vertical_acceleration[0].vertical_acceleration_value.value) << " cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vertical_acceleration[0].vertical_acceleration_value: " <<
+                                logger->debug() << "|\033[38;5;94m000046\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vertical_acceleration[0].vertical_acceleration_value.value) << " cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vertical_acceleration[0].vertical_acceleration_value: " <<
                                              ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vertical_acceleration[0].vertical_acceleration_value.value << " (" << __aux64__ << ")";
                             }
                             
@@ -1134,8 +1134,8 @@ namespace wind
                             // Real
                             // Float
                             // FLOAT  min(0) max(102) span(103) scaleDivisor(10.0) dataType(Float)
-                            uint8_t* _tmp_17546 = (uint8_t*) buffer++;
-                            ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vertical_acceleration[0].vertical_acceleration_confidence.value = *_tmp_17546;
+                            uint8_t* _tmp_47 = (uint8_t*) buffer++;
+                            ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vertical_acceleration[0].vertical_acceleration_confidence.value = *_tmp_47;
                             __aux64__ = ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vertical_acceleration[0].vertical_acceleration_confidence.value;
                             ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vertical_acceleration[0].vertical_acceleration_confidence.value /= 10.0;
                             
@@ -1151,7 +1151,7 @@ namespace wind
                             }
                             
                             if(debug) {
-                                logger->debug() << "|\033[38;5;94m015660\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vertical_acceleration[0].vertical_acceleration_confidence.value) << " cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vertical_acceleration[0].vertical_acceleration_confidence: " <<
+                                logger->debug() << "|\033[38;5;94m000047\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vertical_acceleration[0].vertical_acceleration_confidence.value) << " cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vertical_acceleration[0].vertical_acceleration_confidence: " <<
                                              ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].vertical_acceleration[0].vertical_acceleration_confidence.value << " (" << __aux64__ << ")";
                             }
                     }
@@ -1160,12 +1160,12 @@ namespace wind
                         // Field name: performance_class
                         // Integer
                         // UINT8  min(0) max(7) span(8) datatype(UInt8)
-                        uint8_t* _tmp_17547 = (uint8_t*) buffer++;
-                        __aux64__ = *_tmp_17547;
+                        uint8_t* _tmp_48 = (uint8_t*) buffer++;
+                        __aux64__ = *_tmp_48;
                         ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].performance_class[0].value = __aux64__;
                         
                         if(debug) {
-                            logger->debug() << "|\033[38;5;94m015661\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].performance_class[0].value) << 
+                            logger->debug() << "|\033[38;5;94m000048\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].performance_class[0].value) << 
                                          " cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].performance_class[0].value: " << static_cast<int>(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].performance_class[0].value);
                         }
                         
@@ -1188,26 +1188,26 @@ namespace wind
                                 //  protectedZoneLongitude Longitude                
                                 //  cenDsrcTollingZoneID   CenDsrcTollingZoneID   OPTIONAL  
                                 //  ...
-                            uint8_t* _ext_flag_7692 = (uint8_t*) buffer++;  // Read ext flag from ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].cen_dsrc_tolling_zone[0].
+                            uint8_t* _ext_flag_29 = (uint8_t*) buffer++;  // Read ext flag from ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].cen_dsrc_tolling_zone[0].
                             
                             if(debug) {
-                                logger->debug() << "|\033[38;5;94m015662\033[0m| Reading ext flag from ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].cen_dsrc_tolling_zone[0].: " << int(*_ext_flag_7692);
+                                logger->debug() << "|\033[38;5;94m000049\033[0m| Reading ext flag from ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].cen_dsrc_tolling_zone[0].: " << int(*_ext_flag_29);
                             }
                             
                             if(*(buffer++)) { 
-                                its_container_v2_its_container_msgs::CenDsrcTollingZoneID _tmp_17548;
-                                ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].cen_dsrc_tolling_zone[0].cen_dsrc_tolling_zone_id.push_back(_tmp_17548);
+                                its_container_v2_its_container_msgs::CenDsrcTollingZoneID _tmp_49;
+                                ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].cen_dsrc_tolling_zone[0].cen_dsrc_tolling_zone_id.push_back(_tmp_49);
                             
                                 if(debug)
-                                    logger->debug() << "|\033[38;5;94m015663\033[0m| ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].cen_dsrc_tolling_zone[0].cen_dsrc_tolling_zone_id " << tools::green("present");
+                                    logger->debug() << "|\033[38;5;94m000050\033[0m| ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].cen_dsrc_tolling_zone[0].cen_dsrc_tolling_zone_id " << tools::green("present");
                             }
                             
                             // Field name: protected_zone_latitude
                             // Real
                             // Double
                             // DOUBLE  min(-900000000) max(900000001) span(1800000002) scaleDivisor(1.0E7) dataType(Double)
-                            uint32_t* _tmp_17549 = (uint32_t*) buffer; buffer += 4;
-                            ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].cen_dsrc_tolling_zone[0].protected_zone_latitude.value = *_tmp_17549;
+                            uint32_t* _tmp_50 = (uint32_t*) buffer; buffer += 4;
+                            ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].cen_dsrc_tolling_zone[0].protected_zone_latitude.value = *_tmp_50;
                             ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].cen_dsrc_tolling_zone[0].protected_zone_latitude.value += -900000000;
                             __aux64__ = ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].cen_dsrc_tolling_zone[0].protected_zone_latitude.value;
                             ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].cen_dsrc_tolling_zone[0].protected_zone_latitude.value /= 1.0E7;
@@ -1224,7 +1224,7 @@ namespace wind
                             }
                             
                             if(debug) {
-                                logger->debug() << "|\033[38;5;94m015664\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].cen_dsrc_tolling_zone[0].protected_zone_latitude.value) << " cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].cen_dsrc_tolling_zone[0].protected_zone_latitude: " <<
+                                logger->debug() << "|\033[38;5;94m000051\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].cen_dsrc_tolling_zone[0].protected_zone_latitude.value) << " cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].cen_dsrc_tolling_zone[0].protected_zone_latitude: " <<
                                              ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].cen_dsrc_tolling_zone[0].protected_zone_latitude.value << " (" << __aux64__ << ")";
                             }
                             
@@ -1232,8 +1232,8 @@ namespace wind
                             // Real
                             // Double
                             // DOUBLE  min(-1800000000) max(1800000001) span(3600000002) scaleDivisor(1.0E7) dataType(Double)
-                            uint32_t* _tmp_17550 = (uint32_t*) buffer; buffer += 4;
-                            ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].cen_dsrc_tolling_zone[0].protected_zone_longitude.value = *_tmp_17550;
+                            uint32_t* _tmp_51 = (uint32_t*) buffer; buffer += 4;
+                            ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].cen_dsrc_tolling_zone[0].protected_zone_longitude.value = *_tmp_51;
                             ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].cen_dsrc_tolling_zone[0].protected_zone_longitude.value += -1800000000;
                             __aux64__ = ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].cen_dsrc_tolling_zone[0].protected_zone_longitude.value;
                             ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].cen_dsrc_tolling_zone[0].protected_zone_longitude.value /= 1.0E7;
@@ -1250,7 +1250,7 @@ namespace wind
                             }
                             
                             if(debug) {
-                                logger->debug() << "|\033[38;5;94m015665\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].cen_dsrc_tolling_zone[0].protected_zone_longitude.value) << " cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].cen_dsrc_tolling_zone[0].protected_zone_longitude: " <<
+                                logger->debug() << "|\033[38;5;94m000052\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].cen_dsrc_tolling_zone[0].protected_zone_longitude.value) << " cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].cen_dsrc_tolling_zone[0].protected_zone_longitude: " <<
                                              ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].cen_dsrc_tolling_zone[0].protected_zone_longitude.value << " (" << __aux64__ << ")";
                             }
                             
@@ -1258,12 +1258,12 @@ namespace wind
                                 // Field name: cen_dsrc_tolling_zone_id
                                 // Integer
                                 // UINT32  min(0) max(134217727) span(134217728) datatype(UInt32)
-                                uint32_t* _tmp_17551 = (uint32_t*) buffer; buffer += 4;
-                                __aux64__ = *_tmp_17551;
+                                uint32_t* _tmp_52 = (uint32_t*) buffer; buffer += 4;
+                                __aux64__ = *_tmp_52;
                                 ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].cen_dsrc_tolling_zone[0].cen_dsrc_tolling_zone_id[0].value = __aux64__;
                                 
                                 if(debug) {
-                                    logger->debug() << "|\033[38;5;94m015666\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].cen_dsrc_tolling_zone[0].cen_dsrc_tolling_zone_id[0].value) << 
+                                    logger->debug() << "|\033[38;5;94m000053\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].cen_dsrc_tolling_zone[0].cen_dsrc_tolling_zone_id[0].value) << 
                                                  " cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].cen_dsrc_tolling_zone[0].cen_dsrc_tolling_zone_id[0].value: " << ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].cen_dsrc_tolling_zone[0].cen_dsrc_tolling_zone_id[0].value;
                                 }
                                 
@@ -1278,52 +1278,52 @@ namespace wind
                                     return false;
                                 }
                             }
-                            if(*_ext_flag_7692) { // from ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].cen_dsrc_tolling_zone[0]. 
-                                uint8_t* _tmp_17552 = (uint8_t*) buffer++;  // number of extensions
-                                bool _array_214[*_tmp_17552];
+                            if(*_ext_flag_29) { // from ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].cen_dsrc_tolling_zone[0]. 
+                                uint8_t* _tmp_53 = (uint8_t*) buffer++;  // number of extensions
+                                bool _array_2[*_tmp_53];
                                 
                                 if(debug)
-                                    logger->debug() << "|\033[38;5;94m015667\033[0m| Reading number of exts from ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].cen_dsrc_tolling_zone[0].: " << static_cast<unsigned int>(*_tmp_17552);
+                                    logger->debug() << "|\033[38;5;94m000054\033[0m| Reading number of exts from ros->cam.cam_parameters.high_frequency_container.basic_vehicle_container_high_frequency[0].cen_dsrc_tolling_zone[0].: " << static_cast<unsigned int>(*_tmp_53);
                                 
                                 // Extensions bytemap
-                                for(int i = 0; i < *_tmp_17552; i++)
-                                    _array_214[i] = (*buffer++) != 0;
+                                for(int i = 0; i < *_tmp_53; i++)
+                                    _array_2[i] = (*buffer++) != 0;
                                 
                                 // Discarding unknown OpenType containers
-                                for(int i = 0; i < *_tmp_17552; i++) {
-                                    uint16_t* _tmp_17553 = (uint16_t*)buffer;  // OpenType length
+                                for(int i = 0; i < *_tmp_53; i++) {
+                                    uint16_t* _tmp_54 = (uint16_t*)buffer;  // OpenType length
                                     buffer += 2;
                                 
                                     if(debug) {
                                     }
                                 
-                                    for(int i = 0; i < *_tmp_17553; i++)
+                                    for(int i = 0; i < *_tmp_54; i++)
                                         buffer++;
                                 }
                                 
                             }
                     }
             }
-            else if(_choice_404 == 1)  // CHOICE HighFrequencyContainer  fieldName(rsu_container_high_frequency)
+            else if(_choice_1 == 1)  // CHOICE HighFrequencyContainer  fieldName(rsu_container_high_frequency)
             {
-                mad_cam_pdu_descriptions_msgs::RSUContainerHighFrequency _tmp_17554;
-                ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency.push_back(_tmp_17554);
+                mad_cam_pdu_descriptions_msgs::RSUContainerHighFrequency _tmp_55;
+                ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency.push_back(_tmp_55);
             
                     // RSUContainerHighFrequency  SEQUENCE
                         //  protectedCommunicationZonesRSU ProtectedCommunicationZonesRSU   OPTIONAL  
                         //  ...
-                    uint8_t* _ext_flag_7695 = (uint8_t*) buffer++;  // Read ext flag from ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].
+                    uint8_t* _ext_flag_32 = (uint8_t*) buffer++;  // Read ext flag from ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].
                     
                     if(debug) {
-                        logger->debug() << "|\033[38;5;94m015668\033[0m| Reading ext flag from ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].: " << int(*_ext_flag_7695);
+                        logger->debug() << "|\033[38;5;94m000055\033[0m| Reading ext flag from ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].: " << int(*_ext_flag_32);
                     }
                     
                     if(*(buffer++)) { 
-                        its_container_v2_its_container_msgs::ProtectedCommunicationZonesRSU _tmp_17555;
-                        ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu.push_back(_tmp_17555);
+                        its_container_v2_its_container_msgs::ProtectedCommunicationZonesRSU _tmp_56;
+                        ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu.push_back(_tmp_56);
                     
                         if(debug)
-                            logger->debug() << "|\033[38;5;94m015669\033[0m| ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu " << tools::green("present");
+                            logger->debug() << "|\033[38;5;94m000056\033[0m| ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu " << tools::green("present");
                     }
                     
                     if(ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu.size() != 0) {
@@ -1331,15 +1331,15 @@ namespace wind
                         // SequenceOf
                         // Data Type UInt8
                         // SEQUENCE_OF  min(1) max(16) span(16)
-                        int16_t* _tmp_17556 = (int16_t*)buffer;
+                        int16_t* _tmp_57 = (int16_t*)buffer;
                         buffer += 2;
-                        __aux64__ = *_tmp_17556;
+                        __aux64__ = *_tmp_57;
                         __aux64__ += 1;     // +min
                         
-                        int _if__tmp_17556 = __aux64__;
+                        int _if__tmp_57 = __aux64__;
                         
                         if(debug) {
-                            logger->debug() << "|\033[38;5;94m015670\033[0m| SequenceOf ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0]. size: " << int(*_tmp_17556);
+                            logger->debug() << "|\033[38;5;94m000057\033[0m| SequenceOf ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0]. size: " << int(*_tmp_57);
                         }
                         
                         // ******************* MIN validator *******************
@@ -1354,9 +1354,9 @@ namespace wind
                         }
                         
                         
-                        for(int y = 0; y < _if__tmp_17556; y++) {
-                            its_container_v2_its_container_msgs::ProtectedCommunicationZone seqof_y;  // SEQUENCE
-                            ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements.push_back(seqof_y);
+                        for(int b = 0; b < _if__tmp_57; b++) {
+                            its_container_v2_its_container_msgs::ProtectedCommunicationZone seqof_b;  // SEQUENCE
+                            ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements.push_back(seqof_b);
                         
                                 // ProtectedCommunicationZone  SEQUENCE
                                     //  protectedZoneType      ProtectedZoneType       
@@ -1366,85 +1366,85 @@ namespace wind
                                     //  protectedZoneRadius    ProtectedZoneRadius   OPTIONAL  
                                     //  protectedZoneID        ProtectedZoneID       OPTIONAL  
                                     //  ...
-                                uint8_t* _ext_flag_7696 = (uint8_t*) buffer++;  // Read ext flag from ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].
+                                uint8_t* _ext_flag_33 = (uint8_t*) buffer++;  // Read ext flag from ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].
                                 
                                 if(debug) {
-                                    logger->debug() << "|\033[38;5;94m015671\033[0m| Reading ext flag from ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].: " << int(*_ext_flag_7696);
+                                    logger->debug() << "|\033[38;5;94m000058\033[0m| Reading ext flag from ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].: " << int(*_ext_flag_33);
                                 }
                                 
                                 if(*(buffer++)) { 
-                                    its_container_v2_its_container_msgs::TimestampIts _tmp_17557;
-                                    ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].expiry_time.push_back(_tmp_17557);
+                                    its_container_v2_its_container_msgs::TimestampIts _tmp_58;
+                                    ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].expiry_time.push_back(_tmp_58);
                                 
                                     if(debug)
-                                        logger->debug() << "|\033[38;5;94m015672\033[0m| ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].expiry_time " << tools::green("present");
+                                        logger->debug() << "|\033[38;5;94m000059\033[0m| ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].expiry_time " << tools::green("present");
                                 }
                                 if(*(buffer++)) { 
-                                    its_container_v2_its_container_msgs::ProtectedZoneRadius _tmp_17558;
-                                    ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_radius.push_back(_tmp_17558);
+                                    its_container_v2_its_container_msgs::ProtectedZoneRadius _tmp_59;
+                                    ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_radius.push_back(_tmp_59);
                                 
                                     if(debug)
-                                        logger->debug() << "|\033[38;5;94m015673\033[0m| ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_radius " << tools::green("present");
+                                        logger->debug() << "|\033[38;5;94m000060\033[0m| ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_radius " << tools::green("present");
                                 }
                                 if(*(buffer++)) { 
-                                    its_container_v2_its_container_msgs::ProtectedZoneID _tmp_17559;
-                                    ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_id.push_back(_tmp_17559);
+                                    its_container_v2_its_container_msgs::ProtectedZoneID _tmp_60;
+                                    ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_id.push_back(_tmp_60);
                                 
                                     if(debug)
-                                        logger->debug() << "|\033[38;5;94m015674\033[0m| ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_id " << tools::green("present");
+                                        logger->debug() << "|\033[38;5;94m000061\033[0m| ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_id " << tools::green("present");
                                 }
                                 
                                 // Field name: protected_zone_type
                                 // Enumerated
                                 // INT32  min(0) max(1) span(2) datatype(Int32)
-                                uint8_t* _ext_flag_7697 = (uint8_t*) buffer++;  // Read ext flag from ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_type.
+                                uint8_t* _ext_flag_34 = (uint8_t*) buffer++;  // Read ext flag from ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_type.
                                 
                                 if(debug) {
-                                    logger->debug() << "|\033[38;5;94m015675\033[0m| Reading ext flag from ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_type.: " << int(*_ext_flag_7697);
+                                    logger->debug() << "|\033[38;5;94m000062\033[0m| Reading ext flag from ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_type.: " << int(*_ext_flag_34);
                                 }
                                 
-                                uint8_t* _tmp_17560 = (uint8_t*) buffer++;
-                                __aux64__ = *_tmp_17560;
+                                uint8_t* _tmp_61 = (uint8_t*) buffer++;
+                                __aux64__ = *_tmp_61;
                                 __aux64__ += 0;
-                                ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_type.value = __aux64__;
+                                ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_type.value = __aux64__;
                                 // ******************* MIN validator *******************
                                 if(VALIDATORS_ENABLED && __aux64__ < 0) {
-                                    logger->warning() << "Error: Value in 'cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_type.value' " << (__aux64__) << " is less than allowable (0); message dropped.";
+                                    logger->warning() << "Error: Value in 'cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_type.value' " << (__aux64__) << " is less than allowable (0); message dropped.";
                                     return false;
                                 }
                                 // ******************* MAX validator *******************
                                 if(VALIDATORS_ENABLED && __aux64__ > 1) {
-                                    logger->warning() << "Error: Value in 'cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_type.value' " << (__aux64__) << " exceeds max allowable (1); message dropped.";
+                                    logger->warning() << "Error: Value in 'cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_type.value' " << (__aux64__) << " exceeds max allowable (1); message dropped.";
                                     return false;
                                 }
                                 
                                 
                                 if(debug) {
-                                    logger->debug() << "|\033[38;5;94m015676\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_type.value) << 
-                                                 " cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_type.value: " << static_cast<int>(ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_type.value);
+                                    logger->debug() << "|\033[38;5;94m000063\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_type.value) << 
+                                                 " cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_type.value: " << static_cast<int>(ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_type.value);
                                 }
                                 
-                                if(ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].expiry_time.size() != 0) {
+                                if(ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].expiry_time.size() != 0) {
                                     // Field name: expiry_time
                                     // Integer
                                     // INT64  min(0) max(4398046511103) span(4398046511104) datatype(Int64)
-                                    uint64_t* _tmp_17561 = (uint64_t*)buffer; buffer += 8;
-                                    __aux64__ = *_tmp_17561;
-                                    ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].expiry_time[0].value = __aux64__;
+                                    uint64_t* _tmp_62 = (uint64_t*)buffer; buffer += 8;
+                                    __aux64__ = *_tmp_62;
+                                    ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].expiry_time[0].value = __aux64__;
                                     
                                     if(debug) {
-                                        logger->debug() << "|\033[38;5;94m015677\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].expiry_time[0].value) << 
-                                                     " cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].expiry_time[0].value: " << ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].expiry_time[0].value;
+                                        logger->debug() << "|\033[38;5;94m000064\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].expiry_time[0].value) << 
+                                                     " cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].expiry_time[0].value: " << ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].expiry_time[0].value;
                                     }
                                     
                                     // ******************* MIN validator *******************
                                     if(VALIDATORS_ENABLED && __aux64__ < 0) {
-                                        logger->warning() << "Error: Value in 'cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].expiry_time[0].value' " << (__aux64__) << " is less than allowable (0); message dropped.";
+                                        logger->warning() << "Error: Value in 'cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].expiry_time[0].value' " << (__aux64__) << " is less than allowable (0); message dropped.";
                                         return false;
                                     }
                                     // ******************* MAX validator *******************
                                     if(VALIDATORS_ENABLED && __aux64__ > 4398046511103) {
-                                        logger->warning() << "Error: Value in 'cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].expiry_time[0].value' " << (__aux64__) << " exceeds max allowable (4398046511103); message dropped.";
+                                        logger->warning() << "Error: Value in 'cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].expiry_time[0].value' " << (__aux64__) << " exceeds max allowable (4398046511103); message dropped.";
                                         return false;
                                     }
                                 }
@@ -1453,188 +1453,188 @@ namespace wind
                                 // Real
                                 // Double
                                 // DOUBLE  min(-900000000) max(900000001) span(1800000002) scaleDivisor(1.0E7) dataType(Double)
-                                uint32_t* _tmp_17562 = (uint32_t*) buffer; buffer += 4;
-                                ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_latitude.value = *_tmp_17562;
-                                ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_latitude.value += -900000000;
-                                __aux64__ = ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_latitude.value;
-                                ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_latitude.value /= 1.0E7;
+                                uint32_t* _tmp_63 = (uint32_t*) buffer; buffer += 4;
+                                ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_latitude.value = *_tmp_63;
+                                ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_latitude.value += -900000000;
+                                __aux64__ = ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_latitude.value;
+                                ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_latitude.value /= 1.0E7;
                                 
                                 // ******************* MIN validator *******************
                                 if(VALIDATORS_ENABLED && __aux64__ < -900000000) {
-                                    logger->warning() << "Error: Value in 'cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_latitude.value' " << (__aux64__) << " is less than allowable (-900000000); message dropped.";
+                                    logger->warning() << "Error: Value in 'cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_latitude.value' " << (__aux64__) << " is less than allowable (-900000000); message dropped.";
                                     return false;
                                 }
                                 // ******************* MAX validator *******************
                                 if(VALIDATORS_ENABLED && __aux64__ > 900000001) {
-                                    logger->warning() << "Error: Value in 'cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_latitude.value' " << (__aux64__) << " exceeds max allowable (900000001); message dropped.";
+                                    logger->warning() << "Error: Value in 'cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_latitude.value' " << (__aux64__) << " exceeds max allowable (900000001); message dropped.";
                                     return false;
                                 }
                                 
                                 if(debug) {
-                                    logger->debug() << "|\033[38;5;94m015678\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_latitude.value) << " cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_latitude: " <<
-                                                 ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_latitude.value << " (" << __aux64__ << ")";
+                                    logger->debug() << "|\033[38;5;94m000065\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_latitude.value) << " cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_latitude: " <<
+                                                 ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_latitude.value << " (" << __aux64__ << ")";
                                 }
                                 
                                 // Field name: protected_zone_longitude
                                 // Real
                                 // Double
                                 // DOUBLE  min(-1800000000) max(1800000001) span(3600000002) scaleDivisor(1.0E7) dataType(Double)
-                                uint32_t* _tmp_17563 = (uint32_t*) buffer; buffer += 4;
-                                ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_longitude.value = *_tmp_17563;
-                                ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_longitude.value += -1800000000;
-                                __aux64__ = ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_longitude.value;
-                                ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_longitude.value /= 1.0E7;
+                                uint32_t* _tmp_64 = (uint32_t*) buffer; buffer += 4;
+                                ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_longitude.value = *_tmp_64;
+                                ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_longitude.value += -1800000000;
+                                __aux64__ = ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_longitude.value;
+                                ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_longitude.value /= 1.0E7;
                                 
                                 // ******************* MIN validator *******************
                                 if(VALIDATORS_ENABLED && __aux64__ < -1800000000) {
-                                    logger->warning() << "Error: Value in 'cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_longitude.value' " << (__aux64__) << " is less than allowable (-1800000000); message dropped.";
+                                    logger->warning() << "Error: Value in 'cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_longitude.value' " << (__aux64__) << " is less than allowable (-1800000000); message dropped.";
                                     return false;
                                 }
                                 // ******************* MAX validator *******************
                                 if(VALIDATORS_ENABLED && __aux64__ > 1800000001) {
-                                    logger->warning() << "Error: Value in 'cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_longitude.value' " << (__aux64__) << " exceeds max allowable (1800000001); message dropped.";
+                                    logger->warning() << "Error: Value in 'cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_longitude.value' " << (__aux64__) << " exceeds max allowable (1800000001); message dropped.";
                                     return false;
                                 }
                                 
                                 if(debug) {
-                                    logger->debug() << "|\033[38;5;94m015679\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_longitude.value) << " cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_longitude: " <<
-                                                 ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_longitude.value << " (" << __aux64__ << ")";
+                                    logger->debug() << "|\033[38;5;94m000066\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_longitude.value) << " cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_longitude: " <<
+                                                 ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_longitude.value << " (" << __aux64__ << ")";
                                 }
                                 
-                                if(ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_radius.size() != 0) {
+                                if(ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_radius.size() != 0) {
                                     // Field name: protected_zone_radius
                                     // Integer
                                     // UINT8  min(1) max(255) span(255) datatype(UInt8)
-                                    uint8_t* _ext_flag_7700 = (uint8_t*) buffer++;  // Read ext flag from ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_radius[0].
+                                    uint8_t* _ext_flag_37 = (uint8_t*) buffer++;  // Read ext flag from ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_radius[0].
                                     
                                     if(debug) {
-                                        logger->debug() << "|\033[38;5;94m015680\033[0m| Reading ext flag from ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_radius[0].: " << int(*_ext_flag_7700);
+                                        logger->debug() << "|\033[38;5;94m000067\033[0m| Reading ext flag from ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_radius[0].: " << int(*_ext_flag_37);
                                     }
                                     
-                                    if(*_ext_flag_7700) {
-                                        uint8_t* _tmp_17565 = (uint8_t*) buffer++;
+                                    if(*_ext_flag_37) {
+                                        uint8_t* _tmp_66 = (uint8_t*) buffer++;
                                         
-                                        if(*_tmp_17565) {
-                                            uint64_t* _tmp_17566 = (uint64_t*)buffer; buffer += 8;
-                                            __aux64__ = *_tmp_17566;
+                                        if(*_tmp_66) {
+                                            uint64_t* _tmp_67 = (uint64_t*)buffer; buffer += 8;
+                                            __aux64__ = *_tmp_67;
                                             __aux64__ += INT64_MIN;
-                                            ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_radius[0].value = __aux64__;
+                                            ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_radius[0].value = __aux64__;
                                         }
                                         else
                                         {
-                                            uint32_t* _tmp_17566 = (uint32_t*) buffer; buffer += 4;
-                                            __aux64__ = *_tmp_17566;
+                                            uint32_t* _tmp_67 = (uint32_t*) buffer; buffer += 4;
+                                            __aux64__ = *_tmp_67;
                                             __aux64__ += INT32_MIN;
-                                            ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_radius[0].value = __aux64__;
+                                            ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_radius[0].value = __aux64__;
                                         }
                                     }
                                     else
                                     {
-                                        uint8_t* _tmp_17564 = (uint8_t*) buffer++;
-                                        __aux64__ = *_tmp_17564;
+                                        uint8_t* _tmp_65 = (uint8_t*) buffer++;
+                                        __aux64__ = *_tmp_65;
                                         __aux64__ += 1;
-                                        ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_radius[0].value = __aux64__;
+                                        ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_radius[0].value = __aux64__;
                                     
                                         if(debug) {
-                                            logger->debug() << "|\033[38;5;94m015681\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_radius[0].value) << 
-                                                         " cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_radius[0].value: " << static_cast<int>(ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_radius[0].value);
+                                            logger->debug() << "|\033[38;5;94m000068\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_radius[0].value) << 
+                                                         " cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_radius[0].value: " << static_cast<int>(ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_radius[0].value);
                                         }
                                         
                                         // ******************* MIN validator *******************
                                         if(VALIDATORS_ENABLED && __aux64__ < 1) {
-                                            logger->warning() << "Error: Value in 'cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_radius[0].value' " << (__aux64__) << " is less than allowable (1); message dropped.";
+                                            logger->warning() << "Error: Value in 'cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_radius[0].value' " << (__aux64__) << " is less than allowable (1); message dropped.";
                                             return false;
                                         }
                                         // ******************* MAX validator *******************
                                         if(VALIDATORS_ENABLED && __aux64__ > 255) {
-                                            logger->warning() << "Error: Value in 'cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_radius[0].value' " << (__aux64__) << " exceeds max allowable (255); message dropped.";
+                                            logger->warning() << "Error: Value in 'cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_radius[0].value' " << (__aux64__) << " exceeds max allowable (255); message dropped.";
                                             return false;
                                         }
                                         
                                     }
                                 }
                                 
-                                if(ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_id.size() != 0) {
+                                if(ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_id.size() != 0) {
                                     // Field name: protected_zone_id
                                     // Integer
                                     // UINT32  min(0) max(134217727) span(134217728) datatype(UInt32)
-                                    uint32_t* _tmp_17567 = (uint32_t*) buffer; buffer += 4;
-                                    __aux64__ = *_tmp_17567;
-                                    ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_id[0].value = __aux64__;
+                                    uint32_t* _tmp_68 = (uint32_t*) buffer; buffer += 4;
+                                    __aux64__ = *_tmp_68;
+                                    ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_id[0].value = __aux64__;
                                     
                                     if(debug) {
-                                        logger->debug() << "|\033[38;5;94m015682\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_id[0].value) << 
-                                                     " cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_id[0].value: " << ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_id[0].value;
+                                        logger->debug() << "|\033[38;5;94m000069\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_id[0].value) << 
+                                                     " cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_id[0].value: " << ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_id[0].value;
                                     }
                                     
                                     // ******************* MIN validator *******************
                                     if(VALIDATORS_ENABLED && __aux64__ < 0) {
-                                        logger->warning() << "Error: Value in 'cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_id[0].value' " << (__aux64__) << " is less than allowable (0); message dropped.";
+                                        logger->warning() << "Error: Value in 'cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_id[0].value' " << (__aux64__) << " is less than allowable (0); message dropped.";
                                         return false;
                                     }
                                     // ******************* MAX validator *******************
                                     if(VALIDATORS_ENABLED && __aux64__ > 134217727) {
-                                        logger->warning() << "Error: Value in 'cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].protected_zone_id[0].value' " << (__aux64__) << " exceeds max allowable (134217727); message dropped.";
+                                        logger->warning() << "Error: Value in 'cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].protected_zone_id[0].value' " << (__aux64__) << " exceeds max allowable (134217727); message dropped.";
                                         return false;
                                     }
                                 }
-                                if(*_ext_flag_7696) { // from ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y]. 
-                                    uint8_t* _tmp_17568 = (uint8_t*) buffer++;  // number of extensions
-                                    bool _array_215[*_tmp_17568];
+                                if(*_ext_flag_33) { // from ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b]. 
+                                    uint8_t* _tmp_69 = (uint8_t*) buffer++;  // number of extensions
+                                    bool _array_3[*_tmp_69];
                                     
                                     if(debug)
-                                        logger->debug() << "|\033[38;5;94m015683\033[0m| Reading number of exts from ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[y].: " << static_cast<unsigned int>(*_tmp_17568);
+                                        logger->debug() << "|\033[38;5;94m000070\033[0m| Reading number of exts from ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].protected_communication_zones_rsu[0].elements[b].: " << static_cast<unsigned int>(*_tmp_69);
                                     
                                     // Extensions bytemap
-                                    for(int i = 0; i < *_tmp_17568; i++)
-                                        _array_215[i] = (*buffer++) != 0;
+                                    for(int i = 0; i < *_tmp_69; i++)
+                                        _array_3[i] = (*buffer++) != 0;
                                     
                                     // Discarding unknown OpenType containers
-                                    for(int i = 0; i < *_tmp_17568; i++) {
-                                        uint16_t* _tmp_17569 = (uint16_t*)buffer;  // OpenType length
+                                    for(int i = 0; i < *_tmp_69; i++) {
+                                        uint16_t* _tmp_70 = (uint16_t*)buffer;  // OpenType length
                                         buffer += 2;
                                     
                                         if(debug) {
                                         }
                                     
-                                        for(int i = 0; i < *_tmp_17569; i++)
+                                        for(int i = 0; i < *_tmp_70; i++)
                                             buffer++;
                                     }
                                     
                                 }
                         }
                     }
-                    if(*_ext_flag_7695) { // from ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0]. 
-                        uint8_t* _tmp_17570 = (uint8_t*) buffer++;  // number of extensions
-                        bool _array_216[*_tmp_17570];
+                    if(*_ext_flag_32) { // from ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0]. 
+                        uint8_t* _tmp_71 = (uint8_t*) buffer++;  // number of extensions
+                        bool _array_4[*_tmp_71];
                         
                         if(debug)
-                            logger->debug() << "|\033[38;5;94m015684\033[0m| Reading number of exts from ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].: " << static_cast<unsigned int>(*_tmp_17570);
+                            logger->debug() << "|\033[38;5;94m000071\033[0m| Reading number of exts from ros->cam.cam_parameters.high_frequency_container.rsu_container_high_frequency[0].: " << static_cast<unsigned int>(*_tmp_71);
                         
                         // Extensions bytemap
-                        for(int i = 0; i < *_tmp_17570; i++)
-                            _array_216[i] = (*buffer++) != 0;
+                        for(int i = 0; i < *_tmp_71; i++)
+                            _array_4[i] = (*buffer++) != 0;
                         
                         // Discarding unknown OpenType containers
-                        for(int i = 0; i < *_tmp_17570; i++) {
-                            uint16_t* _tmp_17571 = (uint16_t*)buffer;  // OpenType length
+                        for(int i = 0; i < *_tmp_71; i++) {
+                            uint16_t* _tmp_72 = (uint16_t*)buffer;  // OpenType length
                             buffer += 2;
                         
                             if(debug) {
                             }
                         
-                            for(int i = 0; i < *_tmp_17571; i++)
+                            for(int i = 0; i < *_tmp_72; i++)
                                 buffer++;
                         }
                         
                     }
             }
-            else if(_choice_404 == 2)  // CHOICE HighFrequencyContainer  fieldName(mad_vehicle_container_high_frequency)
+            else if(_choice_1 == 2)  // CHOICE HighFrequencyContainer  fieldName(mad_vehicle_container_high_frequency)
             {
-                mad_cam_pdu_descriptions_msgs::MADVehicleContainerHighFrequency _tmp_17572;
-                ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency.push_back(_tmp_17572);
+                mad_cam_pdu_descriptions_msgs::MADVehicleContainerHighFrequency _tmp_73;
+                ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency.push_back(_tmp_73);
             
-                uint16_t* _tmp_17573 = (uint16_t*)buffer;  // OpenType length
+                uint16_t* _tmp_74 = (uint16_t*)buffer;  // OpenType length
                 buffer += 2;
             
                     // MADVehicleContainerHighFrequency  SEQUENCE
@@ -1660,53 +1660,53 @@ namespace wind
                             //  performanceClass         PerformanceClass           OPTIONAL  
                             //  cenDsrcTollingZone       CenDsrcTollingZone         OPTIONAL  
                         if(*(buffer++)) { 
-                            its_container_v2_its_container_msgs::AccelerationControl _tmp_17574;
-                            ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.acceleration_control.push_back(_tmp_17574);
+                            its_container_v2_its_container_msgs::AccelerationControl _tmp_75;
+                            ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.acceleration_control.push_back(_tmp_75);
                         
                             if(debug)
-                                logger->debug() << "|\033[38;5;94m015685\033[0m| ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.acceleration_control " << tools::green("present");
+                                logger->debug() << "|\033[38;5;94m000072\033[0m| ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.acceleration_control " << tools::green("present");
                         }
                         if(*(buffer++)) { 
-                            its_container_v2_its_container_msgs::LanePosition _tmp_17575;
-                            ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.lane_position.push_back(_tmp_17575);
+                            its_container_v2_its_container_msgs::LanePosition _tmp_76;
+                            ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.lane_position.push_back(_tmp_76);
                         
                             if(debug)
-                                logger->debug() << "|\033[38;5;94m015686\033[0m| ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.lane_position " << tools::green("present");
+                                logger->debug() << "|\033[38;5;94m000073\033[0m| ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.lane_position " << tools::green("present");
                         }
                         if(*(buffer++)) { 
-                            its_container_v2_its_container_msgs::SteeringWheelAngle _tmp_17576;
-                            ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.steering_wheel_angle.push_back(_tmp_17576);
+                            its_container_v2_its_container_msgs::SteeringWheelAngle _tmp_77;
+                            ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.steering_wheel_angle.push_back(_tmp_77);
                         
                             if(debug)
-                                logger->debug() << "|\033[38;5;94m015687\033[0m| ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.steering_wheel_angle " << tools::green("present");
+                                logger->debug() << "|\033[38;5;94m000074\033[0m| ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.steering_wheel_angle " << tools::green("present");
                         }
                         if(*(buffer++)) { 
-                            its_container_v2_its_container_msgs::LateralAcceleration _tmp_17577;
-                            ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.lateral_acceleration.push_back(_tmp_17577);
+                            its_container_v2_its_container_msgs::LateralAcceleration _tmp_78;
+                            ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.lateral_acceleration.push_back(_tmp_78);
                         
                             if(debug)
-                                logger->debug() << "|\033[38;5;94m015688\033[0m| ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.lateral_acceleration " << tools::green("present");
+                                logger->debug() << "|\033[38;5;94m000075\033[0m| ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.lateral_acceleration " << tools::green("present");
                         }
                         if(*(buffer++)) { 
-                            its_container_v2_its_container_msgs::VerticalAcceleration _tmp_17578;
-                            ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vertical_acceleration.push_back(_tmp_17578);
+                            its_container_v2_its_container_msgs::VerticalAcceleration _tmp_79;
+                            ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vertical_acceleration.push_back(_tmp_79);
                         
                             if(debug)
-                                logger->debug() << "|\033[38;5;94m015689\033[0m| ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vertical_acceleration " << tools::green("present");
+                                logger->debug() << "|\033[38;5;94m000076\033[0m| ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vertical_acceleration " << tools::green("present");
                         }
                         if(*(buffer++)) { 
-                            its_container_v2_its_container_msgs::PerformanceClass _tmp_17579;
-                            ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.performance_class.push_back(_tmp_17579);
+                            its_container_v2_its_container_msgs::PerformanceClass _tmp_80;
+                            ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.performance_class.push_back(_tmp_80);
                         
                             if(debug)
-                                logger->debug() << "|\033[38;5;94m015690\033[0m| ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.performance_class " << tools::green("present");
+                                logger->debug() << "|\033[38;5;94m000077\033[0m| ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.performance_class " << tools::green("present");
                         }
                         if(*(buffer++)) { 
-                            its_container_v2_its_container_msgs::CenDsrcTollingZone _tmp_17580;
-                            ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.cen_dsrc_tolling_zone.push_back(_tmp_17580);
+                            its_container_v2_its_container_msgs::CenDsrcTollingZone _tmp_81;
+                            ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.cen_dsrc_tolling_zone.push_back(_tmp_81);
                         
                             if(debug)
-                                logger->debug() << "|\033[38;5;94m015691\033[0m| ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.cen_dsrc_tolling_zone " << tools::green("present");
+                                logger->debug() << "|\033[38;5;94m000078\033[0m| ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.cen_dsrc_tolling_zone " << tools::green("present");
                         }
                         
                         // Field name: heading
@@ -1718,8 +1718,8 @@ namespace wind
                             // Real
                             // Float
                             // FLOAT  min(0) max(3601) span(3602) scaleDivisor(10.0) dataType(Float)
-                            uint16_t* _tmp_17581 = (uint16_t*) buffer; buffer += 2;
-                            ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.heading.heading_value.value = *_tmp_17581;
+                            uint16_t* _tmp_82 = (uint16_t*) buffer; buffer += 2;
+                            ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.heading.heading_value.value = *_tmp_82;
                             __aux64__ = ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.heading.heading_value.value;
                             ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.heading.heading_value.value /= 10.0;
                             
@@ -1735,7 +1735,7 @@ namespace wind
                             }
                             
                             if(debug) {
-                                logger->debug() << "|\033[38;5;94m015692\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.heading.heading_value.value) << " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.heading.heading_value: " <<
+                                logger->debug() << "|\033[38;5;94m000079\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.heading.heading_value.value) << " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.heading.heading_value: " <<
                                              ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.heading.heading_value.value << " (" << __aux64__ << ")";
                             }
                             
@@ -1743,8 +1743,8 @@ namespace wind
                             // Real
                             // Float
                             // FLOAT  min(1) max(127) span(127) scaleDivisor(10.0) dataType(Float)
-                            uint8_t* _tmp_17582 = (uint8_t*) buffer++;
-                            ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.heading.heading_confidence.value = *_tmp_17582;
+                            uint8_t* _tmp_83 = (uint8_t*) buffer++;
+                            ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.heading.heading_confidence.value = *_tmp_83;
                             ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.heading.heading_confidence.value += 1;
                             __aux64__ = ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.heading.heading_confidence.value;
                             ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.heading.heading_confidence.value /= 10.0;
@@ -1761,7 +1761,7 @@ namespace wind
                             }
                             
                             if(debug) {
-                                logger->debug() << "|\033[38;5;94m015693\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.heading.heading_confidence.value) << " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.heading.heading_confidence: " <<
+                                logger->debug() << "|\033[38;5;94m000080\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.heading.heading_confidence.value) << " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.heading.heading_confidence: " <<
                                              ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.heading.heading_confidence.value << " (" << __aux64__ << ")";
                             }
                         
@@ -1774,8 +1774,8 @@ namespace wind
                             // Real
                             // Float
                             // FLOAT  min(0) max(16383) span(16384) scaleDivisor(100.0) dataType(Float)
-                            uint16_t* _tmp_17583 = (uint16_t*) buffer; buffer += 2;
-                            ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.speed.speed_value.value = *_tmp_17583;
+                            uint16_t* _tmp_84 = (uint16_t*) buffer; buffer += 2;
+                            ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.speed.speed_value.value = *_tmp_84;
                             __aux64__ = ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.speed.speed_value.value;
                             ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.speed.speed_value.value /= 100.0;
                             
@@ -1791,7 +1791,7 @@ namespace wind
                             }
                             
                             if(debug) {
-                                logger->debug() << "|\033[38;5;94m015694\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.speed.speed_value.value) << " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.speed.speed_value: " <<
+                                logger->debug() << "|\033[38;5;94m000081\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.speed.speed_value.value) << " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.speed.speed_value: " <<
                                              ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.speed.speed_value.value << " (" << __aux64__ << ")";
                             }
                             
@@ -1799,8 +1799,8 @@ namespace wind
                             // Real
                             // Float
                             // FLOAT  min(1) max(127) span(127) scaleDivisor(100.0) dataType(Float)
-                            uint8_t* _tmp_17584 = (uint8_t*) buffer++;
-                            ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.speed.speed_confidence.value = *_tmp_17584;
+                            uint8_t* _tmp_85 = (uint8_t*) buffer++;
+                            ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.speed.speed_confidence.value = *_tmp_85;
                             ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.speed.speed_confidence.value += 1;
                             __aux64__ = ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.speed.speed_confidence.value;
                             ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.speed.speed_confidence.value /= 100.0;
@@ -1817,15 +1817,15 @@ namespace wind
                             }
                             
                             if(debug) {
-                                logger->debug() << "|\033[38;5;94m015695\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.speed.speed_confidence.value) << " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.speed.speed_confidence: " <<
+                                logger->debug() << "|\033[38;5;94m000082\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.speed.speed_confidence.value) << " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.speed.speed_confidence: " <<
                                              ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.speed.speed_confidence.value << " (" << __aux64__ << ")";
                             }
                         
                         // Field name: drive_direction
                         // Enumerated
                         // INT32  min(0) max(2) span(3) datatype(Int32)
-                        uint8_t* _tmp_17585 = (uint8_t*) buffer++;
-                        __aux64__ = *_tmp_17585;
+                        uint8_t* _tmp_86 = (uint8_t*) buffer++;
+                        __aux64__ = *_tmp_86;
                         __aux64__ += 0;
                         ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.drive_direction.value = __aux64__;
                         // ******************* MIN validator *******************
@@ -1841,7 +1841,7 @@ namespace wind
                         
                         
                         if(debug) {
-                            logger->debug() << "|\033[38;5;94m015696\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.drive_direction.value) << 
+                            logger->debug() << "|\033[38;5;94m000083\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.drive_direction.value) << 
                                          " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.drive_direction.value: " << static_cast<int>(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.drive_direction.value);
                         }
                         
@@ -1854,8 +1854,8 @@ namespace wind
                             // Real
                             // Float
                             // FLOAT  min(1) max(1023) span(1023) scaleDivisor(10.0) dataType(Float)
-                            uint16_t* _tmp_17586 = (uint16_t*) buffer; buffer += 2;
-                            ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vehicle_length.vehicle_length_value.value = *_tmp_17586;
+                            uint16_t* _tmp_87 = (uint16_t*) buffer; buffer += 2;
+                            ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vehicle_length.vehicle_length_value.value = *_tmp_87;
                             ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vehicle_length.vehicle_length_value.value += 1;
                             __aux64__ = ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vehicle_length.vehicle_length_value.value;
                             ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vehicle_length.vehicle_length_value.value /= 10.0;
@@ -1872,15 +1872,15 @@ namespace wind
                             }
                             
                             if(debug) {
-                                logger->debug() << "|\033[38;5;94m015697\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vehicle_length.vehicle_length_value.value) << " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vehicle_length.vehicle_length_value: " <<
+                                logger->debug() << "|\033[38;5;94m000084\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vehicle_length.vehicle_length_value.value) << " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vehicle_length.vehicle_length_value: " <<
                                              ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vehicle_length.vehicle_length_value.value << " (" << __aux64__ << ")";
                             }
                             
                             // Field name: vehicle_length_confidence_indication
                             // Enumerated
                             // INT32  min(0) max(4) span(5) datatype(Int32)
-                            uint8_t* _tmp_17587 = (uint8_t*) buffer++;
-                            __aux64__ = *_tmp_17587;
+                            uint8_t* _tmp_88 = (uint8_t*) buffer++;
+                            __aux64__ = *_tmp_88;
                             __aux64__ += 0;
                             ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vehicle_length.vehicle_length_confidence_indication.value = __aux64__;
                             // ******************* MIN validator *******************
@@ -1896,7 +1896,7 @@ namespace wind
                             
                             
                             if(debug) {
-                                logger->debug() << "|\033[38;5;94m015698\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vehicle_length.vehicle_length_confidence_indication.value) << 
+                                logger->debug() << "|\033[38;5;94m000085\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vehicle_length.vehicle_length_confidence_indication.value) << 
                                              " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vehicle_length.vehicle_length_confidence_indication.value: " << static_cast<int>(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vehicle_length.vehicle_length_confidence_indication.value);
                             }
                         
@@ -1904,8 +1904,8 @@ namespace wind
                         // Real
                         // Float
                         // FLOAT  min(1) max(62) span(62) scaleDivisor(10.0) dataType(Float)
-                        uint8_t* _tmp_17588 = (uint8_t*) buffer++;
-                        ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vehicle_width.value = *_tmp_17588;
+                        uint8_t* _tmp_89 = (uint8_t*) buffer++;
+                        ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vehicle_width.value = *_tmp_89;
                         ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vehicle_width.value += 1;
                         __aux64__ = ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vehicle_width.value;
                         ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vehicle_width.value /= 10.0;
@@ -1922,7 +1922,7 @@ namespace wind
                         }
                         
                         if(debug) {
-                            logger->debug() << "|\033[38;5;94m015699\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vehicle_width.value) << " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vehicle_width: " <<
+                            logger->debug() << "|\033[38;5;94m000086\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vehicle_width.value) << " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vehicle_width: " <<
                                          ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vehicle_width.value << " (" << __aux64__ << ")";
                         }
                         
@@ -1935,8 +1935,8 @@ namespace wind
                             // Real
                             // Float
                             // FLOAT  min(-160) max(161) span(322) scaleDivisor(10.0) dataType(Float)
-                            uint16_t* _tmp_17589 = (uint16_t*) buffer; buffer += 2;
-                            ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.longitudinal_acceleration.longitudinal_acceleration_value.value = *_tmp_17589;
+                            uint16_t* _tmp_90 = (uint16_t*) buffer; buffer += 2;
+                            ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.longitudinal_acceleration.longitudinal_acceleration_value.value = *_tmp_90;
                             ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.longitudinal_acceleration.longitudinal_acceleration_value.value += -160;
                             __aux64__ = ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.longitudinal_acceleration.longitudinal_acceleration_value.value;
                             ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.longitudinal_acceleration.longitudinal_acceleration_value.value /= 10.0;
@@ -1953,7 +1953,7 @@ namespace wind
                             }
                             
                             if(debug) {
-                                logger->debug() << "|\033[38;5;94m015700\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.longitudinal_acceleration.longitudinal_acceleration_value.value) << " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.longitudinal_acceleration.longitudinal_acceleration_value: " <<
+                                logger->debug() << "|\033[38;5;94m000087\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.longitudinal_acceleration.longitudinal_acceleration_value.value) << " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.longitudinal_acceleration.longitudinal_acceleration_value: " <<
                                              ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.longitudinal_acceleration.longitudinal_acceleration_value.value << " (" << __aux64__ << ")";
                             }
                             
@@ -1961,8 +1961,8 @@ namespace wind
                             // Real
                             // Float
                             // FLOAT  min(0) max(102) span(103) scaleDivisor(10.0) dataType(Float)
-                            uint8_t* _tmp_17590 = (uint8_t*) buffer++;
-                            ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.longitudinal_acceleration.longitudinal_acceleration_confidence.value = *_tmp_17590;
+                            uint8_t* _tmp_91 = (uint8_t*) buffer++;
+                            ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.longitudinal_acceleration.longitudinal_acceleration_confidence.value = *_tmp_91;
                             __aux64__ = ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.longitudinal_acceleration.longitudinal_acceleration_confidence.value;
                             ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.longitudinal_acceleration.longitudinal_acceleration_confidence.value /= 10.0;
                             
@@ -1978,7 +1978,7 @@ namespace wind
                             }
                             
                             if(debug) {
-                                logger->debug() << "|\033[38;5;94m015701\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.longitudinal_acceleration.longitudinal_acceleration_confidence.value) << " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.longitudinal_acceleration.longitudinal_acceleration_confidence: " <<
+                                logger->debug() << "|\033[38;5;94m000088\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.longitudinal_acceleration.longitudinal_acceleration_confidence.value) << " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.longitudinal_acceleration.longitudinal_acceleration_confidence: " <<
                                              ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.longitudinal_acceleration.longitudinal_acceleration_confidence.value << " (" << __aux64__ << ")";
                             }
                         
@@ -1990,13 +1990,13 @@ namespace wind
                             // Field name: curvature_value
                             // Integer
                             // INT16  min(-1023) max(1023) span(2047) datatype(Int16)
-                            uint16_t* _tmp_17591 = (uint16_t*) buffer; buffer += 2;
-                            __aux64__ = *_tmp_17591;
+                            uint16_t* _tmp_92 = (uint16_t*) buffer; buffer += 2;
+                            __aux64__ = *_tmp_92;
                             __aux64__ += -1023;
                             ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.curvature.curvature_value.value = __aux64__;
                             
                             if(debug) {
-                                logger->debug() << "|\033[38;5;94m015702\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.curvature.curvature_value.value) << 
+                                logger->debug() << "|\033[38;5;94m000089\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.curvature.curvature_value.value) << 
                                              " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.curvature.curvature_value.value: " << ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.curvature.curvature_value.value;
                             }
                             
@@ -2014,8 +2014,8 @@ namespace wind
                             // Field name: curvature_confidence
                             // Enumerated
                             // INT32  min(0) max(7) span(8) datatype(Int32)
-                            uint8_t* _tmp_17592 = (uint8_t*) buffer++;
-                            __aux64__ = *_tmp_17592;
+                            uint8_t* _tmp_93 = (uint8_t*) buffer++;
+                            __aux64__ = *_tmp_93;
                             __aux64__ += 0;
                             ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.curvature.curvature_confidence.value = __aux64__;
                             // ******************* MIN validator *******************
@@ -2031,21 +2031,21 @@ namespace wind
                             
                             
                             if(debug) {
-                                logger->debug() << "|\033[38;5;94m015703\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.curvature.curvature_confidence.value) << 
+                                logger->debug() << "|\033[38;5;94m000090\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.curvature.curvature_confidence.value) << 
                                              " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.curvature.curvature_confidence.value: " << static_cast<int>(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.curvature.curvature_confidence.value);
                             }
                         
                         // Field name: curvature_calculation_mode
                         // Enumerated
                         // INT32  min(0) max(2) span(3) datatype(Int32)
-                        uint8_t* _ext_flag_7712 = (uint8_t*) buffer++;  // Read ext flag from ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.curvature_calculation_mode.
+                        uint8_t* _ext_flag_49 = (uint8_t*) buffer++;  // Read ext flag from ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.curvature_calculation_mode.
                         
                         if(debug) {
-                            logger->debug() << "|\033[38;5;94m015704\033[0m| Reading ext flag from ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.curvature_calculation_mode.: " << int(*_ext_flag_7712);
+                            logger->debug() << "|\033[38;5;94m000091\033[0m| Reading ext flag from ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.curvature_calculation_mode.: " << int(*_ext_flag_49);
                         }
                         
-                        uint8_t* _tmp_17593 = (uint8_t*) buffer++;
-                        __aux64__ = *_tmp_17593;
+                        uint8_t* _tmp_94 = (uint8_t*) buffer++;
+                        __aux64__ = *_tmp_94;
                         __aux64__ += 0;
                         ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.curvature_calculation_mode.value = __aux64__;
                         // ******************* MIN validator *******************
@@ -2061,7 +2061,7 @@ namespace wind
                         
                         
                         if(debug) {
-                            logger->debug() << "|\033[38;5;94m015705\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.curvature_calculation_mode.value) << 
+                            logger->debug() << "|\033[38;5;94m000092\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.curvature_calculation_mode.value) << 
                                          " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.curvature_calculation_mode.value: " << static_cast<int>(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.curvature_calculation_mode.value);
                         }
                         
@@ -2074,8 +2074,8 @@ namespace wind
                             // Real
                             // Float
                             // FLOAT  min(-32766) max(32767) span(65534) scaleDivisor(100.0) dataType(Float)
-                            uint16_t* _tmp_17594 = (uint16_t*) buffer; buffer += 2;
-                            ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.yaw_rate.yaw_rate_value.value = *_tmp_17594;
+                            uint16_t* _tmp_95 = (uint16_t*) buffer; buffer += 2;
+                            ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.yaw_rate.yaw_rate_value.value = *_tmp_95;
                             ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.yaw_rate.yaw_rate_value.value += -32766;
                             __aux64__ = ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.yaw_rate.yaw_rate_value.value;
                             ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.yaw_rate.yaw_rate_value.value /= 100.0;
@@ -2092,15 +2092,15 @@ namespace wind
                             }
                             
                             if(debug) {
-                                logger->debug() << "|\033[38;5;94m015706\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.yaw_rate.yaw_rate_value.value) << " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.yaw_rate.yaw_rate_value: " <<
+                                logger->debug() << "|\033[38;5;94m000093\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.yaw_rate.yaw_rate_value.value) << " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.yaw_rate.yaw_rate_value: " <<
                                              ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.yaw_rate.yaw_rate_value.value << " (" << __aux64__ << ")";
                             }
                             
                             // Field name: yaw_rate_confidence
                             // Enumerated
                             // INT32  min(0) max(8) span(9) datatype(Int32)
-                            uint8_t* _tmp_17595 = (uint8_t*) buffer++;
-                            __aux64__ = *_tmp_17595;
+                            uint8_t* _tmp_96 = (uint8_t*) buffer++;
+                            __aux64__ = *_tmp_96;
                             __aux64__ += 0;
                             ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.yaw_rate.yaw_rate_confidence.value = __aux64__;
                             // ******************* MIN validator *******************
@@ -2116,7 +2116,7 @@ namespace wind
                             
                             
                             if(debug) {
-                                logger->debug() << "|\033[38;5;94m015707\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.yaw_rate.yaw_rate_confidence.value) << 
+                                logger->debug() << "|\033[38;5;94m000094\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.yaw_rate.yaw_rate_confidence.value) << 
                                              " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.yaw_rate.yaw_rate_confidence.value: " << static_cast<int>(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.yaw_rate.yaw_rate_confidence.value);
                             }
                         
@@ -2124,19 +2124,19 @@ namespace wind
                             // Field name: acceleration_control
                             // BitString
                             // BIT_STRING  min(7) max(7) span(1)
-                            uint8_t* _tmp_17596 = (uint8_t*)buffer;
-                            __aux64__ = *_tmp_17596 + 7;
+                            uint8_t* _tmp_97 = (uint8_t*)buffer;
+                            __aux64__ = *_tmp_97 + 7;
                             buffer += 1;
                             
                             if(debug)
-                                logger->debug() << "|\033[38;5;94m015708\033[0m| cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.acceleration_control[0].value: " << __aux64__;
+                                logger->debug() << "|\033[38;5;94m000095\033[0m| cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.acceleration_control[0].value: " << __aux64__;
                             
-                            int _if__tmp_17596 = __aux64__;
-                            for(int z = 0; z < _if__tmp_17596; z++) {
+                            int _if__tmp_97 = __aux64__;
+                            for(int c = 0; c < _if__tmp_97; c++) {
                                 uint8_t __c__;
                                 ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.acceleration_control[0].values.push_back(__c__);
                                 uint8_t* __b__ = (uint8_t*)buffer++;
-                                ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.acceleration_control[0].values[z] = (*__b__ == 1);
+                                ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.acceleration_control[0].values[c] = (*__b__ == 1);
                             }
                             
                             // ******************* MIN validator *******************
@@ -2155,13 +2155,13 @@ namespace wind
                             // Field name: lane_position
                             // Integer
                             // INT8  min(-1) max(14) span(16) datatype(Int8)
-                            uint8_t* _tmp_17597 = (uint8_t*) buffer++;
-                            __aux64__ = *_tmp_17597;
+                            uint8_t* _tmp_98 = (uint8_t*) buffer++;
+                            __aux64__ = *_tmp_98;
                             __aux64__ += -1;
                             ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.lane_position[0].value = __aux64__;
                             
                             if(debug) {
-                                logger->debug() << "|\033[38;5;94m015709\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.lane_position[0].value) << 
+                                logger->debug() << "|\033[38;5;94m000096\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.lane_position[0].value) << 
                                              " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.lane_position[0].value: " << static_cast<int>(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.lane_position[0].value);
                             }
                             
@@ -2186,13 +2186,13 @@ namespace wind
                                 // Field name: steering_wheel_angle_value
                                 // Integer
                                 // INT16  min(-511) max(512) span(1024) datatype(Int16)
-                                uint16_t* _tmp_17598 = (uint16_t*) buffer; buffer += 2;
-                                __aux64__ = *_tmp_17598;
+                                uint16_t* _tmp_99 = (uint16_t*) buffer; buffer += 2;
+                                __aux64__ = *_tmp_99;
                                 __aux64__ += -511;
                                 ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.steering_wheel_angle[0].steering_wheel_angle_value.value = __aux64__;
                                 
                                 if(debug) {
-                                    logger->debug() << "|\033[38;5;94m015710\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.steering_wheel_angle[0].steering_wheel_angle_value.value) << 
+                                    logger->debug() << "|\033[38;5;94m000097\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.steering_wheel_angle[0].steering_wheel_angle_value.value) << 
                                                  " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.steering_wheel_angle[0].steering_wheel_angle_value.value: " << ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.steering_wheel_angle[0].steering_wheel_angle_value.value;
                                 }
                                 
@@ -2210,13 +2210,13 @@ namespace wind
                                 // Field name: steering_wheel_angle_confidence
                                 // Integer
                                 // UINT8  min(1) max(127) span(127) datatype(UInt8)
-                                uint8_t* _tmp_17599 = (uint8_t*) buffer++;
-                                __aux64__ = *_tmp_17599;
+                                uint8_t* _tmp_100 = (uint8_t*) buffer++;
+                                __aux64__ = *_tmp_100;
                                 __aux64__ += 1;
                                 ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.steering_wheel_angle[0].steering_wheel_angle_confidence.value = __aux64__;
                                 
                                 if(debug) {
-                                    logger->debug() << "|\033[38;5;94m015711\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.steering_wheel_angle[0].steering_wheel_angle_confidence.value) << 
+                                    logger->debug() << "|\033[38;5;94m000098\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.steering_wheel_angle[0].steering_wheel_angle_confidence.value) << 
                                                  " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.steering_wheel_angle[0].steering_wheel_angle_confidence.value: " << static_cast<int>(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.steering_wheel_angle[0].steering_wheel_angle_confidence.value);
                                 }
                                 
@@ -2242,8 +2242,8 @@ namespace wind
                                 // Real
                                 // Float
                                 // FLOAT  min(-160) max(161) span(322) scaleDivisor(10.0) dataType(Float)
-                                uint16_t* _tmp_17600 = (uint16_t*) buffer; buffer += 2;
-                                ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.lateral_acceleration[0].lateral_acceleration_value.value = *_tmp_17600;
+                                uint16_t* _tmp_101 = (uint16_t*) buffer; buffer += 2;
+                                ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.lateral_acceleration[0].lateral_acceleration_value.value = *_tmp_101;
                                 ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.lateral_acceleration[0].lateral_acceleration_value.value += -160;
                                 __aux64__ = ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.lateral_acceleration[0].lateral_acceleration_value.value;
                                 ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.lateral_acceleration[0].lateral_acceleration_value.value /= 10.0;
@@ -2260,7 +2260,7 @@ namespace wind
                                 }
                                 
                                 if(debug) {
-                                    logger->debug() << "|\033[38;5;94m015712\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.lateral_acceleration[0].lateral_acceleration_value.value) << " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.lateral_acceleration[0].lateral_acceleration_value: " <<
+                                    logger->debug() << "|\033[38;5;94m000099\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.lateral_acceleration[0].lateral_acceleration_value.value) << " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.lateral_acceleration[0].lateral_acceleration_value: " <<
                                                  ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.lateral_acceleration[0].lateral_acceleration_value.value << " (" << __aux64__ << ")";
                                 }
                                 
@@ -2268,8 +2268,8 @@ namespace wind
                                 // Real
                                 // Float
                                 // FLOAT  min(0) max(102) span(103) scaleDivisor(10.0) dataType(Float)
-                                uint8_t* _tmp_17601 = (uint8_t*) buffer++;
-                                ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.lateral_acceleration[0].lateral_acceleration_confidence.value = *_tmp_17601;
+                                uint8_t* _tmp_102 = (uint8_t*) buffer++;
+                                ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.lateral_acceleration[0].lateral_acceleration_confidence.value = *_tmp_102;
                                 __aux64__ = ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.lateral_acceleration[0].lateral_acceleration_confidence.value;
                                 ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.lateral_acceleration[0].lateral_acceleration_confidence.value /= 10.0;
                                 
@@ -2285,7 +2285,7 @@ namespace wind
                                 }
                                 
                                 if(debug) {
-                                    logger->debug() << "|\033[38;5;94m015713\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.lateral_acceleration[0].lateral_acceleration_confidence.value) << " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.lateral_acceleration[0].lateral_acceleration_confidence: " <<
+                                    logger->debug() << "|\033[38;5;94m000100\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.lateral_acceleration[0].lateral_acceleration_confidence.value) << " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.lateral_acceleration[0].lateral_acceleration_confidence: " <<
                                                  ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.lateral_acceleration[0].lateral_acceleration_confidence.value << " (" << __aux64__ << ")";
                                 }
                         }
@@ -2300,8 +2300,8 @@ namespace wind
                                 // Real
                                 // Float
                                 // FLOAT  min(-160) max(161) span(322) scaleDivisor(10.0) dataType(Float)
-                                uint16_t* _tmp_17602 = (uint16_t*) buffer; buffer += 2;
-                                ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vertical_acceleration[0].vertical_acceleration_value.value = *_tmp_17602;
+                                uint16_t* _tmp_103 = (uint16_t*) buffer; buffer += 2;
+                                ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vertical_acceleration[0].vertical_acceleration_value.value = *_tmp_103;
                                 ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vertical_acceleration[0].vertical_acceleration_value.value += -160;
                                 __aux64__ = ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vertical_acceleration[0].vertical_acceleration_value.value;
                                 ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vertical_acceleration[0].vertical_acceleration_value.value /= 10.0;
@@ -2318,7 +2318,7 @@ namespace wind
                                 }
                                 
                                 if(debug) {
-                                    logger->debug() << "|\033[38;5;94m015714\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vertical_acceleration[0].vertical_acceleration_value.value) << " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vertical_acceleration[0].vertical_acceleration_value: " <<
+                                    logger->debug() << "|\033[38;5;94m000101\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vertical_acceleration[0].vertical_acceleration_value.value) << " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vertical_acceleration[0].vertical_acceleration_value: " <<
                                                  ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vertical_acceleration[0].vertical_acceleration_value.value << " (" << __aux64__ << ")";
                                 }
                                 
@@ -2326,8 +2326,8 @@ namespace wind
                                 // Real
                                 // Float
                                 // FLOAT  min(0) max(102) span(103) scaleDivisor(10.0) dataType(Float)
-                                uint8_t* _tmp_17603 = (uint8_t*) buffer++;
-                                ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vertical_acceleration[0].vertical_acceleration_confidence.value = *_tmp_17603;
+                                uint8_t* _tmp_104 = (uint8_t*) buffer++;
+                                ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vertical_acceleration[0].vertical_acceleration_confidence.value = *_tmp_104;
                                 __aux64__ = ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vertical_acceleration[0].vertical_acceleration_confidence.value;
                                 ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vertical_acceleration[0].vertical_acceleration_confidence.value /= 10.0;
                                 
@@ -2343,7 +2343,7 @@ namespace wind
                                 }
                                 
                                 if(debug) {
-                                    logger->debug() << "|\033[38;5;94m015715\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vertical_acceleration[0].vertical_acceleration_confidence.value) << " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vertical_acceleration[0].vertical_acceleration_confidence: " <<
+                                    logger->debug() << "|\033[38;5;94m000102\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vertical_acceleration[0].vertical_acceleration_confidence.value) << " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vertical_acceleration[0].vertical_acceleration_confidence: " <<
                                                  ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.vertical_acceleration[0].vertical_acceleration_confidence.value << " (" << __aux64__ << ")";
                                 }
                         }
@@ -2352,12 +2352,12 @@ namespace wind
                             // Field name: performance_class
                             // Integer
                             // UINT8  min(0) max(7) span(8) datatype(UInt8)
-                            uint8_t* _tmp_17604 = (uint8_t*) buffer++;
-                            __aux64__ = *_tmp_17604;
+                            uint8_t* _tmp_105 = (uint8_t*) buffer++;
+                            __aux64__ = *_tmp_105;
                             ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.performance_class[0].value = __aux64__;
                             
                             if(debug) {
-                                logger->debug() << "|\033[38;5;94m015716\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.performance_class[0].value) << 
+                                logger->debug() << "|\033[38;5;94m000103\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.performance_class[0].value) << 
                                              " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.performance_class[0].value: " << static_cast<int>(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.performance_class[0].value);
                             }
                             
@@ -2380,26 +2380,26 @@ namespace wind
                                     //  protectedZoneLongitude Longitude                
                                     //  cenDsrcTollingZoneID   CenDsrcTollingZoneID   OPTIONAL  
                                     //  ...
-                                uint8_t* _ext_flag_7719 = (uint8_t*) buffer++;  // Read ext flag from ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.cen_dsrc_tolling_zone[0].
+                                uint8_t* _ext_flag_56 = (uint8_t*) buffer++;  // Read ext flag from ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.cen_dsrc_tolling_zone[0].
                                 
                                 if(debug) {
-                                    logger->debug() << "|\033[38;5;94m015717\033[0m| Reading ext flag from ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.cen_dsrc_tolling_zone[0].: " << int(*_ext_flag_7719);
+                                    logger->debug() << "|\033[38;5;94m000104\033[0m| Reading ext flag from ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.cen_dsrc_tolling_zone[0].: " << int(*_ext_flag_56);
                                 }
                                 
                                 if(*(buffer++)) { 
-                                    its_container_v2_its_container_msgs::CenDsrcTollingZoneID _tmp_17605;
-                                    ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.cen_dsrc_tolling_zone[0].cen_dsrc_tolling_zone_id.push_back(_tmp_17605);
+                                    its_container_v2_its_container_msgs::CenDsrcTollingZoneID _tmp_106;
+                                    ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.cen_dsrc_tolling_zone[0].cen_dsrc_tolling_zone_id.push_back(_tmp_106);
                                 
                                     if(debug)
-                                        logger->debug() << "|\033[38;5;94m015718\033[0m| ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.cen_dsrc_tolling_zone[0].cen_dsrc_tolling_zone_id " << tools::green("present");
+                                        logger->debug() << "|\033[38;5;94m000105\033[0m| ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.cen_dsrc_tolling_zone[0].cen_dsrc_tolling_zone_id " << tools::green("present");
                                 }
                                 
                                 // Field name: protected_zone_latitude
                                 // Real
                                 // Double
                                 // DOUBLE  min(-900000000) max(900000001) span(1800000002) scaleDivisor(1.0E7) dataType(Double)
-                                uint32_t* _tmp_17606 = (uint32_t*) buffer; buffer += 4;
-                                ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.cen_dsrc_tolling_zone[0].protected_zone_latitude.value = *_tmp_17606;
+                                uint32_t* _tmp_107 = (uint32_t*) buffer; buffer += 4;
+                                ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.cen_dsrc_tolling_zone[0].protected_zone_latitude.value = *_tmp_107;
                                 ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.cen_dsrc_tolling_zone[0].protected_zone_latitude.value += -900000000;
                                 __aux64__ = ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.cen_dsrc_tolling_zone[0].protected_zone_latitude.value;
                                 ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.cen_dsrc_tolling_zone[0].protected_zone_latitude.value /= 1.0E7;
@@ -2416,7 +2416,7 @@ namespace wind
                                 }
                                 
                                 if(debug) {
-                                    logger->debug() << "|\033[38;5;94m015719\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.cen_dsrc_tolling_zone[0].protected_zone_latitude.value) << " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.cen_dsrc_tolling_zone[0].protected_zone_latitude: " <<
+                                    logger->debug() << "|\033[38;5;94m000106\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.cen_dsrc_tolling_zone[0].protected_zone_latitude.value) << " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.cen_dsrc_tolling_zone[0].protected_zone_latitude: " <<
                                                  ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.cen_dsrc_tolling_zone[0].protected_zone_latitude.value << " (" << __aux64__ << ")";
                                 }
                                 
@@ -2424,8 +2424,8 @@ namespace wind
                                 // Real
                                 // Double
                                 // DOUBLE  min(-1800000000) max(1800000001) span(3600000002) scaleDivisor(1.0E7) dataType(Double)
-                                uint32_t* _tmp_17607 = (uint32_t*) buffer; buffer += 4;
-                                ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.cen_dsrc_tolling_zone[0].protected_zone_longitude.value = *_tmp_17607;
+                                uint32_t* _tmp_108 = (uint32_t*) buffer; buffer += 4;
+                                ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.cen_dsrc_tolling_zone[0].protected_zone_longitude.value = *_tmp_108;
                                 ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.cen_dsrc_tolling_zone[0].protected_zone_longitude.value += -1800000000;
                                 __aux64__ = ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.cen_dsrc_tolling_zone[0].protected_zone_longitude.value;
                                 ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.cen_dsrc_tolling_zone[0].protected_zone_longitude.value /= 1.0E7;
@@ -2442,7 +2442,7 @@ namespace wind
                                 }
                                 
                                 if(debug) {
-                                    logger->debug() << "|\033[38;5;94m015720\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.cen_dsrc_tolling_zone[0].protected_zone_longitude.value) << " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.cen_dsrc_tolling_zone[0].protected_zone_longitude: " <<
+                                    logger->debug() << "|\033[38;5;94m000107\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.cen_dsrc_tolling_zone[0].protected_zone_longitude.value) << " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.cen_dsrc_tolling_zone[0].protected_zone_longitude: " <<
                                                  ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.cen_dsrc_tolling_zone[0].protected_zone_longitude.value << " (" << __aux64__ << ")";
                                 }
                                 
@@ -2450,12 +2450,12 @@ namespace wind
                                     // Field name: cen_dsrc_tolling_zone_id
                                     // Integer
                                     // UINT32  min(0) max(134217727) span(134217728) datatype(UInt32)
-                                    uint32_t* _tmp_17608 = (uint32_t*) buffer; buffer += 4;
-                                    __aux64__ = *_tmp_17608;
+                                    uint32_t* _tmp_109 = (uint32_t*) buffer; buffer += 4;
+                                    __aux64__ = *_tmp_109;
                                     ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.cen_dsrc_tolling_zone[0].cen_dsrc_tolling_zone_id[0].value = __aux64__;
                                     
                                     if(debug) {
-                                        logger->debug() << "|\033[38;5;94m015721\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.cen_dsrc_tolling_zone[0].cen_dsrc_tolling_zone_id[0].value) << 
+                                        logger->debug() << "|\033[38;5;94m000108\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.cen_dsrc_tolling_zone[0].cen_dsrc_tolling_zone_id[0].value) << 
                                                      " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.cen_dsrc_tolling_zone[0].cen_dsrc_tolling_zone_id[0].value: " << ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.cen_dsrc_tolling_zone[0].cen_dsrc_tolling_zone_id[0].value;
                                     }
                                     
@@ -2470,26 +2470,26 @@ namespace wind
                                         return false;
                                     }
                                 }
-                                if(*_ext_flag_7719) { // from ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.cen_dsrc_tolling_zone[0]. 
-                                    uint8_t* _tmp_17609 = (uint8_t*) buffer++;  // number of extensions
-                                    bool _array_217[*_tmp_17609];
+                                if(*_ext_flag_56) { // from ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.cen_dsrc_tolling_zone[0]. 
+                                    uint8_t* _tmp_110 = (uint8_t*) buffer++;  // number of extensions
+                                    bool _array_5[*_tmp_110];
                                     
                                     if(debug)
-                                        logger->debug() << "|\033[38;5;94m015722\033[0m| Reading number of exts from ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.cen_dsrc_tolling_zone[0].: " << static_cast<unsigned int>(*_tmp_17609);
+                                        logger->debug() << "|\033[38;5;94m000109\033[0m| Reading number of exts from ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].basic_vehicle_container_high_frequency.cen_dsrc_tolling_zone[0].: " << static_cast<unsigned int>(*_tmp_110);
                                     
                                     // Extensions bytemap
-                                    for(int i = 0; i < *_tmp_17609; i++)
-                                        _array_217[i] = (*buffer++) != 0;
+                                    for(int i = 0; i < *_tmp_110; i++)
+                                        _array_5[i] = (*buffer++) != 0;
                                     
                                     // Discarding unknown OpenType containers
-                                    for(int i = 0; i < *_tmp_17609; i++) {
-                                        uint16_t* _tmp_17610 = (uint16_t*)buffer;  // OpenType length
+                                    for(int i = 0; i < *_tmp_110; i++) {
+                                        uint16_t* _tmp_111 = (uint16_t*)buffer;  // OpenType length
                                         buffer += 2;
                                     
                                         if(debug) {
                                         }
                                     
-                                        for(int i = 0; i < *_tmp_17610; i++)
+                                        for(int i = 0; i < *_tmp_111; i++)
                                             buffer++;
                                     }
                                     
@@ -2502,24 +2502,24 @@ namespace wind
                             //  madDrivingMode       MADDrivingMode          
                             //  adviceTimeConsidered GenerationDeltaTime   OPTIONAL  
                         if(*(buffer++)) { 
-                            mad_cam_pdu_descriptions_msgs::GenerationDeltaTime _tmp_17611;
-                            ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].mad_control_mode_state.advice_time_considered.push_back(_tmp_17611);
+                            mad_cam_pdu_descriptions_msgs::GenerationDeltaTime _tmp_112;
+                            ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].mad_control_mode_state.advice_time_considered.push_back(_tmp_112);
                         
                             if(debug)
-                                logger->debug() << "|\033[38;5;94m015723\033[0m| ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].mad_control_mode_state.advice_time_considered " << tools::green("present");
+                                logger->debug() << "|\033[38;5;94m000110\033[0m| ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].mad_control_mode_state.advice_time_considered " << tools::green("present");
                         }
                         
                         // Field name: mad_control_mode
                         // Enumerated
                         // INT32  min(0) max(7) span(8) datatype(Int32)
-                        uint8_t* _ext_flag_7722 = (uint8_t*) buffer++;  // Read ext flag from ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].mad_control_mode_state.mad_control_mode.
+                        uint8_t* _ext_flag_59 = (uint8_t*) buffer++;  // Read ext flag from ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].mad_control_mode_state.mad_control_mode.
                         
                         if(debug) {
-                            logger->debug() << "|\033[38;5;94m015724\033[0m| Reading ext flag from ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].mad_control_mode_state.mad_control_mode.: " << int(*_ext_flag_7722);
+                            logger->debug() << "|\033[38;5;94m000111\033[0m| Reading ext flag from ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].mad_control_mode_state.mad_control_mode.: " << int(*_ext_flag_59);
                         }
                         
-                        uint8_t* _tmp_17612 = (uint8_t*) buffer++;
-                        __aux64__ = *_tmp_17612;
+                        uint8_t* _tmp_113 = (uint8_t*) buffer++;
+                        __aux64__ = *_tmp_113;
                         __aux64__ += 0;
                         ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].mad_control_mode_state.mad_control_mode.value = __aux64__;
                         // ******************* MIN validator *******************
@@ -2535,15 +2535,15 @@ namespace wind
                         
                         
                         if(debug) {
-                            logger->debug() << "|\033[38;5;94m015725\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].mad_control_mode_state.mad_control_mode.value) << 
+                            logger->debug() << "|\033[38;5;94m000112\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].mad_control_mode_state.mad_control_mode.value) << 
                                          " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].mad_control_mode_state.mad_control_mode.value: " << static_cast<int>(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].mad_control_mode_state.mad_control_mode.value);
                         }
                         
                         // Field name: mad_driving_mode
                         // Enumerated
                         // INT32  min(0) max(3) span(4) datatype(Int32)
-                        uint8_t* _tmp_17613 = (uint8_t*) buffer++;
-                        __aux64__ = *_tmp_17613;
+                        uint8_t* _tmp_114 = (uint8_t*) buffer++;
+                        __aux64__ = *_tmp_114;
                         __aux64__ += 0;
                         ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].mad_control_mode_state.mad_driving_mode.value = __aux64__;
                         // ******************* MIN validator *******************
@@ -2559,7 +2559,7 @@ namespace wind
                         
                         
                         if(debug) {
-                            logger->debug() << "|\033[38;5;94m015726\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].mad_control_mode_state.mad_driving_mode.value) << 
+                            logger->debug() << "|\033[38;5;94m000113\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].mad_control_mode_state.mad_driving_mode.value) << 
                                          " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].mad_control_mode_state.mad_driving_mode.value: " << static_cast<int>(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].mad_control_mode_state.mad_driving_mode.value);
                         }
                         
@@ -2567,12 +2567,12 @@ namespace wind
                             // Field name: advice_time_considered
                             // Integer
                             // UINT16  min(0) max(65535) span(65536) datatype(UInt16)
-                            uint16_t* _tmp_17614 = (uint16_t*) buffer; buffer += 2;
-                            __aux64__ = *_tmp_17614;
+                            uint16_t* _tmp_115 = (uint16_t*) buffer; buffer += 2;
+                            __aux64__ = *_tmp_115;
                             ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].mad_control_mode_state.advice_time_considered[0].value = __aux64__;
                             
                             if(debug) {
-                                logger->debug() << "|\033[38;5;94m015727\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].mad_control_mode_state.advice_time_considered[0].value) << 
+                                logger->debug() << "|\033[38;5;94m000114\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].mad_control_mode_state.advice_time_considered[0].value) << 
                                              " cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].mad_control_mode_state.advice_time_considered[0].value: " << ros->cam.cam_parameters.high_frequency_container.mad_vehicle_container_high_frequency[0].mad_control_mode_state.advice_time_considered[0].value;
                             }
                             
@@ -2590,25 +2590,25 @@ namespace wind
             }
             else
             {
-                uint16_t* _tmp_17615 = (uint16_t*)buffer;  // OpenType length
-                buffer += 2 + int(*_tmp_17615);            // Ignoring opentype data
+                uint16_t* _tmp_116 = (uint16_t*)buffer;  // OpenType length
+                buffer += 2 + int(*_tmp_116);            // Ignoring opentype data
             }
             
             if(ros->cam.cam_parameters.low_frequency_container.size() != 0) {
                 // Field name: low_frequency_container
                 // Choice
-                uint8_t* _ext_flag_7724 = (uint8_t*)buffer++; // ext flag
+                uint8_t* _ext_flag_61 = (uint8_t*)buffer++; // ext flag
                 
                    // #0  basicVehicleContainerLowFrequency   BasicVehicleContainerLowFrequency   
                    // #1  madVehicleContainerLowFrequency   MADVehicleContainerLowFrequency   (ext field)
-                uint8_t _choice_405 = *(buffer++);
+                uint8_t _choice_2 = *(buffer++);
                 
-                if(*_ext_flag_7724)
-                    _choice_405 += 0 + 1; // Ext addition
+                if(*_ext_flag_61)
+                    _choice_2 += 0 + 1; // Ext addition
                 
-                if(_choice_405 == 0) {
-                    mad_cam_pdu_descriptions_msgs::BasicVehicleContainerLowFrequency _tmp_17616;
-                    ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency.push_back(_tmp_17616);
+                if(_choice_2 == 0) {
+                    mad_cam_pdu_descriptions_msgs::BasicVehicleContainerLowFrequency _tmp_117;
+                    ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency.push_back(_tmp_117);
                 
                         // BasicVehicleContainerLowFrequency  SEQUENCE
                             //  vehicleRole    VehicleRole        
@@ -2618,8 +2618,8 @@ namespace wind
                         // Field name: vehicle_role
                         // Enumerated
                         // INT32  min(0) max(15) span(16) datatype(Int32)
-                        uint8_t* _tmp_17617 = (uint8_t*) buffer++;
-                        __aux64__ = *_tmp_17617;
+                        uint8_t* _tmp_118 = (uint8_t*) buffer++;
+                        __aux64__ = *_tmp_118;
                         __aux64__ += 0;
                         ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].vehicle_role.value = __aux64__;
                         // ******************* MIN validator *******************
@@ -2635,26 +2635,26 @@ namespace wind
                         
                         
                         if(debug) {
-                            logger->debug() << "|\033[38;5;94m015728\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].vehicle_role.value) << 
+                            logger->debug() << "|\033[38;5;94m000115\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].vehicle_role.value) << 
                                          " cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].vehicle_role.value: " << static_cast<int>(ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].vehicle_role.value);
                         }
                         
                         // Field name: exterior_lights
                         // BitString
                         // BIT_STRING  min(8) max(8) span(1)
-                        uint8_t* _tmp_17618 = (uint8_t*)buffer;
-                        __aux64__ = *_tmp_17618 + 8;
+                        uint8_t* _tmp_119 = (uint8_t*)buffer;
+                        __aux64__ = *_tmp_119 + 8;
                         buffer += 1;
                         
                         if(debug)
-                            logger->debug() << "|\033[38;5;94m015729\033[0m| cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].exterior_lights.value: " << __aux64__;
+                            logger->debug() << "|\033[38;5;94m000116\033[0m| cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].exterior_lights.value: " << __aux64__;
                         
-                        int _if__tmp_17618 = __aux64__;
-                        for(int a = 0; a < _if__tmp_17618; a++) {
+                        int _if__tmp_119 = __aux64__;
+                        for(int d = 0; d < _if__tmp_119; d++) {
                             uint8_t __c__;
                             ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].exterior_lights.values.push_back(__c__);
                             uint8_t* __b__ = (uint8_t*)buffer++;
-                            ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].exterior_lights.values[a] = (*__b__ == 1);
+                            ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].exterior_lights.values[d] = (*__b__ == 1);
                         }
                         
                         // ******************* MIN validator *******************
@@ -2672,14 +2672,14 @@ namespace wind
                         // SequenceOf
                         // Data Type UInt8
                         // SEQUENCE_OF  min(0) max(40) span(41)
-                        int16_t* _tmp_17619 = (int16_t*)buffer;
+                        int16_t* _tmp_120 = (int16_t*)buffer;
                         buffer += 2;
-                        __aux64__ = *_tmp_17619;
+                        __aux64__ = *_tmp_120;
                         
-                        int _if__tmp_17619 = __aux64__;
+                        int _if__tmp_120 = __aux64__;
                         
                         if(debug) {
-                            logger->debug() << "|\033[38;5;94m015730\033[0m| SequenceOf ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history. size: " << int(*_tmp_17619);
+                            logger->debug() << "|\033[38;5;94m000117\033[0m| SequenceOf ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history. size: " << int(*_tmp_120);
                         }
                         
                         // ******************* MIN validator *******************
@@ -2694,19 +2694,19 @@ namespace wind
                         }
                         
                         
-                        for(int b = 0; b < _if__tmp_17619; b++) {
-                            its_container_v2_its_container_msgs::PathPoint seqof_b;  // SEQUENCE
-                            ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements.push_back(seqof_b);
+                        for(int e = 0; e < _if__tmp_120; e++) {
+                            its_container_v2_its_container_msgs::PathPoint seqof_e;  // SEQUENCE
+                            ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements.push_back(seqof_e);
                         
                                 // PathPoint  SEQUENCE
                                     //  pathPosition  DeltaReferencePosition     
                                     //  pathDeltaTime PathDeltaTime            OPTIONAL  
                                 if(*(buffer++)) { 
-                                    its_container_v2_its_container_msgs::PathDeltaTime _tmp_17620;
-                                    ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_delta_time.push_back(_tmp_17620);
+                                    its_container_v2_its_container_msgs::PathDeltaTime _tmp_121;
+                                    ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_delta_time.push_back(_tmp_121);
                                 
                                     if(debug)
-                                        logger->debug() << "|\033[38;5;94m015731\033[0m| ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_delta_time " << tools::green("present");
+                                        logger->debug() << "|\033[38;5;94m000118\033[0m| ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_delta_time " << tools::green("present");
                                 }
                                 
                                 // Field name: path_position
@@ -2719,143 +2719,143 @@ namespace wind
                                     // Real
                                     // Double
                                     // DOUBLE  min(-131071) max(131072) span(262144) scaleDivisor(1.0E7) dataType(Double)
-                                    uint32_t* _tmp_17621 = (uint32_t*) buffer; buffer += 4;
-                                    ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_position.delta_latitude.value = *_tmp_17621;
-                                    ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_position.delta_latitude.value += -131071;
-                                    __aux64__ = ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_position.delta_latitude.value;
-                                    ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_position.delta_latitude.value /= 1.0E7;
+                                    uint32_t* _tmp_122 = (uint32_t*) buffer; buffer += 4;
+                                    ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_position.delta_latitude.value = *_tmp_122;
+                                    ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_position.delta_latitude.value += -131071;
+                                    __aux64__ = ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_position.delta_latitude.value;
+                                    ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_position.delta_latitude.value /= 1.0E7;
                                     
                                     // ******************* MIN validator *******************
                                     if(VALIDATORS_ENABLED && __aux64__ < -131071) {
-                                        logger->warning() << "Error: Value in 'cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_position.delta_latitude.value' " << (__aux64__) << " is less than allowable (-131071); message dropped.";
+                                        logger->warning() << "Error: Value in 'cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_position.delta_latitude.value' " << (__aux64__) << " is less than allowable (-131071); message dropped.";
                                         return false;
                                     }
                                     // ******************* MAX validator *******************
                                     if(VALIDATORS_ENABLED && __aux64__ > 131072) {
-                                        logger->warning() << "Error: Value in 'cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_position.delta_latitude.value' " << (__aux64__) << " exceeds max allowable (131072); message dropped.";
+                                        logger->warning() << "Error: Value in 'cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_position.delta_latitude.value' " << (__aux64__) << " exceeds max allowable (131072); message dropped.";
                                         return false;
                                     }
                                     
                                     if(debug) {
-                                        logger->debug() << "|\033[38;5;94m015732\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_position.delta_latitude.value) << " cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_position.delta_latitude: " <<
-                                                     ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_position.delta_latitude.value << " (" << __aux64__ << ")";
+                                        logger->debug() << "|\033[38;5;94m000119\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_position.delta_latitude.value) << " cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_position.delta_latitude: " <<
+                                                     ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_position.delta_latitude.value << " (" << __aux64__ << ")";
                                     }
                                     
                                     // Field name: delta_longitude
                                     // Real
                                     // Double
                                     // DOUBLE  min(-131071) max(131072) span(262144) scaleDivisor(1.0E7) dataType(Double)
-                                    uint32_t* _tmp_17622 = (uint32_t*) buffer; buffer += 4;
-                                    ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_position.delta_longitude.value = *_tmp_17622;
-                                    ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_position.delta_longitude.value += -131071;
-                                    __aux64__ = ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_position.delta_longitude.value;
-                                    ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_position.delta_longitude.value /= 1.0E7;
+                                    uint32_t* _tmp_123 = (uint32_t*) buffer; buffer += 4;
+                                    ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_position.delta_longitude.value = *_tmp_123;
+                                    ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_position.delta_longitude.value += -131071;
+                                    __aux64__ = ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_position.delta_longitude.value;
+                                    ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_position.delta_longitude.value /= 1.0E7;
                                     
                                     // ******************* MIN validator *******************
                                     if(VALIDATORS_ENABLED && __aux64__ < -131071) {
-                                        logger->warning() << "Error: Value in 'cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_position.delta_longitude.value' " << (__aux64__) << " is less than allowable (-131071); message dropped.";
+                                        logger->warning() << "Error: Value in 'cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_position.delta_longitude.value' " << (__aux64__) << " is less than allowable (-131071); message dropped.";
                                         return false;
                                     }
                                     // ******************* MAX validator *******************
                                     if(VALIDATORS_ENABLED && __aux64__ > 131072) {
-                                        logger->warning() << "Error: Value in 'cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_position.delta_longitude.value' " << (__aux64__) << " exceeds max allowable (131072); message dropped.";
+                                        logger->warning() << "Error: Value in 'cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_position.delta_longitude.value' " << (__aux64__) << " exceeds max allowable (131072); message dropped.";
                                         return false;
                                     }
                                     
                                     if(debug) {
-                                        logger->debug() << "|\033[38;5;94m015733\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_position.delta_longitude.value) << " cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_position.delta_longitude: " <<
-                                                     ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_position.delta_longitude.value << " (" << __aux64__ << ")";
+                                        logger->debug() << "|\033[38;5;94m000120\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_position.delta_longitude.value) << " cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_position.delta_longitude: " <<
+                                                     ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_position.delta_longitude.value << " (" << __aux64__ << ")";
                                     }
                                     
                                     // Field name: delta_altitude
                                     // Real
                                     // Float
                                     // FLOAT  min(-12700) max(12800) span(25501) scaleDivisor(100.0) dataType(Float)
-                                    uint16_t* _tmp_17623 = (uint16_t*) buffer; buffer += 2;
-                                    ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_position.delta_altitude.value = *_tmp_17623;
-                                    ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_position.delta_altitude.value += -12700;
-                                    __aux64__ = ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_position.delta_altitude.value;
-                                    ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_position.delta_altitude.value /= 100.0;
+                                    uint16_t* _tmp_124 = (uint16_t*) buffer; buffer += 2;
+                                    ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_position.delta_altitude.value = *_tmp_124;
+                                    ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_position.delta_altitude.value += -12700;
+                                    __aux64__ = ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_position.delta_altitude.value;
+                                    ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_position.delta_altitude.value /= 100.0;
                                     
                                     // ******************* MIN validator *******************
                                     if(VALIDATORS_ENABLED && __aux64__ < -12700) {
-                                        logger->warning() << "Error: Value in 'cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_position.delta_altitude.value' " << (__aux64__) << " is less than allowable (-12700); message dropped.";
+                                        logger->warning() << "Error: Value in 'cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_position.delta_altitude.value' " << (__aux64__) << " is less than allowable (-12700); message dropped.";
                                         return false;
                                     }
                                     // ******************* MAX validator *******************
                                     if(VALIDATORS_ENABLED && __aux64__ > 12800) {
-                                        logger->warning() << "Error: Value in 'cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_position.delta_altitude.value' " << (__aux64__) << " exceeds max allowable (12800); message dropped.";
+                                        logger->warning() << "Error: Value in 'cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_position.delta_altitude.value' " << (__aux64__) << " exceeds max allowable (12800); message dropped.";
                                         return false;
                                     }
                                     
                                     if(debug) {
-                                        logger->debug() << "|\033[38;5;94m015734\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_position.delta_altitude.value) << " cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_position.delta_altitude: " <<
-                                                     ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_position.delta_altitude.value << " (" << __aux64__ << ")";
+                                        logger->debug() << "|\033[38;5;94m000121\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_position.delta_altitude.value) << " cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_position.delta_altitude: " <<
+                                                     ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_position.delta_altitude.value << " (" << __aux64__ << ")";
                                     }
                                 
-                                if(ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_delta_time.size() != 0) {
+                                if(ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_delta_time.size() != 0) {
                                     // Field name: path_delta_time
                                     // Real
                                     // Float
                                     // FLOAT  min(1) max(65535) span(65535) scaleDivisor(100.0) dataType(Float)
-                                    uint8_t* _ext_flag_7729 = (uint8_t*) buffer++;  // Read ext flag from ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_delta_time[0].
+                                    uint8_t* _ext_flag_66 = (uint8_t*) buffer++;  // Read ext flag from ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_delta_time[0].
                                     
                                     if(debug) {
-                                        logger->debug() << "|\033[38;5;94m015735\033[0m| Reading ext flag from ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_delta_time[0].: " << int(*_ext_flag_7729);
+                                        logger->debug() << "|\033[38;5;94m000122\033[0m| Reading ext flag from ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_delta_time[0].: " << int(*_ext_flag_66);
                                     }
                                     
-                                    if(*_ext_flag_7729) {
-                                        uint8_t* _tmp_17625 = (uint8_t*) buffer++;
+                                    if(*_ext_flag_66) {
+                                        uint8_t* _tmp_126 = (uint8_t*) buffer++;
                                         
-                                        if(*_tmp_17625) {
-                                            uint64_t* _tmp_17626 = (uint64_t*)buffer; buffer += 8;
-                                            ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_delta_time[0].value = *_tmp_17626;
-                                            ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_delta_time[0].value += INT64_MIN;
-                                            __aux64__ = ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_delta_time[0].value;
-                                            ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_delta_time[0].value /= 100.0;
+                                        if(*_tmp_126) {
+                                            uint64_t* _tmp_127 = (uint64_t*)buffer; buffer += 8;
+                                            ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_delta_time[0].value = *_tmp_127;
+                                            ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_delta_time[0].value += INT64_MIN;
+                                            __aux64__ = ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_delta_time[0].value;
+                                            ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_delta_time[0].value /= 100.0;
                                         }
                                         else
                                         {
-                                            uint32_t* _tmp_17626 = (uint32_t*) buffer; buffer += 4;
-                                            ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_delta_time[0].value = *_tmp_17626;
-                                            ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_delta_time[0].value += INT32_MIN;
-                                            __aux64__ = ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_delta_time[0].value;
-                                            ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_delta_time[0].value /= 100.0;
+                                            uint32_t* _tmp_127 = (uint32_t*) buffer; buffer += 4;
+                                            ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_delta_time[0].value = *_tmp_127;
+                                            ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_delta_time[0].value += INT32_MIN;
+                                            __aux64__ = ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_delta_time[0].value;
+                                            ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_delta_time[0].value /= 100.0;
                                         }
                                     }
                                     else
                                     {
-                                        uint16_t* _tmp_17624 = (uint16_t*) buffer; buffer += 2;
-                                        ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_delta_time[0].value = *_tmp_17624;
-                                        ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_delta_time[0].value += 1;
-                                        __aux64__ = ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_delta_time[0].value;
-                                        ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_delta_time[0].value /= 100.0;
+                                        uint16_t* _tmp_125 = (uint16_t*) buffer; buffer += 2;
+                                        ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_delta_time[0].value = *_tmp_125;
+                                        ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_delta_time[0].value += 1;
+                                        __aux64__ = ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_delta_time[0].value;
+                                        ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_delta_time[0].value /= 100.0;
                                     }
                                     
                                     // ******************* MIN validator *******************
                                     if(VALIDATORS_ENABLED && __aux64__ < 1) {
-                                        logger->warning() << "Error: Value in 'cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_delta_time[0].value' " << (__aux64__) << " is less than allowable (1); message dropped.";
+                                        logger->warning() << "Error: Value in 'cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_delta_time[0].value' " << (__aux64__) << " is less than allowable (1); message dropped.";
                                         return false;
                                     }
                                     // ******************* MAX validator *******************
                                     if(VALIDATORS_ENABLED && __aux64__ > 65535) {
-                                        logger->warning() << "Error: Value in 'cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_delta_time[0].value' " << (__aux64__) << " exceeds max allowable (65535); message dropped.";
+                                        logger->warning() << "Error: Value in 'cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_delta_time[0].value' " << (__aux64__) << " exceeds max allowable (65535); message dropped.";
                                         return false;
                                     }
                                     
                                     if(debug) {
-                                        logger->debug() << "|\033[38;5;94m015736\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_delta_time[0].value) << " cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_delta_time[0]: " <<
-                                                     ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[b].path_delta_time[0].value << " (" << __aux64__ << ")";
+                                        logger->debug() << "|\033[38;5;94m000123\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_delta_time[0].value) << " cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_delta_time[0]: " <<
+                                                     ros->cam.cam_parameters.low_frequency_container[0].basic_vehicle_container_low_frequency[0].path_history.elements[e].path_delta_time[0].value << " (" << __aux64__ << ")";
                                     }
                                 }
                         }
                 }
-                else if(_choice_405 == 1)  // CHOICE LowFrequencyContainer  fieldName(mad_vehicle_container_low_frequency)
+                else if(_choice_2 == 1)  // CHOICE LowFrequencyContainer  fieldName(mad_vehicle_container_low_frequency)
                 {
-                    mad_cam_pdu_descriptions_msgs::MADVehicleContainerLowFrequency _tmp_17627;
-                    ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency.push_back(_tmp_17627);
+                    mad_cam_pdu_descriptions_msgs::MADVehicleContainerLowFrequency _tmp_128;
+                    ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency.push_back(_tmp_128);
                 
-                    uint16_t* _tmp_17628 = (uint16_t*)buffer;  // OpenType length
+                    uint16_t* _tmp_129 = (uint16_t*)buffer;  // OpenType length
                     buffer += 2;
                 
                         // MADVehicleContainerLowFrequency  SEQUENCE
@@ -2874,8 +2874,8 @@ namespace wind
                             // Real
                             // Float
                             // FLOAT  min(1) max(63) span(63) scaleDivisor(10.0) dataType(Float)
-                            uint8_t* _tmp_17629 = (uint8_t*) buffer++;
-                            ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_dimensions.pos_cent_mass.value = *_tmp_17629;
+                            uint8_t* _tmp_130 = (uint8_t*) buffer++;
+                            ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_dimensions.pos_cent_mass.value = *_tmp_130;
                             ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_dimensions.pos_cent_mass.value += 1;
                             __aux64__ = ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_dimensions.pos_cent_mass.value;
                             ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_dimensions.pos_cent_mass.value /= 10.0;
@@ -2892,7 +2892,7 @@ namespace wind
                             }
                             
                             if(debug) {
-                                logger->debug() << "|\033[38;5;94m015737\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_dimensions.pos_cent_mass.value) << " cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_dimensions.pos_cent_mass: " <<
+                                logger->debug() << "|\033[38;5;94m000124\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_dimensions.pos_cent_mass.value) << " cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_dimensions.pos_cent_mass: " <<
                                              ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_dimensions.pos_cent_mass.value << " (" << __aux64__ << ")";
                             }
                             
@@ -2900,8 +2900,8 @@ namespace wind
                             // Real
                             // Float
                             // FLOAT  min(1) max(20) span(20) scaleDivisor(10.0) dataType(Float)
-                            uint8_t* _tmp_17630 = (uint8_t*) buffer++;
-                            ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_dimensions.pos_front_ax.value = *_tmp_17630;
+                            uint8_t* _tmp_131 = (uint8_t*) buffer++;
+                            ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_dimensions.pos_front_ax.value = *_tmp_131;
                             ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_dimensions.pos_front_ax.value += 1;
                             __aux64__ = ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_dimensions.pos_front_ax.value;
                             ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_dimensions.pos_front_ax.value /= 10.0;
@@ -2918,7 +2918,7 @@ namespace wind
                             }
                             
                             if(debug) {
-                                logger->debug() << "|\033[38;5;94m015738\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_dimensions.pos_front_ax.value) << " cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_dimensions.pos_front_ax: " <<
+                                logger->debug() << "|\033[38;5;94m000125\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_dimensions.pos_front_ax.value) << " cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_dimensions.pos_front_ax: " <<
                                              ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_dimensions.pos_front_ax.value << " (" << __aux64__ << ")";
                             }
                             
@@ -2926,8 +2926,8 @@ namespace wind
                             // Real
                             // Float
                             // FLOAT  min(1) max(127) span(127) scaleDivisor(10.0) dataType(Float)
-                            uint8_t* _tmp_17631 = (uint8_t*) buffer++;
-                            ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_dimensions.wheel_base.value = *_tmp_17631;
+                            uint8_t* _tmp_132 = (uint8_t*) buffer++;
+                            ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_dimensions.wheel_base.value = *_tmp_132;
                             ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_dimensions.wheel_base.value += 1;
                             __aux64__ = ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_dimensions.wheel_base.value;
                             ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_dimensions.wheel_base.value /= 10.0;
@@ -2944,16 +2944,16 @@ namespace wind
                             }
                             
                             if(debug) {
-                                logger->debug() << "|\033[38;5;94m015739\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_dimensions.wheel_base.value) << " cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_dimensions.wheel_base: " <<
+                                logger->debug() << "|\033[38;5;94m000126\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_dimensions.wheel_base.value) << " cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_dimensions.wheel_base: " <<
                                              ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_dimensions.wheel_base.value << " (" << __aux64__ << ")";
                             }
                             
                             // Field name: vehicle_mass
                             // Real
-                            // Float
-                            // FLOAT  min(1) max(1024) span(1024) scaleDivisor(1.0E-5) dataType(Float)
-                            uint16_t* _tmp_17632 = (uint16_t*) buffer; buffer += 2;
-                            ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_dimensions.vehicle_mass.value = *_tmp_17632;
+                            // Double
+                            // DOUBLE  min(1) max(1024) span(1024) scaleDivisor(1.0E-5) dataType(Double)
+                            uint16_t* _tmp_133 = (uint16_t*) buffer; buffer += 2;
+                            ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_dimensions.vehicle_mass.value = *_tmp_133;
                             ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_dimensions.vehicle_mass.value += 1;
                             __aux64__ = ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_dimensions.vehicle_mass.value;
                             ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_dimensions.vehicle_mass.value /= 1.0E-5;
@@ -2970,7 +2970,7 @@ namespace wind
                             }
                             
                             if(debug) {
-                                logger->debug() << "|\033[38;5;94m015740\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_dimensions.vehicle_mass.value) << " cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_dimensions.vehicle_mass: " <<
+                                logger->debug() << "|\033[38;5;94m000127\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_dimensions.vehicle_mass.value) << " cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_dimensions.vehicle_mass: " <<
                                              ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_dimensions.vehicle_mass.value << " (" << __aux64__ << ")";
                             }
                         
@@ -2985,13 +2985,13 @@ namespace wind
                             // Field name: curvature_value_min
                             // Integer
                             // INT16  min(-1023) max(1023) span(2047) datatype(Int16)
-                            uint16_t* _tmp_17633 = (uint16_t*) buffer; buffer += 2;
-                            __aux64__ = *_tmp_17633;
+                            uint16_t* _tmp_134 = (uint16_t*) buffer; buffer += 2;
+                            __aux64__ = *_tmp_134;
                             __aux64__ += -1023;
                             ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_capabilities.curvature_value_min.value = __aux64__;
                             
                             if(debug) {
-                                logger->debug() << "|\033[38;5;94m015741\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_capabilities.curvature_value_min.value) << 
+                                logger->debug() << "|\033[38;5;94m000128\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_capabilities.curvature_value_min.value) << 
                                              " cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_capabilities.curvature_value_min.value: " << ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_capabilities.curvature_value_min.value;
                             }
                             
@@ -3009,13 +3009,13 @@ namespace wind
                             // Field name: curvature_value_max
                             // Integer
                             // INT16  min(-1023) max(1023) span(2047) datatype(Int16)
-                            uint16_t* _tmp_17634 = (uint16_t*) buffer; buffer += 2;
-                            __aux64__ = *_tmp_17634;
+                            uint16_t* _tmp_135 = (uint16_t*) buffer; buffer += 2;
+                            __aux64__ = *_tmp_135;
                             __aux64__ += -1023;
                             ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_capabilities.curvature_value_max.value = __aux64__;
                             
                             if(debug) {
-                                logger->debug() << "|\033[38;5;94m015742\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_capabilities.curvature_value_max.value) << 
+                                logger->debug() << "|\033[38;5;94m000129\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_capabilities.curvature_value_max.value) << 
                                              " cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_capabilities.curvature_value_max.value: " << ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_capabilities.curvature_value_max.value;
                             }
                             
@@ -3034,8 +3034,8 @@ namespace wind
                             // Real
                             // Float
                             // FLOAT  min(-160) max(161) span(322) scaleDivisor(10.0) dataType(Float)
-                            uint16_t* _tmp_17635 = (uint16_t*) buffer; buffer += 2;
-                            ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_capabilities.acceleration_value_min.value = *_tmp_17635;
+                            uint16_t* _tmp_136 = (uint16_t*) buffer; buffer += 2;
+                            ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_capabilities.acceleration_value_min.value = *_tmp_136;
                             ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_capabilities.acceleration_value_min.value += -160;
                             __aux64__ = ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_capabilities.acceleration_value_min.value;
                             ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_capabilities.acceleration_value_min.value /= 10.0;
@@ -3052,7 +3052,7 @@ namespace wind
                             }
                             
                             if(debug) {
-                                logger->debug() << "|\033[38;5;94m015743\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_capabilities.acceleration_value_min.value) << " cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_capabilities.acceleration_value_min: " <<
+                                logger->debug() << "|\033[38;5;94m000130\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_capabilities.acceleration_value_min.value) << " cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_capabilities.acceleration_value_min: " <<
                                              ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_capabilities.acceleration_value_min.value << " (" << __aux64__ << ")";
                             }
                             
@@ -3060,8 +3060,8 @@ namespace wind
                             // Real
                             // Float
                             // FLOAT  min(-160) max(161) span(322) scaleDivisor(10.0) dataType(Float)
-                            uint16_t* _tmp_17636 = (uint16_t*) buffer; buffer += 2;
-                            ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_capabilities.acceleration_value_max.value = *_tmp_17636;
+                            uint16_t* _tmp_137 = (uint16_t*) buffer; buffer += 2;
+                            ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_capabilities.acceleration_value_max.value = *_tmp_137;
                             ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_capabilities.acceleration_value_max.value += -160;
                             __aux64__ = ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_capabilities.acceleration_value_max.value;
                             ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_capabilities.acceleration_value_max.value /= 10.0;
@@ -3078,32 +3078,32 @@ namespace wind
                             }
                             
                             if(debug) {
-                                logger->debug() << "|\033[38;5;94m015744\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_capabilities.acceleration_value_max.value) << " cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_capabilities.acceleration_value_max: " <<
+                                logger->debug() << "|\033[38;5;94m000131\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_capabilities.acceleration_value_max.value) << " cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_capabilities.acceleration_value_max: " <<
                                              ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_capabilities.acceleration_value_max.value << " (" << __aux64__ << ")";
                             }
                             
                             // Field name: possible_level_of_input
                             // BitString
                             // BIT_STRING  min(3) max(3) span(1)
-                            uint8_t* _ext_flag_7736 = (uint8_t*) buffer++;  // Read ext flag from ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_capabilities.possible_level_of_input.
+                            uint8_t* _ext_flag_73 = (uint8_t*) buffer++;  // Read ext flag from ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_capabilities.possible_level_of_input.
                             
                             if(debug) {
-                                logger->debug() << "|\033[38;5;94m015745\033[0m| Reading ext flag from ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_capabilities.possible_level_of_input.: " << int(*_ext_flag_7736);
+                                logger->debug() << "|\033[38;5;94m000132\033[0m| Reading ext flag from ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_capabilities.possible_level_of_input.: " << int(*_ext_flag_73);
                             }
                             
-                            uint8_t* _tmp_17637 = (uint8_t*)buffer;
-                            __aux64__ = *_tmp_17637 + 3;
+                            uint8_t* _tmp_138 = (uint8_t*)buffer;
+                            __aux64__ = *_tmp_138 + 3;
                             buffer += 1;
                             
                             if(debug)
-                                logger->debug() << "|\033[38;5;94m015746\033[0m| cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_capabilities.possible_level_of_input.value: " << __aux64__;
+                                logger->debug() << "|\033[38;5;94m000133\033[0m| cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_capabilities.possible_level_of_input.value: " << __aux64__;
                             
-                            int _if__tmp_17637 = __aux64__;
-                            for(int c = 0; c < _if__tmp_17637; c++) {
+                            int _if__tmp_138 = __aux64__;
+                            for(int f = 0; f < _if__tmp_138; f++) {
                                 uint8_t __c__;
                                 ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_capabilities.possible_level_of_input.values.push_back(__c__);
                                 uint8_t* __b__ = (uint8_t*)buffer++;
-                                ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_capabilities.possible_level_of_input.values[c] = (*__b__ == 1);
+                                ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].vehicle_capabilities.possible_level_of_input.values[f] = (*__b__ == 1);
                             }
                             
                             // ******************* MIN validator *******************
@@ -3123,18 +3123,18 @@ namespace wind
                                 //  speedValue             SpeedValue               OPTIONAL  
                                 //  headingValue           HeadingValue             OPTIONAL  
                             if(*(buffer++)) { 
-                                mad_cam_pdu_descriptions_msgs::SpeedValue _tmp_17638;
-                                ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.speed_value.push_back(_tmp_17638);
+                                mad_cam_pdu_descriptions_msgs::SpeedValue _tmp_139;
+                                ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.speed_value.push_back(_tmp_139);
                             
                                 if(debug)
-                                    logger->debug() << "|\033[38;5;94m015747\033[0m| ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.speed_value " << tools::green("present");
+                                    logger->debug() << "|\033[38;5;94m000134\033[0m| ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.speed_value " << tools::green("present");
                             }
                             if(*(buffer++)) { 
-                                mad_cam_pdu_descriptions_msgs::HeadingValue _tmp_17639;
-                                ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.heading_value.push_back(_tmp_17639);
+                                mad_cam_pdu_descriptions_msgs::HeadingValue _tmp_140;
+                                ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.heading_value.push_back(_tmp_140);
                             
                                 if(debug)
-                                    logger->debug() << "|\033[38;5;94m015748\033[0m| ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.heading_value " << tools::green("present");
+                                    logger->debug() << "|\033[38;5;94m000135\033[0m| ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.heading_value " << tools::green("present");
                             }
                             
                             // Field name: delta_reference_position
@@ -3147,8 +3147,8 @@ namespace wind
                                 // Real
                                 // Double
                                 // DOUBLE  min(-131071) max(131072) span(262144) scaleDivisor(1.0E7) dataType(Double)
-                                uint32_t* _tmp_17640 = (uint32_t*) buffer; buffer += 4;
-                                ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.delta_reference_position.delta_latitude.value = *_tmp_17640;
+                                uint32_t* _tmp_141 = (uint32_t*) buffer; buffer += 4;
+                                ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.delta_reference_position.delta_latitude.value = *_tmp_141;
                                 ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.delta_reference_position.delta_latitude.value += -131071;
                                 __aux64__ = ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.delta_reference_position.delta_latitude.value;
                                 ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.delta_reference_position.delta_latitude.value /= 1.0E7;
@@ -3165,7 +3165,7 @@ namespace wind
                                 }
                                 
                                 if(debug) {
-                                    logger->debug() << "|\033[38;5;94m015749\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.delta_reference_position.delta_latitude.value) << " cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.delta_reference_position.delta_latitude: " <<
+                                    logger->debug() << "|\033[38;5;94m000136\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.delta_reference_position.delta_latitude.value) << " cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.delta_reference_position.delta_latitude: " <<
                                                  ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.delta_reference_position.delta_latitude.value << " (" << __aux64__ << ")";
                                 }
                                 
@@ -3173,8 +3173,8 @@ namespace wind
                                 // Real
                                 // Double
                                 // DOUBLE  min(-131071) max(131072) span(262144) scaleDivisor(1.0E7) dataType(Double)
-                                uint32_t* _tmp_17641 = (uint32_t*) buffer; buffer += 4;
-                                ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.delta_reference_position.delta_longitude.value = *_tmp_17641;
+                                uint32_t* _tmp_142 = (uint32_t*) buffer; buffer += 4;
+                                ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.delta_reference_position.delta_longitude.value = *_tmp_142;
                                 ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.delta_reference_position.delta_longitude.value += -131071;
                                 __aux64__ = ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.delta_reference_position.delta_longitude.value;
                                 ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.delta_reference_position.delta_longitude.value /= 1.0E7;
@@ -3191,7 +3191,7 @@ namespace wind
                                 }
                                 
                                 if(debug) {
-                                    logger->debug() << "|\033[38;5;94m015750\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.delta_reference_position.delta_longitude.value) << " cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.delta_reference_position.delta_longitude: " <<
+                                    logger->debug() << "|\033[38;5;94m000137\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.delta_reference_position.delta_longitude.value) << " cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.delta_reference_position.delta_longitude: " <<
                                                  ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.delta_reference_position.delta_longitude.value << " (" << __aux64__ << ")";
                                 }
                                 
@@ -3199,8 +3199,8 @@ namespace wind
                                 // Real
                                 // Float
                                 // FLOAT  min(-12700) max(12800) span(25501) scaleDivisor(100.0) dataType(Float)
-                                uint16_t* _tmp_17642 = (uint16_t*) buffer; buffer += 2;
-                                ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.delta_reference_position.delta_altitude.value = *_tmp_17642;
+                                uint16_t* _tmp_143 = (uint16_t*) buffer; buffer += 2;
+                                ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.delta_reference_position.delta_altitude.value = *_tmp_143;
                                 ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.delta_reference_position.delta_altitude.value += -12700;
                                 __aux64__ = ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.delta_reference_position.delta_altitude.value;
                                 ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.delta_reference_position.delta_altitude.value /= 100.0;
@@ -3217,7 +3217,7 @@ namespace wind
                                 }
                                 
                                 if(debug) {
-                                    logger->debug() << "|\033[38;5;94m015751\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.delta_reference_position.delta_altitude.value) << " cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.delta_reference_position.delta_altitude: " <<
+                                    logger->debug() << "|\033[38;5;94m000138\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.delta_reference_position.delta_altitude.value) << " cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.delta_reference_position.delta_altitude: " <<
                                                  ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.delta_reference_position.delta_altitude.value << " (" << __aux64__ << ")";
                                 }
                             
@@ -3226,8 +3226,8 @@ namespace wind
                                 // Real
                                 // Float
                                 // FLOAT  min(0) max(16383) span(16384) scaleDivisor(100.0) dataType(Float)
-                                uint16_t* _tmp_17643 = (uint16_t*) buffer; buffer += 2;
-                                ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.speed_value[0].value = *_tmp_17643;
+                                uint16_t* _tmp_144 = (uint16_t*) buffer; buffer += 2;
+                                ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.speed_value[0].value = *_tmp_144;
                                 __aux64__ = ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.speed_value[0].value;
                                 ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.speed_value[0].value /= 100.0;
                                 
@@ -3243,7 +3243,7 @@ namespace wind
                                 }
                                 
                                 if(debug) {
-                                    logger->debug() << "|\033[38;5;94m015752\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.speed_value[0].value) << " cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.speed_value[0]: " <<
+                                    logger->debug() << "|\033[38;5;94m000139\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.speed_value[0].value) << " cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.speed_value[0]: " <<
                                                  ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.speed_value[0].value << " (" << __aux64__ << ")";
                                 }
                             }
@@ -3253,8 +3253,8 @@ namespace wind
                                 // Real
                                 // Float
                                 // FLOAT  min(0) max(3601) span(3602) scaleDivisor(10.0) dataType(Float)
-                                uint16_t* _tmp_17644 = (uint16_t*) buffer; buffer += 2;
-                                ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.heading_value[0].value = *_tmp_17644;
+                                uint16_t* _tmp_145 = (uint16_t*) buffer; buffer += 2;
+                                ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.heading_value[0].value = *_tmp_145;
                                 __aux64__ = ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.heading_value[0].value;
                                 ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.heading_value[0].value /= 10.0;
                                 
@@ -3270,22 +3270,22 @@ namespace wind
                                 }
                                 
                                 if(debug) {
-                                    logger->debug() << "|\033[38;5;94m015753\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.heading_value[0].value) << " cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.heading_value[0]: " <<
+                                    logger->debug() << "|\033[38;5;94m000140\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.heading_value[0].value) << " cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.heading_value[0]: " <<
                                                  ros->cam.cam_parameters.low_frequency_container[0].mad_vehicle_container_low_frequency[0].local_destination.heading_value[0].value << " (" << __aux64__ << ")";
                                 }
                             }
                 }
                 else
                 {
-                    uint16_t* _tmp_17645 = (uint16_t*)buffer;  // OpenType length
-                    buffer += 2 + int(*_tmp_17645);            // Ignoring opentype data
+                    uint16_t* _tmp_146 = (uint16_t*)buffer;  // OpenType length
+                    buffer += 2 + int(*_tmp_146);            // Ignoring opentype data
                 }
             }
             
             if(ros->cam.cam_parameters.special_vehicle_container.size() != 0) {
                 // Field name: special_vehicle_container
                 // Choice
-                uint8_t* _ext_flag_7742 = (uint8_t*)buffer++; // ext flag
+                uint8_t* _ext_flag_79 = (uint8_t*)buffer++; // ext flag
                 
                    // #0  publicTransportContainer   PublicTransportContainer   
                    // #1  specialTransportContainer   SpecialTransportContainer   
@@ -3294,34 +3294,34 @@ namespace wind
                    // #4  rescueContainer   RescueContainer   
                    // #5  emergencyContainer   EmergencyContainer   
                    // #6  safetyCarContainer   SafetyCarContainer   
-                uint8_t _choice_406 = *(buffer++);
+                uint8_t _choice_3 = *(buffer++);
                 
-                if(*_ext_flag_7742)
-                    _choice_406 += 6 + 1; // Ext addition
+                if(*_ext_flag_79)
+                    _choice_3 += 6 + 1; // Ext addition
                 
-                if(_choice_406 == 0) {
-                    mad_cam_pdu_descriptions_msgs::PublicTransportContainer _tmp_17646;
-                    ros->cam.cam_parameters.special_vehicle_container[0].public_transport_container.push_back(_tmp_17646);
+                if(_choice_3 == 0) {
+                    mad_cam_pdu_descriptions_msgs::PublicTransportContainer _tmp_147;
+                    ros->cam.cam_parameters.special_vehicle_container[0].public_transport_container.push_back(_tmp_147);
                 
                         // PublicTransportContainer  SEQUENCE
                             //  embarkationStatus EmbarkationStatus     
                             //  ptActivation      PtActivation        OPTIONAL  
                         if(*(buffer++)) { 
-                            its_container_v2_its_container_msgs::PtActivation _tmp_17647;
-                            ros->cam.cam_parameters.special_vehicle_container[0].public_transport_container[0].pt_activation.push_back(_tmp_17647);
+                            its_container_v2_its_container_msgs::PtActivation _tmp_148;
+                            ros->cam.cam_parameters.special_vehicle_container[0].public_transport_container[0].pt_activation.push_back(_tmp_148);
                         
                             if(debug)
-                                logger->debug() << "|\033[38;5;94m015754\033[0m| ros->cam.cam_parameters.special_vehicle_container[0].public_transport_container[0].pt_activation " << tools::green("present");
+                                logger->debug() << "|\033[38;5;94m000141\033[0m| ros->cam.cam_parameters.special_vehicle_container[0].public_transport_container[0].pt_activation " << tools::green("present");
                         }
                         
                         // Field name: embarkation_status
                         // Value
                         // Boolean
-                        uint8_t* _tmp_17648 = (uint8_t*)buffer;
+                        uint8_t* _tmp_149 = (uint8_t*)buffer;
                         buffer++;
-                        ros->cam.cam_parameters.special_vehicle_container[0].public_transport_container[0].embarkation_status.value = (*_tmp_17648 == 1);
+                        ros->cam.cam_parameters.special_vehicle_container[0].public_transport_container[0].embarkation_status.value = (*_tmp_149 == 1);
                         if(debug)
-                            logger->debug() << "|\033[38;5;94m015755\033[0m| \033[37;1mbool  \033[0m ros->cam.cam_parameters.special_vehicle_container[0].public_transport_container[0].embarkation_status.: " << (*_tmp_17648);
+                            logger->debug() << "|\033[38;5;94m000142\033[0m| \033[37;1mbool  \033[0m ros->cam.cam_parameters.special_vehicle_container[0].public_transport_container[0].embarkation_status.: " << (*_tmp_149);
                         
                         if(ros->cam.cam_parameters.special_vehicle_container[0].public_transport_container[0].pt_activation.size() != 0) {
                             // Field name: pt_activation
@@ -3332,12 +3332,12 @@ namespace wind
                                 // Field name: pt_activation_type
                                 // Integer
                                 // UINT8  min(0) max(255) span(256) datatype(UInt8)
-                                uint8_t* _tmp_17649 = (uint8_t*) buffer++;
-                                __aux64__ = *_tmp_17649;
+                                uint8_t* _tmp_150 = (uint8_t*) buffer++;
+                                __aux64__ = *_tmp_150;
                                 ros->cam.cam_parameters.special_vehicle_container[0].public_transport_container[0].pt_activation[0].pt_activation_type.value = __aux64__;
                                 
                                 if(debug) {
-                                    logger->debug() << "|\033[38;5;94m015756\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.special_vehicle_container[0].public_transport_container[0].pt_activation[0].pt_activation_type.value) << 
+                                    logger->debug() << "|\033[38;5;94m000143\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.special_vehicle_container[0].public_transport_container[0].pt_activation[0].pt_activation_type.value) << 
                                                  " cam.cam_parameters.special_vehicle_container[0].public_transport_container[0].pt_activation[0].pt_activation_type.value: " << static_cast<int>(ros->cam.cam_parameters.special_vehicle_container[0].public_transport_container[0].pt_activation[0].pt_activation_type.value);
                                 }
                                 
@@ -3355,21 +3355,21 @@ namespace wind
                                 // Field name: pt_activation_data
                                 // OctetString
                                 // min(1) max(20) span(20)
-                                uint8_t* _tmp_17650 = (uint8_t*)buffer;
+                                uint8_t* _tmp_151 = (uint8_t*)buffer;
                                 buffer += 1;
-                                __aux64__ = *_tmp_17650 + 1;
+                                __aux64__ = *_tmp_151 + 1;
                                 
-                                int _if__tmp_17650 = __aux64__;
-                                for(int d = 0; d < _if__tmp_17650; d++) {
+                                int _if__tmp_151 = __aux64__;
+                                for(int g = 0; g < _if__tmp_151; g++) {
                                     int8_t* __n__ = (int8_t*)buffer++;
                                     ros->cam.cam_parameters.special_vehicle_container[0].public_transport_container[0].pt_activation[0].pt_activation_data.values.push_back(*__n__);
                                 }
                         }
                 }
-                else if(_choice_406 == 1)  // CHOICE SpecialVehicleContainer  fieldName(special_transport_container)
+                else if(_choice_3 == 1)  // CHOICE SpecialVehicleContainer  fieldName(special_transport_container)
                 {
-                    mad_cam_pdu_descriptions_msgs::SpecialTransportContainer _tmp_17651;
-                    ros->cam.cam_parameters.special_vehicle_container[0].special_transport_container.push_back(_tmp_17651);
+                    mad_cam_pdu_descriptions_msgs::SpecialTransportContainer _tmp_152;
+                    ros->cam.cam_parameters.special_vehicle_container[0].special_transport_container.push_back(_tmp_152);
                 
                         // SpecialTransportContainer  SEQUENCE
                             //  specialTransportType SpecialTransportType     
@@ -3378,19 +3378,19 @@ namespace wind
                         // Field name: special_transport_type
                         // BitString
                         // BIT_STRING  min(4) max(4) span(1)
-                        uint8_t* _tmp_17652 = (uint8_t*)buffer;
-                        __aux64__ = *_tmp_17652 + 4;
+                        uint8_t* _tmp_153 = (uint8_t*)buffer;
+                        __aux64__ = *_tmp_153 + 4;
                         buffer += 1;
                         
                         if(debug)
-                            logger->debug() << "|\033[38;5;94m015757\033[0m| cam.cam_parameters.special_vehicle_container[0].special_transport_container[0].special_transport_type.value: " << __aux64__;
+                            logger->debug() << "|\033[38;5;94m000144\033[0m| cam.cam_parameters.special_vehicle_container[0].special_transport_container[0].special_transport_type.value: " << __aux64__;
                         
-                        int _if__tmp_17652 = __aux64__;
-                        for(int e = 0; e < _if__tmp_17652; e++) {
+                        int _if__tmp_153 = __aux64__;
+                        for(int h = 0; h < _if__tmp_153; h++) {
                             uint8_t __c__;
                             ros->cam.cam_parameters.special_vehicle_container[0].special_transport_container[0].special_transport_type.values.push_back(__c__);
                             uint8_t* __b__ = (uint8_t*)buffer++;
-                            ros->cam.cam_parameters.special_vehicle_container[0].special_transport_container[0].special_transport_type.values[e] = (*__b__ == 1);
+                            ros->cam.cam_parameters.special_vehicle_container[0].special_transport_container[0].special_transport_type.values[h] = (*__b__ == 1);
                         }
                         
                         // ******************* MIN validator *******************
@@ -3407,19 +3407,19 @@ namespace wind
                         // Field name: light_bar_siren_in_use
                         // BitString
                         // BIT_STRING  min(2) max(2) span(1)
-                        uint8_t* _tmp_17653 = (uint8_t*)buffer;
-                        __aux64__ = *_tmp_17653 + 2;
+                        uint8_t* _tmp_154 = (uint8_t*)buffer;
+                        __aux64__ = *_tmp_154 + 2;
                         buffer += 1;
                         
                         if(debug)
-                            logger->debug() << "|\033[38;5;94m015758\033[0m| cam.cam_parameters.special_vehicle_container[0].special_transport_container[0].light_bar_siren_in_use.value: " << __aux64__;
+                            logger->debug() << "|\033[38;5;94m000145\033[0m| cam.cam_parameters.special_vehicle_container[0].special_transport_container[0].light_bar_siren_in_use.value: " << __aux64__;
                         
-                        int _if__tmp_17653 = __aux64__;
-                        for(int f = 0; f < _if__tmp_17653; f++) {
+                        int _if__tmp_154 = __aux64__;
+                        for(int i = 0; i < _if__tmp_154; i++) {
                             uint8_t __c__;
                             ros->cam.cam_parameters.special_vehicle_container[0].special_transport_container[0].light_bar_siren_in_use.values.push_back(__c__);
                             uint8_t* __b__ = (uint8_t*)buffer++;
-                            ros->cam.cam_parameters.special_vehicle_container[0].special_transport_container[0].light_bar_siren_in_use.values[f] = (*__b__ == 1);
+                            ros->cam.cam_parameters.special_vehicle_container[0].special_transport_container[0].light_bar_siren_in_use.values[i] = (*__b__ == 1);
                         }
                         
                         // ******************* MIN validator *******************
@@ -3433,10 +3433,10 @@ namespace wind
                             return false;
                         }
                 }
-                else if(_choice_406 == 2)  // CHOICE SpecialVehicleContainer  fieldName(dangerous_goods_container)
+                else if(_choice_3 == 2)  // CHOICE SpecialVehicleContainer  fieldName(dangerous_goods_container)
                 {
-                    mad_cam_pdu_descriptions_msgs::DangerousGoodsContainer _tmp_17654;
-                    ros->cam.cam_parameters.special_vehicle_container[0].dangerous_goods_container.push_back(_tmp_17654);
+                    mad_cam_pdu_descriptions_msgs::DangerousGoodsContainer _tmp_155;
+                    ros->cam.cam_parameters.special_vehicle_container[0].dangerous_goods_container.push_back(_tmp_155);
                 
                         // DangerousGoodsContainer  SEQUENCE
                             //  dangerousGoodsBasic DangerousGoodsBasic     
@@ -3444,8 +3444,8 @@ namespace wind
                         // Field name: dangerous_goods_basic
                         // Enumerated
                         // INT32  min(0) max(19) span(20) datatype(Int32)
-                        uint8_t* _tmp_17655 = (uint8_t*) buffer++;
-                        __aux64__ = *_tmp_17655;
+                        uint8_t* _tmp_156 = (uint8_t*) buffer++;
+                        __aux64__ = *_tmp_156;
                         __aux64__ += 0;
                         ros->cam.cam_parameters.special_vehicle_container[0].dangerous_goods_container[0].dangerous_goods_basic.value = __aux64__;
                         // ******************* MIN validator *******************
@@ -3461,44 +3461,44 @@ namespace wind
                         
                         
                         if(debug) {
-                            logger->debug() << "|\033[38;5;94m015759\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.special_vehicle_container[0].dangerous_goods_container[0].dangerous_goods_basic.value) << 
+                            logger->debug() << "|\033[38;5;94m000146\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.special_vehicle_container[0].dangerous_goods_container[0].dangerous_goods_basic.value) << 
                                          " cam.cam_parameters.special_vehicle_container[0].dangerous_goods_container[0].dangerous_goods_basic.value: " << static_cast<int>(ros->cam.cam_parameters.special_vehicle_container[0].dangerous_goods_container[0].dangerous_goods_basic.value);
                         }
                 }
-                else if(_choice_406 == 3)  // CHOICE SpecialVehicleContainer  fieldName(road_works_container_basic)
+                else if(_choice_3 == 3)  // CHOICE SpecialVehicleContainer  fieldName(road_works_container_basic)
                 {
-                    mad_cam_pdu_descriptions_msgs::RoadWorksContainerBasic _tmp_17656;
-                    ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic.push_back(_tmp_17656);
+                    mad_cam_pdu_descriptions_msgs::RoadWorksContainerBasic _tmp_157;
+                    ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic.push_back(_tmp_157);
                 
                         // RoadWorksContainerBasic  SEQUENCE
                             //  roadworksSubCauseCode RoadworksSubCauseCode   OPTIONAL  
                             //  lightBarSirenInUse    LightBarSirenInUse        
                             //  closedLanes           ClosedLanes             OPTIONAL  
                         if(*(buffer++)) { 
-                            its_container_v2_its_container_msgs::RoadworksSubCauseCode _tmp_17657;
-                            ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].roadworks_sub_cause_code.push_back(_tmp_17657);
+                            its_container_v2_its_container_msgs::RoadworksSubCauseCode _tmp_158;
+                            ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].roadworks_sub_cause_code.push_back(_tmp_158);
                         
                             if(debug)
-                                logger->debug() << "|\033[38;5;94m015760\033[0m| ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].roadworks_sub_cause_code " << tools::green("present");
+                                logger->debug() << "|\033[38;5;94m000147\033[0m| ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].roadworks_sub_cause_code " << tools::green("present");
                         }
                         if(*(buffer++)) { 
-                            its_container_v2_its_container_msgs::ClosedLanes _tmp_17658;
-                            ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].closed_lanes.push_back(_tmp_17658);
+                            its_container_v2_its_container_msgs::ClosedLanes _tmp_159;
+                            ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].closed_lanes.push_back(_tmp_159);
                         
                             if(debug)
-                                logger->debug() << "|\033[38;5;94m015761\033[0m| ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].closed_lanes " << tools::green("present");
+                                logger->debug() << "|\033[38;5;94m000148\033[0m| ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].closed_lanes " << tools::green("present");
                         }
                         
                         if(ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].roadworks_sub_cause_code.size() != 0) {
                             // Field name: roadworks_sub_cause_code
                             // Integer
                             // UINT8  min(0) max(255) span(256) datatype(UInt8)
-                            uint8_t* _tmp_17659 = (uint8_t*) buffer++;
-                            __aux64__ = *_tmp_17659;
+                            uint8_t* _tmp_160 = (uint8_t*) buffer++;
+                            __aux64__ = *_tmp_160;
                             ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].roadworks_sub_cause_code[0].value = __aux64__;
                             
                             if(debug) {
-                                logger->debug() << "|\033[38;5;94m015762\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].roadworks_sub_cause_code[0].value) << 
+                                logger->debug() << "|\033[38;5;94m000149\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].roadworks_sub_cause_code[0].value) << 
                                              " cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].roadworks_sub_cause_code[0].value: " << static_cast<int>(ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].roadworks_sub_cause_code[0].value);
                             }
                             
@@ -3517,19 +3517,19 @@ namespace wind
                         // Field name: light_bar_siren_in_use
                         // BitString
                         // BIT_STRING  min(2) max(2) span(1)
-                        uint8_t* _tmp_17660 = (uint8_t*)buffer;
-                        __aux64__ = *_tmp_17660 + 2;
+                        uint8_t* _tmp_161 = (uint8_t*)buffer;
+                        __aux64__ = *_tmp_161 + 2;
                         buffer += 1;
                         
                         if(debug)
-                            logger->debug() << "|\033[38;5;94m015763\033[0m| cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].light_bar_siren_in_use.value: " << __aux64__;
+                            logger->debug() << "|\033[38;5;94m000150\033[0m| cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].light_bar_siren_in_use.value: " << __aux64__;
                         
-                        int _if__tmp_17660 = __aux64__;
-                        for(int g = 0; g < _if__tmp_17660; g++) {
+                        int _if__tmp_161 = __aux64__;
+                        for(int j = 0; j < _if__tmp_161; j++) {
                             uint8_t __c__;
                             ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].light_bar_siren_in_use.values.push_back(__c__);
                             uint8_t* __b__ = (uint8_t*)buffer++;
-                            ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].light_bar_siren_in_use.values[g] = (*__b__ == 1);
+                            ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].light_bar_siren_in_use.values[j] = (*__b__ == 1);
                         }
                         
                         // ******************* MIN validator *******************
@@ -3550,40 +3550,40 @@ namespace wind
                                     //  outerhardShoulderStatus HardShoulderStatus   OPTIONAL  
                                     //  drivingLaneStatus       DrivingLaneStatus    OPTIONAL  
                                     //  ...
-                                uint8_t* _ext_flag_7744 = (uint8_t*) buffer++;  // Read ext flag from ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].closed_lanes[0].
+                                uint8_t* _ext_flag_81 = (uint8_t*) buffer++;  // Read ext flag from ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].closed_lanes[0].
                                 
                                 if(debug) {
-                                    logger->debug() << "|\033[38;5;94m015764\033[0m| Reading ext flag from ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].closed_lanes[0].: " << int(*_ext_flag_7744);
+                                    logger->debug() << "|\033[38;5;94m000151\033[0m| Reading ext flag from ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].closed_lanes[0].: " << int(*_ext_flag_81);
                                 }
                                 
                                 if(*(buffer++)) { 
-                                    its_container_v2_its_container_msgs::HardShoulderStatus _tmp_17661;
-                                    ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].closed_lanes[0].innerhard_shoulder_status.push_back(_tmp_17661);
+                                    its_container_v2_its_container_msgs::HardShoulderStatus _tmp_162;
+                                    ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].closed_lanes[0].innerhard_shoulder_status.push_back(_tmp_162);
                                 
                                     if(debug)
-                                        logger->debug() << "|\033[38;5;94m015765\033[0m| ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].closed_lanes[0].innerhard_shoulder_status " << tools::green("present");
+                                        logger->debug() << "|\033[38;5;94m000152\033[0m| ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].closed_lanes[0].innerhard_shoulder_status " << tools::green("present");
                                 }
                                 if(*(buffer++)) { 
-                                    its_container_v2_its_container_msgs::HardShoulderStatus _tmp_17662;
-                                    ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].closed_lanes[0].outerhard_shoulder_status.push_back(_tmp_17662);
+                                    its_container_v2_its_container_msgs::HardShoulderStatus _tmp_163;
+                                    ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].closed_lanes[0].outerhard_shoulder_status.push_back(_tmp_163);
                                 
                                     if(debug)
-                                        logger->debug() << "|\033[38;5;94m015766\033[0m| ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].closed_lanes[0].outerhard_shoulder_status " << tools::green("present");
+                                        logger->debug() << "|\033[38;5;94m000153\033[0m| ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].closed_lanes[0].outerhard_shoulder_status " << tools::green("present");
                                 }
                                 if(*(buffer++)) { 
-                                    its_container_v2_its_container_msgs::DrivingLaneStatus _tmp_17663;
-                                    ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].closed_lanes[0].driving_lane_status.push_back(_tmp_17663);
+                                    its_container_v2_its_container_msgs::DrivingLaneStatus _tmp_164;
+                                    ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].closed_lanes[0].driving_lane_status.push_back(_tmp_164);
                                 
                                     if(debug)
-                                        logger->debug() << "|\033[38;5;94m015767\033[0m| ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].closed_lanes[0].driving_lane_status " << tools::green("present");
+                                        logger->debug() << "|\033[38;5;94m000154\033[0m| ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].closed_lanes[0].driving_lane_status " << tools::green("present");
                                 }
                                 
                                 if(ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].closed_lanes[0].innerhard_shoulder_status.size() != 0) {
                                     // Field name: innerhard_shoulder_status
                                     // Enumerated
                                     // INT32  min(0) max(2) span(3) datatype(Int32)
-                                    uint8_t* _tmp_17664 = (uint8_t*) buffer++;
-                                    __aux64__ = *_tmp_17664;
+                                    uint8_t* _tmp_165 = (uint8_t*) buffer++;
+                                    __aux64__ = *_tmp_165;
                                     __aux64__ += 0;
                                     ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].closed_lanes[0].innerhard_shoulder_status[0].value = __aux64__;
                                     // ******************* MIN validator *******************
@@ -3599,7 +3599,7 @@ namespace wind
                                     
                                     
                                     if(debug) {
-                                        logger->debug() << "|\033[38;5;94m015768\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].closed_lanes[0].innerhard_shoulder_status[0].value) << 
+                                        logger->debug() << "|\033[38;5;94m000155\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].closed_lanes[0].innerhard_shoulder_status[0].value) << 
                                                      " cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].closed_lanes[0].innerhard_shoulder_status[0].value: " << static_cast<int>(ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].closed_lanes[0].innerhard_shoulder_status[0].value);
                                     }
                                 }
@@ -3608,8 +3608,8 @@ namespace wind
                                     // Field name: outerhard_shoulder_status
                                     // Enumerated
                                     // INT32  min(0) max(2) span(3) datatype(Int32)
-                                    uint8_t* _tmp_17665 = (uint8_t*) buffer++;
-                                    __aux64__ = *_tmp_17665;
+                                    uint8_t* _tmp_166 = (uint8_t*) buffer++;
+                                    __aux64__ = *_tmp_166;
                                     __aux64__ += 0;
                                     ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].closed_lanes[0].outerhard_shoulder_status[0].value = __aux64__;
                                     // ******************* MIN validator *******************
@@ -3625,7 +3625,7 @@ namespace wind
                                     
                                     
                                     if(debug) {
-                                        logger->debug() << "|\033[38;5;94m015769\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].closed_lanes[0].outerhard_shoulder_status[0].value) << 
+                                        logger->debug() << "|\033[38;5;94m000156\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].closed_lanes[0].outerhard_shoulder_status[0].value) << 
                                                      " cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].closed_lanes[0].outerhard_shoulder_status[0].value: " << static_cast<int>(ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].closed_lanes[0].outerhard_shoulder_status[0].value);
                                     }
                                 }
@@ -3634,19 +3634,19 @@ namespace wind
                                     // Field name: driving_lane_status
                                     // BitString
                                     // BIT_STRING  min(1) max(13) span(13)
-                                    uint8_t* _tmp_17666 = (uint8_t*)buffer;
-                                    __aux64__ = *_tmp_17666 + 1;
+                                    uint8_t* _tmp_167 = (uint8_t*)buffer;
+                                    __aux64__ = *_tmp_167 + 1;
                                     buffer += 1;
                                     
                                     if(debug)
-                                        logger->debug() << "|\033[38;5;94m015770\033[0m| cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].closed_lanes[0].driving_lane_status[0].value: " << __aux64__;
+                                        logger->debug() << "|\033[38;5;94m000157\033[0m| cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].closed_lanes[0].driving_lane_status[0].value: " << __aux64__;
                                     
-                                    int _if__tmp_17666 = __aux64__;
-                                    for(int h = 0; h < _if__tmp_17666; h++) {
+                                    int _if__tmp_167 = __aux64__;
+                                    for(int k = 0; k < _if__tmp_167; k++) {
                                         uint8_t __c__;
                                         ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].closed_lanes[0].driving_lane_status[0].values.push_back(__c__);
                                         uint8_t* __b__ = (uint8_t*)buffer++;
-                                        ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].closed_lanes[0].driving_lane_status[0].values[h] = (*__b__ == 1);
+                                        ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].closed_lanes[0].driving_lane_status[0].values[k] = (*__b__ == 1);
                                     }
                                     
                                     // ******************* MIN validator *******************
@@ -3660,36 +3660,36 @@ namespace wind
                                         return false;
                                     }
                                 }
-                                if(*_ext_flag_7744) { // from ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].closed_lanes[0]. 
-                                    uint8_t* _tmp_17667 = (uint8_t*) buffer++;  // number of extensions
-                                    bool _array_218[*_tmp_17667];
+                                if(*_ext_flag_81) { // from ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].closed_lanes[0]. 
+                                    uint8_t* _tmp_168 = (uint8_t*) buffer++;  // number of extensions
+                                    bool _array_6[*_tmp_168];
                                     
                                     if(debug)
-                                        logger->debug() << "|\033[38;5;94m015771\033[0m| Reading number of exts from ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].closed_lanes[0].: " << static_cast<unsigned int>(*_tmp_17667);
+                                        logger->debug() << "|\033[38;5;94m000158\033[0m| Reading number of exts from ros->cam.cam_parameters.special_vehicle_container[0].road_works_container_basic[0].closed_lanes[0].: " << static_cast<unsigned int>(*_tmp_168);
                                     
                                     // Extensions bytemap
-                                    for(int i = 0; i < *_tmp_17667; i++)
-                                        _array_218[i] = (*buffer++) != 0;
+                                    for(int i = 0; i < *_tmp_168; i++)
+                                        _array_6[i] = (*buffer++) != 0;
                                     
                                     // Discarding unknown OpenType containers
-                                    for(int i = 0; i < *_tmp_17667; i++) {
-                                        uint16_t* _tmp_17668 = (uint16_t*)buffer;  // OpenType length
+                                    for(int i = 0; i < *_tmp_168; i++) {
+                                        uint16_t* _tmp_169 = (uint16_t*)buffer;  // OpenType length
                                         buffer += 2;
                                     
                                         if(debug) {
                                         }
                                     
-                                        for(int i = 0; i < *_tmp_17668; i++)
+                                        for(int i = 0; i < *_tmp_169; i++)
                                             buffer++;
                                     }
                                     
                                 }
                         }
                 }
-                else if(_choice_406 == 4)  // CHOICE SpecialVehicleContainer  fieldName(rescue_container)
+                else if(_choice_3 == 4)  // CHOICE SpecialVehicleContainer  fieldName(rescue_container)
                 {
-                    mad_cam_pdu_descriptions_msgs::RescueContainer _tmp_17669;
-                    ros->cam.cam_parameters.special_vehicle_container[0].rescue_container.push_back(_tmp_17669);
+                    mad_cam_pdu_descriptions_msgs::RescueContainer _tmp_170;
+                    ros->cam.cam_parameters.special_vehicle_container[0].rescue_container.push_back(_tmp_170);
                 
                         // RescueContainer  SEQUENCE
                             //  lightBarSirenInUse LightBarSirenInUse     
@@ -3697,19 +3697,19 @@ namespace wind
                         // Field name: light_bar_siren_in_use
                         // BitString
                         // BIT_STRING  min(2) max(2) span(1)
-                        uint8_t* _tmp_17670 = (uint8_t*)buffer;
-                        __aux64__ = *_tmp_17670 + 2;
+                        uint8_t* _tmp_171 = (uint8_t*)buffer;
+                        __aux64__ = *_tmp_171 + 2;
                         buffer += 1;
                         
                         if(debug)
-                            logger->debug() << "|\033[38;5;94m015772\033[0m| cam.cam_parameters.special_vehicle_container[0].rescue_container[0].light_bar_siren_in_use.value: " << __aux64__;
+                            logger->debug() << "|\033[38;5;94m000159\033[0m| cam.cam_parameters.special_vehicle_container[0].rescue_container[0].light_bar_siren_in_use.value: " << __aux64__;
                         
-                        int _if__tmp_17670 = __aux64__;
-                        for(int i = 0; i < _if__tmp_17670; i++) {
+                        int _if__tmp_171 = __aux64__;
+                        for(int l = 0; l < _if__tmp_171; l++) {
                             uint8_t __c__;
                             ros->cam.cam_parameters.special_vehicle_container[0].rescue_container[0].light_bar_siren_in_use.values.push_back(__c__);
                             uint8_t* __b__ = (uint8_t*)buffer++;
-                            ros->cam.cam_parameters.special_vehicle_container[0].rescue_container[0].light_bar_siren_in_use.values[i] = (*__b__ == 1);
+                            ros->cam.cam_parameters.special_vehicle_container[0].rescue_container[0].light_bar_siren_in_use.values[l] = (*__b__ == 1);
                         }
                         
                         // ******************* MIN validator *******************
@@ -3723,46 +3723,46 @@ namespace wind
                             return false;
                         }
                 }
-                else if(_choice_406 == 5)  // CHOICE SpecialVehicleContainer  fieldName(emergency_container)
+                else if(_choice_3 == 5)  // CHOICE SpecialVehicleContainer  fieldName(emergency_container)
                 {
-                    mad_cam_pdu_descriptions_msgs::EmergencyContainer _tmp_17671;
-                    ros->cam.cam_parameters.special_vehicle_container[0].emergency_container.push_back(_tmp_17671);
+                    mad_cam_pdu_descriptions_msgs::EmergencyContainer _tmp_172;
+                    ros->cam.cam_parameters.special_vehicle_container[0].emergency_container.push_back(_tmp_172);
                 
                         // EmergencyContainer  SEQUENCE
                             //  lightBarSirenInUse LightBarSirenInUse     
                             //  incidentIndication CauseCode            OPTIONAL  
                             //  emergencyPriority  EmergencyPriority    OPTIONAL  
                         if(*(buffer++)) { 
-                            its_container_v2_its_container_msgs::CauseCode _tmp_17672;
-                            ros->cam.cam_parameters.special_vehicle_container[0].emergency_container[0].incident_indication.push_back(_tmp_17672);
+                            its_container_v2_its_container_msgs::CauseCode _tmp_173;
+                            ros->cam.cam_parameters.special_vehicle_container[0].emergency_container[0].incident_indication.push_back(_tmp_173);
                         
                             if(debug)
-                                logger->debug() << "|\033[38;5;94m015773\033[0m| ros->cam.cam_parameters.special_vehicle_container[0].emergency_container[0].incident_indication " << tools::green("present");
+                                logger->debug() << "|\033[38;5;94m000160\033[0m| ros->cam.cam_parameters.special_vehicle_container[0].emergency_container[0].incident_indication " << tools::green("present");
                         }
                         if(*(buffer++)) { 
-                            its_container_v2_its_container_msgs::EmergencyPriority _tmp_17673;
-                            ros->cam.cam_parameters.special_vehicle_container[0].emergency_container[0].emergency_priority.push_back(_tmp_17673);
+                            its_container_v2_its_container_msgs::EmergencyPriority _tmp_174;
+                            ros->cam.cam_parameters.special_vehicle_container[0].emergency_container[0].emergency_priority.push_back(_tmp_174);
                         
                             if(debug)
-                                logger->debug() << "|\033[38;5;94m015774\033[0m| ros->cam.cam_parameters.special_vehicle_container[0].emergency_container[0].emergency_priority " << tools::green("present");
+                                logger->debug() << "|\033[38;5;94m000161\033[0m| ros->cam.cam_parameters.special_vehicle_container[0].emergency_container[0].emergency_priority " << tools::green("present");
                         }
                         
                         // Field name: light_bar_siren_in_use
                         // BitString
                         // BIT_STRING  min(2) max(2) span(1)
-                        uint8_t* _tmp_17674 = (uint8_t*)buffer;
-                        __aux64__ = *_tmp_17674 + 2;
+                        uint8_t* _tmp_175 = (uint8_t*)buffer;
+                        __aux64__ = *_tmp_175 + 2;
                         buffer += 1;
                         
                         if(debug)
-                            logger->debug() << "|\033[38;5;94m015775\033[0m| cam.cam_parameters.special_vehicle_container[0].emergency_container[0].light_bar_siren_in_use.value: " << __aux64__;
+                            logger->debug() << "|\033[38;5;94m000162\033[0m| cam.cam_parameters.special_vehicle_container[0].emergency_container[0].light_bar_siren_in_use.value: " << __aux64__;
                         
-                        int _if__tmp_17674 = __aux64__;
-                        for(int j = 0; j < _if__tmp_17674; j++) {
+                        int _if__tmp_175 = __aux64__;
+                        for(int m = 0; m < _if__tmp_175; m++) {
                             uint8_t __c__;
                             ros->cam.cam_parameters.special_vehicle_container[0].emergency_container[0].light_bar_siren_in_use.values.push_back(__c__);
                             uint8_t* __b__ = (uint8_t*)buffer++;
-                            ros->cam.cam_parameters.special_vehicle_container[0].emergency_container[0].light_bar_siren_in_use.values[j] = (*__b__ == 1);
+                            ros->cam.cam_parameters.special_vehicle_container[0].emergency_container[0].light_bar_siren_in_use.values[m] = (*__b__ == 1);
                         }
                         
                         // ******************* MIN validator *******************
@@ -3782,22 +3782,22 @@ namespace wind
                                     //  causeCode    CauseCodeType        
                                     //  subCauseCode SubCauseCodeType     
                                     //  ...
-                                uint8_t* _ext_flag_7747 = (uint8_t*) buffer++;  // Read ext flag from ros->cam.cam_parameters.special_vehicle_container[0].emergency_container[0].incident_indication[0].
+                                uint8_t* _ext_flag_84 = (uint8_t*) buffer++;  // Read ext flag from ros->cam.cam_parameters.special_vehicle_container[0].emergency_container[0].incident_indication[0].
                                 
                                 if(debug) {
-                                    logger->debug() << "|\033[38;5;94m015776\033[0m| Reading ext flag from ros->cam.cam_parameters.special_vehicle_container[0].emergency_container[0].incident_indication[0].: " << int(*_ext_flag_7747);
+                                    logger->debug() << "|\033[38;5;94m000163\033[0m| Reading ext flag from ros->cam.cam_parameters.special_vehicle_container[0].emergency_container[0].incident_indication[0].: " << int(*_ext_flag_84);
                                 }
                                 
                                 
                                 // Field name: cause_code
                                 // Integer
                                 // UINT8  min(0) max(255) span(256) datatype(UInt8)
-                                uint8_t* _tmp_17675 = (uint8_t*) buffer++;
-                                __aux64__ = *_tmp_17675;
+                                uint8_t* _tmp_176 = (uint8_t*) buffer++;
+                                __aux64__ = *_tmp_176;
                                 ros->cam.cam_parameters.special_vehicle_container[0].emergency_container[0].incident_indication[0].cause_code.value = __aux64__;
                                 
                                 if(debug) {
-                                    logger->debug() << "|\033[38;5;94m015777\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.special_vehicle_container[0].emergency_container[0].incident_indication[0].cause_code.value) << 
+                                    logger->debug() << "|\033[38;5;94m000164\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.special_vehicle_container[0].emergency_container[0].incident_indication[0].cause_code.value) << 
                                                  " cam.cam_parameters.special_vehicle_container[0].emergency_container[0].incident_indication[0].cause_code.value: " << static_cast<int>(ros->cam.cam_parameters.special_vehicle_container[0].emergency_container[0].incident_indication[0].cause_code.value);
                                 }
                                 
@@ -3815,12 +3815,12 @@ namespace wind
                                 // Field name: sub_cause_code
                                 // Integer
                                 // UINT8  min(0) max(255) span(256) datatype(UInt8)
-                                uint8_t* _tmp_17676 = (uint8_t*) buffer++;
-                                __aux64__ = *_tmp_17676;
+                                uint8_t* _tmp_177 = (uint8_t*) buffer++;
+                                __aux64__ = *_tmp_177;
                                 ros->cam.cam_parameters.special_vehicle_container[0].emergency_container[0].incident_indication[0].sub_cause_code.value = __aux64__;
                                 
                                 if(debug) {
-                                    logger->debug() << "|\033[38;5;94m015778\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.special_vehicle_container[0].emergency_container[0].incident_indication[0].sub_cause_code.value) << 
+                                    logger->debug() << "|\033[38;5;94m000165\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.special_vehicle_container[0].emergency_container[0].incident_indication[0].sub_cause_code.value) << 
                                                  " cam.cam_parameters.special_vehicle_container[0].emergency_container[0].incident_indication[0].sub_cause_code.value: " << static_cast<int>(ros->cam.cam_parameters.special_vehicle_container[0].emergency_container[0].incident_indication[0].sub_cause_code.value);
                                 }
                                 
@@ -3834,26 +3834,26 @@ namespace wind
                                     logger->warning() << "Error: Value in 'cam.cam_parameters.special_vehicle_container[0].emergency_container[0].incident_indication[0].sub_cause_code.value' " << (__aux64__) << " exceeds max allowable (255); message dropped.";
                                     return false;
                                 }
-                                if(*_ext_flag_7747) { // from ros->cam.cam_parameters.special_vehicle_container[0].emergency_container[0].incident_indication[0]. 
-                                    uint8_t* _tmp_17677 = (uint8_t*) buffer++;  // number of extensions
-                                    bool _array_219[*_tmp_17677];
+                                if(*_ext_flag_84) { // from ros->cam.cam_parameters.special_vehicle_container[0].emergency_container[0].incident_indication[0]. 
+                                    uint8_t* _tmp_178 = (uint8_t*) buffer++;  // number of extensions
+                                    bool _array_7[*_tmp_178];
                                     
                                     if(debug)
-                                        logger->debug() << "|\033[38;5;94m015779\033[0m| Reading number of exts from ros->cam.cam_parameters.special_vehicle_container[0].emergency_container[0].incident_indication[0].: " << static_cast<unsigned int>(*_tmp_17677);
+                                        logger->debug() << "|\033[38;5;94m000166\033[0m| Reading number of exts from ros->cam.cam_parameters.special_vehicle_container[0].emergency_container[0].incident_indication[0].: " << static_cast<unsigned int>(*_tmp_178);
                                     
                                     // Extensions bytemap
-                                    for(int i = 0; i < *_tmp_17677; i++)
-                                        _array_219[i] = (*buffer++) != 0;
+                                    for(int i = 0; i < *_tmp_178; i++)
+                                        _array_7[i] = (*buffer++) != 0;
                                     
                                     // Discarding unknown OpenType containers
-                                    for(int i = 0; i < *_tmp_17677; i++) {
-                                        uint16_t* _tmp_17678 = (uint16_t*)buffer;  // OpenType length
+                                    for(int i = 0; i < *_tmp_178; i++) {
+                                        uint16_t* _tmp_179 = (uint16_t*)buffer;  // OpenType length
                                         buffer += 2;
                                     
                                         if(debug) {
                                         }
                                     
-                                        for(int i = 0; i < *_tmp_17678; i++)
+                                        for(int i = 0; i < *_tmp_179; i++)
                                             buffer++;
                                     }
                                     
@@ -3864,19 +3864,19 @@ namespace wind
                             // Field name: emergency_priority
                             // BitString
                             // BIT_STRING  min(2) max(2) span(1)
-                            uint8_t* _tmp_17679 = (uint8_t*)buffer;
-                            __aux64__ = *_tmp_17679 + 2;
+                            uint8_t* _tmp_180 = (uint8_t*)buffer;
+                            __aux64__ = *_tmp_180 + 2;
                             buffer += 1;
                             
                             if(debug)
-                                logger->debug() << "|\033[38;5;94m015780\033[0m| cam.cam_parameters.special_vehicle_container[0].emergency_container[0].emergency_priority[0].value: " << __aux64__;
+                                logger->debug() << "|\033[38;5;94m000167\033[0m| cam.cam_parameters.special_vehicle_container[0].emergency_container[0].emergency_priority[0].value: " << __aux64__;
                             
-                            int _if__tmp_17679 = __aux64__;
-                            for(int k = 0; k < _if__tmp_17679; k++) {
+                            int _if__tmp_180 = __aux64__;
+                            for(int n = 0; n < _if__tmp_180; n++) {
                                 uint8_t __c__;
                                 ros->cam.cam_parameters.special_vehicle_container[0].emergency_container[0].emergency_priority[0].values.push_back(__c__);
                                 uint8_t* __b__ = (uint8_t*)buffer++;
-                                ros->cam.cam_parameters.special_vehicle_container[0].emergency_container[0].emergency_priority[0].values[k] = (*__b__ == 1);
+                                ros->cam.cam_parameters.special_vehicle_container[0].emergency_container[0].emergency_priority[0].values[n] = (*__b__ == 1);
                             }
                             
                             // ******************* MIN validator *******************
@@ -3891,10 +3891,10 @@ namespace wind
                             }
                         }
                 }
-                else if(_choice_406 == 6)  // CHOICE SpecialVehicleContainer  fieldName(safety_car_container)
+                else if(_choice_3 == 6)  // CHOICE SpecialVehicleContainer  fieldName(safety_car_container)
                 {
-                    mad_cam_pdu_descriptions_msgs::SafetyCarContainer _tmp_17680;
-                    ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container.push_back(_tmp_17680);
+                    mad_cam_pdu_descriptions_msgs::SafetyCarContainer _tmp_181;
+                    ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container.push_back(_tmp_181);
                 
                         // SafetyCarContainer  SEQUENCE
                             //  lightBarSirenInUse LightBarSirenInUse     
@@ -3902,43 +3902,43 @@ namespace wind
                             //  trafficRule        TrafficRule          OPTIONAL  
                             //  speedLimit         SpeedLimit           OPTIONAL  
                         if(*(buffer++)) { 
-                            its_container_v2_its_container_msgs::CauseCode _tmp_17681;
-                            ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].incident_indication.push_back(_tmp_17681);
+                            its_container_v2_its_container_msgs::CauseCode _tmp_182;
+                            ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].incident_indication.push_back(_tmp_182);
                         
                             if(debug)
-                                logger->debug() << "|\033[38;5;94m015781\033[0m| ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].incident_indication " << tools::green("present");
+                                logger->debug() << "|\033[38;5;94m000168\033[0m| ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].incident_indication " << tools::green("present");
                         }
                         if(*(buffer++)) { 
-                            its_container_v2_its_container_msgs::TrafficRule _tmp_17682;
-                            ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].traffic_rule.push_back(_tmp_17682);
+                            its_container_v2_its_container_msgs::TrafficRule _tmp_183;
+                            ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].traffic_rule.push_back(_tmp_183);
                         
                             if(debug)
-                                logger->debug() << "|\033[38;5;94m015782\033[0m| ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].traffic_rule " << tools::green("present");
+                                logger->debug() << "|\033[38;5;94m000169\033[0m| ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].traffic_rule " << tools::green("present");
                         }
                         if(*(buffer++)) { 
-                            its_container_v2_its_container_msgs::SpeedLimit _tmp_17683;
-                            ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].speed_limit.push_back(_tmp_17683);
+                            its_container_v2_its_container_msgs::SpeedLimit _tmp_184;
+                            ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].speed_limit.push_back(_tmp_184);
                         
                             if(debug)
-                                logger->debug() << "|\033[38;5;94m015783\033[0m| ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].speed_limit " << tools::green("present");
+                                logger->debug() << "|\033[38;5;94m000170\033[0m| ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].speed_limit " << tools::green("present");
                         }
                         
                         // Field name: light_bar_siren_in_use
                         // BitString
                         // BIT_STRING  min(2) max(2) span(1)
-                        uint8_t* _tmp_17684 = (uint8_t*)buffer;
-                        __aux64__ = *_tmp_17684 + 2;
+                        uint8_t* _tmp_185 = (uint8_t*)buffer;
+                        __aux64__ = *_tmp_185 + 2;
                         buffer += 1;
                         
                         if(debug)
-                            logger->debug() << "|\033[38;5;94m015784\033[0m| cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].light_bar_siren_in_use.value: " << __aux64__;
+                            logger->debug() << "|\033[38;5;94m000171\033[0m| cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].light_bar_siren_in_use.value: " << __aux64__;
                         
-                        int _if__tmp_17684 = __aux64__;
-                        for(int l = 0; l < _if__tmp_17684; l++) {
+                        int _if__tmp_185 = __aux64__;
+                        for(int o = 0; o < _if__tmp_185; o++) {
                             uint8_t __c__;
                             ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].light_bar_siren_in_use.values.push_back(__c__);
                             uint8_t* __b__ = (uint8_t*)buffer++;
-                            ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].light_bar_siren_in_use.values[l] = (*__b__ == 1);
+                            ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].light_bar_siren_in_use.values[o] = (*__b__ == 1);
                         }
                         
                         // ******************* MIN validator *******************
@@ -3958,22 +3958,22 @@ namespace wind
                                     //  causeCode    CauseCodeType        
                                     //  subCauseCode SubCauseCodeType     
                                     //  ...
-                                uint8_t* _ext_flag_7748 = (uint8_t*) buffer++;  // Read ext flag from ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].incident_indication[0].
+                                uint8_t* _ext_flag_85 = (uint8_t*) buffer++;  // Read ext flag from ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].incident_indication[0].
                                 
                                 if(debug) {
-                                    logger->debug() << "|\033[38;5;94m015785\033[0m| Reading ext flag from ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].incident_indication[0].: " << int(*_ext_flag_7748);
+                                    logger->debug() << "|\033[38;5;94m000172\033[0m| Reading ext flag from ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].incident_indication[0].: " << int(*_ext_flag_85);
                                 }
                                 
                                 
                                 // Field name: cause_code
                                 // Integer
                                 // UINT8  min(0) max(255) span(256) datatype(UInt8)
-                                uint8_t* _tmp_17685 = (uint8_t*) buffer++;
-                                __aux64__ = *_tmp_17685;
+                                uint8_t* _tmp_186 = (uint8_t*) buffer++;
+                                __aux64__ = *_tmp_186;
                                 ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].incident_indication[0].cause_code.value = __aux64__;
                                 
                                 if(debug) {
-                                    logger->debug() << "|\033[38;5;94m015786\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].incident_indication[0].cause_code.value) << 
+                                    logger->debug() << "|\033[38;5;94m000173\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].incident_indication[0].cause_code.value) << 
                                                  " cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].incident_indication[0].cause_code.value: " << static_cast<int>(ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].incident_indication[0].cause_code.value);
                                 }
                                 
@@ -3991,12 +3991,12 @@ namespace wind
                                 // Field name: sub_cause_code
                                 // Integer
                                 // UINT8  min(0) max(255) span(256) datatype(UInt8)
-                                uint8_t* _tmp_17686 = (uint8_t*) buffer++;
-                                __aux64__ = *_tmp_17686;
+                                uint8_t* _tmp_187 = (uint8_t*) buffer++;
+                                __aux64__ = *_tmp_187;
                                 ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].incident_indication[0].sub_cause_code.value = __aux64__;
                                 
                                 if(debug) {
-                                    logger->debug() << "|\033[38;5;94m015787\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].incident_indication[0].sub_cause_code.value) << 
+                                    logger->debug() << "|\033[38;5;94m000174\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].incident_indication[0].sub_cause_code.value) << 
                                                  " cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].incident_indication[0].sub_cause_code.value: " << static_cast<int>(ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].incident_indication[0].sub_cause_code.value);
                                 }
                                 
@@ -4010,26 +4010,26 @@ namespace wind
                                     logger->warning() << "Error: Value in 'cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].incident_indication[0].sub_cause_code.value' " << (__aux64__) << " exceeds max allowable (255); message dropped.";
                                     return false;
                                 }
-                                if(*_ext_flag_7748) { // from ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].incident_indication[0]. 
-                                    uint8_t* _tmp_17687 = (uint8_t*) buffer++;  // number of extensions
-                                    bool _array_220[*_tmp_17687];
+                                if(*_ext_flag_85) { // from ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].incident_indication[0]. 
+                                    uint8_t* _tmp_188 = (uint8_t*) buffer++;  // number of extensions
+                                    bool _array_8[*_tmp_188];
                                     
                                     if(debug)
-                                        logger->debug() << "|\033[38;5;94m015788\033[0m| Reading number of exts from ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].incident_indication[0].: " << static_cast<unsigned int>(*_tmp_17687);
+                                        logger->debug() << "|\033[38;5;94m000175\033[0m| Reading number of exts from ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].incident_indication[0].: " << static_cast<unsigned int>(*_tmp_188);
                                     
                                     // Extensions bytemap
-                                    for(int i = 0; i < *_tmp_17687; i++)
-                                        _array_220[i] = (*buffer++) != 0;
+                                    for(int i = 0; i < *_tmp_188; i++)
+                                        _array_8[i] = (*buffer++) != 0;
                                     
                                     // Discarding unknown OpenType containers
-                                    for(int i = 0; i < *_tmp_17687; i++) {
-                                        uint16_t* _tmp_17688 = (uint16_t*)buffer;  // OpenType length
+                                    for(int i = 0; i < *_tmp_188; i++) {
+                                        uint16_t* _tmp_189 = (uint16_t*)buffer;  // OpenType length
                                         buffer += 2;
                                     
                                         if(debug) {
                                         }
                                     
-                                        for(int i = 0; i < *_tmp_17688; i++)
+                                        for(int i = 0; i < *_tmp_189; i++)
                                             buffer++;
                                     }
                                     
@@ -4040,14 +4040,14 @@ namespace wind
                             // Field name: traffic_rule
                             // Enumerated
                             // INT32  min(0) max(3) span(4) datatype(Int32)
-                            uint8_t* _ext_flag_7749 = (uint8_t*) buffer++;  // Read ext flag from ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].traffic_rule[0].
+                            uint8_t* _ext_flag_86 = (uint8_t*) buffer++;  // Read ext flag from ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].traffic_rule[0].
                             
                             if(debug) {
-                                logger->debug() << "|\033[38;5;94m015789\033[0m| Reading ext flag from ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].traffic_rule[0].: " << int(*_ext_flag_7749);
+                                logger->debug() << "|\033[38;5;94m000176\033[0m| Reading ext flag from ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].traffic_rule[0].: " << int(*_ext_flag_86);
                             }
                             
-                            uint8_t* _tmp_17689 = (uint8_t*) buffer++;
-                            __aux64__ = *_tmp_17689;
+                            uint8_t* _tmp_190 = (uint8_t*) buffer++;
+                            __aux64__ = *_tmp_190;
                             __aux64__ += 0;
                             ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].traffic_rule[0].value = __aux64__;
                             // ******************* MIN validator *******************
@@ -4063,7 +4063,7 @@ namespace wind
                             
                             
                             if(debug) {
-                                logger->debug() << "|\033[38;5;94m015790\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].traffic_rule[0].value) << 
+                                logger->debug() << "|\033[38;5;94m000177\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].traffic_rule[0].value) << 
                                              " cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].traffic_rule[0].value: " << static_cast<int>(ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].traffic_rule[0].value);
                             }
                         }
@@ -4072,13 +4072,13 @@ namespace wind
                             // Field name: speed_limit
                             // Integer
                             // UINT8  min(1) max(255) span(255) datatype(UInt8)
-                            uint8_t* _tmp_17690 = (uint8_t*) buffer++;
-                            __aux64__ = *_tmp_17690;
+                            uint8_t* _tmp_191 = (uint8_t*) buffer++;
+                            __aux64__ = *_tmp_191;
                             __aux64__ += 1;
                             ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].speed_limit[0].value = __aux64__;
                             
                             if(debug) {
-                                logger->debug() << "|\033[38;5;94m015791\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].speed_limit[0].value) << 
+                                logger->debug() << "|\033[38;5;94m000178\033[0m| " << tools::getTypeName(ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].speed_limit[0].value) << 
                                              " cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].speed_limit[0].value: " << static_cast<int>(ros->cam.cam_parameters.special_vehicle_container[0].safety_car_container[0].speed_limit[0].value);
                             }
                             
@@ -4096,30 +4096,30 @@ namespace wind
                 }
                 else
                 {
-                    uint16_t* _tmp_17691 = (uint16_t*)buffer;  // OpenType length
-                    buffer += 2 + int(*_tmp_17691);            // Ignoring opentype data
+                    uint16_t* _tmp_192 = (uint16_t*)buffer;  // OpenType length
+                    buffer += 2 + int(*_tmp_192);            // Ignoring opentype data
                 }
             }
-            if(*_ext_flag_7664) { // from ros->cam.cam_parameters. 
-                uint8_t* _tmp_17692 = (uint8_t*) buffer++;  // number of extensions
-                bool _array_221[*_tmp_17692];
+            if(*_ext_flag_1) { // from ros->cam.cam_parameters. 
+                uint8_t* _tmp_193 = (uint8_t*) buffer++;  // number of extensions
+                bool _array_9[*_tmp_193];
                 
                 if(debug)
-                    logger->debug() << "|\033[38;5;94m015792\033[0m| Reading number of exts from ros->cam.cam_parameters.: " << static_cast<unsigned int>(*_tmp_17692);
+                    logger->debug() << "|\033[38;5;94m000179\033[0m| Reading number of exts from ros->cam.cam_parameters.: " << static_cast<unsigned int>(*_tmp_193);
                 
                 // Extensions bytemap
-                for(int i = 0; i < *_tmp_17692; i++)
-                    _array_221[i] = (*buffer++) != 0;
+                for(int i = 0; i < *_tmp_193; i++)
+                    _array_9[i] = (*buffer++) != 0;
                 
                 // Discarding unknown OpenType containers
-                for(int i = 0; i < *_tmp_17692; i++) {
-                    uint16_t* _tmp_17693 = (uint16_t*)buffer;  // OpenType length
+                for(int i = 0; i < *_tmp_193; i++) {
+                    uint16_t* _tmp_194 = (uint16_t*)buffer;  // OpenType length
                     buffer += 2;
                 
                     if(debug) {
                     }
                 
-                    for(int i = 0; i < *_tmp_17693; i++)
+                    for(int i = 0; i < *_tmp_194; i++)
                         buffer++;
                 }
                 
