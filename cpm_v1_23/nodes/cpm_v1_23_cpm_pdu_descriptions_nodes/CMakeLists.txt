@@ -27,6 +27,8 @@ project(cpm_v1_23_cpm_pdu_descriptions_nodes)
 ## Compile as C++11, supported in ROS Kinetic and newer
 add_compile_options(-std=c++11)
 add_definitions(-DWIND_ROS_VERSION=1)
+add_definitions(-DV2X_MESSAGE_ID=14)
+add_definitions(-DV2X_PROTOCOL_VERSION=1)
 
 find_package(catkin REQUIRED COMPONENTS
     roscpp

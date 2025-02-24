@@ -27,6 +27,8 @@ project(its_container_v2_its_container_msgs)
 ## Compile as C++11, supported in ROS Kinetic and newer
 add_compile_options(-std=c++11)
 add_definitions(-DWIND_ROS_VERSION=1)
+add_definitions(-DV2X_MESSAGE_ID=null)
+add_definitions(-DV2X_PROTOCOL_VERSION=null)
 
 find_package(catkin REQUIRED COMPONENTS
     std_msgs

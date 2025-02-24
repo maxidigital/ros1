@@ -27,6 +27,8 @@ project(cam_v2_cam_pdu_descriptions_msgs)
 ## Compile as C++11, supported in ROS Kinetic and newer
 add_compile_options(-std=c++11)
 add_definitions(-DWIND_ROS_VERSION=1)
+add_definitions(-DV2X_MESSAGE_ID=2)
+add_definitions(-DV2X_PROTOCOL_VERSION=2)
 
 find_package(catkin REQUIRED COMPONENTS
     std_msgs
