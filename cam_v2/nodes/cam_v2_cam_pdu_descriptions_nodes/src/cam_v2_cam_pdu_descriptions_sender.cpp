@@ -66,7 +66,7 @@ wind::wind_ros::Sender_cam_v2_cam_pdu_descriptions::callback(
 		return;
 	busy_ = true;
 
-    slogger_->print() << "Received CAM message on '" << tools::green(topic_) << "' topic";
+    slogger_->print() << "CAM message received on topic '" << tools::green(topic_) << "'";
     int buf_len = encoder_->encode(msg, &buff_[REQUEST_HEADER_SIZE_]);
     if(buf_len == -1) {
         failed_++;
